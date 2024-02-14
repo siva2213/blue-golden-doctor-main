@@ -66,7 +66,7 @@ const Availability = () => {
           Nurturing Your Smile With{" "}
           <span className="avail-ttl2">Precision & Care.</span>
         </p>
-        <img src={teeth} alt="availability" />
+        <img src={teeth} alt="availability" className="checkavailability"/>
         <form className="avail-form" onSubmit={handleSubmit}>
           <div className="avail-form-cnt">
             <TiLocation className="avail-licicon1" />

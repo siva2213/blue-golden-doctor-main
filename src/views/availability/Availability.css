@@ -36,6 +36,11 @@
     font-weight: 500;
     color: #ff61dd;
   }
+  .checkavailability {
+    position: absolute;
+    width: 100%;
+    top: 5%;
+  }
   .avail-form {
     display: flex;
     flex-direction: column;
@@ -49,7 +54,8 @@
     position: absolute;
     right: 20px;
     left: 20px;
-    top: 58%;
+    /* top: 58%; */
+    bottom: 5%;
   }
   .avail-form-cnt {
     background: rgba(99, 97, 128, 0.6);
