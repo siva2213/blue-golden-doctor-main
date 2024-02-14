@@ -4,7 +4,7 @@
 @media only screen and (max-width: 767px) {
   .ser-main {
     display: block;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     /* background-color: #fff; */
     /* border-bottom-left-radius: 50%; 
     border-bottom-right-radius: 50%; */
@@ -27,7 +27,7 @@
     justify-content: space-between;
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 10px;
+    padding: 0px 10px;
   }
   .ser-page {
     color: #e957c9;
@@ -37,7 +37,7 @@
   .ser-icttl {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
   .container.ser-active {
     /* width: 100vw; */
@@ -45,7 +45,7 @@
   }
 
   .icon {
-    width: 30px;
+    width: 26px;
     padding: 10px;
     background: #e5e4f0;
     border-radius: 100px;
@@ -53,41 +53,55 @@
 
   .title {
     color: #372f62;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     white-space: nowrap;
   }
 
   .image {
-    width: 130px;
-    height: 40px;
-    border-radius: 100px;
+    width: 150px;
+    border-radius: 20px;
     transition: width 0.3s ease;
   }
-  .image1 {
-    width: 130px;
+  .imageservice {
+    /* width: 130px; */
     height: 40px;
-    border-radius: 100px;
+    border-radius: 20px;
     transition: width 0.3s ease;
   }
 
   .content {
-    display: none;
-    margin-top: 10px;
+    display: block;
+    margin: 0;
+    text-align: left;
+    color: #615f6f;
+    font-size: 12px;
   }
 
-  .container.ser-active .content {
+  /* .container.ser-active .content {
     display: block;
     color: #615f6f;
     font-size: 12px;
     text-align: left;
     margin: 0;
-  }
+  } */
 
   .container.ser-active .image {
     /* width: 50vw; */
     height: auto;
     border-radius: 20px;
+  }
+  .curve-colorone {
+    background: #e7c985;
+    position: relative;
+    top: 1px;
+  }
+  .curve-colortwo {
+    background: #fff;
+    /* border: solid 5px #000; */
+    /* border-color: #000 transparent transparent transparent; */
+    border-radius: 70%/150px 150px 0 0;
+    transform: rotate(180deg);
   }
   .bk-btn {
     padding: 30px 50px;
@@ -98,5 +112,6 @@
     font-weight: bold;
     border-radius: 50%;
     margin: 20px;
+    transform: rotate(180deg);
   }
 }

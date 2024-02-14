@@ -8,6 +8,7 @@ import { PiHeadsetFill } from "react-icons/pi";
 import ReactStars from "react-rating-stars-component";
 import person from "../../assets/person.png";
 import Pagination from "../../components/Pagination";
+import girl from '../../assets/young_woman.png'
 
 const Specialists = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -88,16 +89,16 @@ const Specialists = () => {
     const totalPages = Math.ceil(totalItems / itemsPerPage);
     setTotalPages(totalPages2);
   }, []);
-    const handleScroll2 = (event) => {
-      const container = event.target;
-      const containerWidth = container.offsetWidth;
-      const scrollLeft = container.scrollLeft;
-      const totalWidth = container.scrollWidth;
-      const currentPage = Math.ceil(
-        (scrollLeft + containerWidth) / containerWidth
-      );
-      setCurrentPage2(currentPage2);
-    };
+  const handleScroll2 = (event) => {
+    const container = event.target;
+    const containerWidth = container.offsetWidth;
+    const scrollLeft = container.scrollLeft;
+    const totalWidth = container.scrollWidth;
+    const currentPage = Math.ceil(
+      (scrollLeft + containerWidth) / containerWidth
+    );
+    setCurrentPage2(currentPage2);
+  };
   const fetchDoctorsForPage = async (page) => {};
 
   // const handlePageChange = async (newPage) => {
@@ -190,6 +191,28 @@ const Specialists = () => {
               />
             </p>
           </div>
+          <div className="rev-customers">
+            <img className="cus-img" src={person} />
+            <div className="cust-detail">
+              <p className="cust-name">Melvin Dennis</p>
+              <ReactStars
+                count={5}
+                // onChange={ratingChanged}
+                size={24}
+                activeColor="#E957C9"
+                value={5}
+                color="#E957C9"
+              />
+              <p className="cust-cnt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis amet molestie, dictum est a, mattis tellus. Sed
+                dignissim, metus nec fringilla egets accumsan, risus sem
+                sollicitudin lacus, ut interdum tellus elit sed risus. Est an
+                maecenas eget condimentum velit.
+              </p>
+            </div>
+          </div>
+
           <div className="rev-customers">
             <img className="cus-img" src={person} />
             <div className="cust-detail">

@@ -20,12 +20,13 @@
 
   .spec-one {
     background: #e7c985;
-    padding: 0px 20px 30px 20px;
+    padding: 0px 0px 30px 0px;
   }
   .spec-ttl {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
   }
   .spec-ttl1 {
     color: #fff;
@@ -169,6 +170,9 @@
     background: #f3f1fd;
     border-radius: 50px;
     padding: 0px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .rev-ttl {
     display: flex;
@@ -181,7 +185,7 @@
     background: #fff;
     margin: 0 10px 0 10px;
     border-radius: 40px;
-    padding: 20px;
+    padding: 10px;
     gap: 20px;
     align-items: center;
   }
