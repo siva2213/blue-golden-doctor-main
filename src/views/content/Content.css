@@ -1,0 +1,379 @@
+.cnt-main {
+  background-image: url("../../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px 10px 80px;
+}
+
+.cnt-main-res {
+  display: none;
+}
+.cnt-left-res {
+  display: none;
+}
+.graphdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+.docs-icon1 {
+  color: rgb(233, 87, 201);
+  font-size: 28px;
+  border-radius: 100px;
+  padding: 5px;
+  box-shadow: -5px -5px 10px 0 #403672, 5px 5px 10px 0 #2d2653;
+}
+.docs-icon2 {
+  color: rgb(233, 87, 201);
+  font-size: 30px;
+  border-radius: 100px;
+  padding: 5px;
+  box-shadow: -5px -5px 10px 0 #403672, 5px 5px 10px 0 #2d2653;
+}
+.cnt-right-res {
+  display: none;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px 10px 10px 20px;
+  justify-content: space-between;
+  background: #372f62;
+  width: 100%;
+  height: 70px;
+  box-shadow: inset -5px -5px 10px #403672, inset 5px 5px 10px #2d2653;
+}
+
+.cnt-left,
+.cnt-right {
+  width: 50vw;
+}
+
+.cnt-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.cnt-graphs {
+  width: 50%;
+}
+
+.graphs-data {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: baseline;
+}
+.src-input {
+  border: none;
+  background: #372f62;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: "League Spartan", sans-serif;
+}
+.src-icon {
+  border-radius: 100%;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 30px;
+  box-shadow: -5px -5px 10px 0 #403672, 5px 5px 10px 0 #2d2653;
+  color: #e957c9;
+}
+.src-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.src-text1 {
+  color: #e957c9;
+  font-weight: bold;
+  font-size: 54px;
+  text-align: left;
+  margin: 0;
+}
+.src-text2 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 54px;
+  margin: 0;
+  text-align: left;
+}
+.src-para {
+  text-align: left;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.6rem;
+}
+
+.cnt-display {
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+}
+.cnt-doc,
+.cnt-pat {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border-radius: 10px;
+  padding: 14px 40px 14px 20px;
+  border-radius: 100px;
+  gap: 30px;
+  text-align: left;
+  background: #372f62;
+  gap: 10px;
+  box-shadow: 0 5px 10px #403672, inset 0 5px 10px #2d2653;
+}
+.cnt-count {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.src-input:focus-visible {
+  outline: none;
+}
+.cnt-num {
+  font-size: 16px;
+  color: #e48e51;
+  margin: 0;
+  font-weight: bold;
+}
+.cnt-ttl {
+  margin: 0;
+  color: white;
+  font-size: 10px;
+}
+.text-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.src-input::placeholder {
+  color: #ffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* media query */
+
+@media only screen and (max-width: 767px) {
+  .cnt-main {
+    display: none;
+  }
+  .cnt-main-res {
+    display: flex;
+    flex-direction: column;
+  }
+  .cnt-left-res {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+    background: #372f62;
+    border-radius: 0 0 50px 0;
+    gap: 25px;
+    position: relative;
+    top: -1px;
+  }
+  .cnt-right-res {
+    display: none;
+    flex-direction: column;
+  }
+
+  .src-input {
+    border: none;
+    background: #372f62;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "League Spartan", sans-serif;
+  }
+  .src-input::placeholder {
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .loc-search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .arrow {
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 6px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .src-icon-res {
+    border-radius: 100%;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: -5px -5px 10px 0 #403672, 5px 5px 10px 0 #2d2653;
+    color: #e957c9;
+  }
+  .search-container-res {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px 10px 10px 20px;
+    justify-content: space-between;
+    background: #372f62;
+    box-shadow: inset -5px -5px 10px #403672, inset 5px 5px 10px #2d2653;
+  }
+
+  .src-paragraph-res {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px 0 20px;
+  }
+  .cnt-display-res {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .graphs-data-res {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .doc-icon1 {
+    color: rgb(233, 87, 201);
+    font-size: 28px;
+    border-radius: 100px;
+    padding: 5px;
+    box-shadow: -5px -5px 10px 0 #403672, 5px 5px 10px 0 #2d2653;
+  }
+  .doc-icon2 {
+    color: rgb(233, 87, 201);
+    font-size: 30px;
+    border-radius: 100px;
+    padding: 5px;
+    box-shadow: -5px -5px 10px 0 #403672, 5px 5px 10px 0 #2d2653;
+  }
+  .cnt-count-res {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .cnt-doc-res,
+  .cnt-pat-res {
+    padding: 10px;
+    background: #372f62;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    box-shadow: inset -5px -5px 10px #403672, inset 5px 5px 10px #2d2653;
+    border-radius: 50px;
+    text-align: left;
+  }
+  .src-para-res {
+    font-size: 14px;
+    color: #372f62;
+  }
+  .src-text1-res,
+  .src-text2-res {
+    font-size: 20px;
+  }
+
+  .src-text1-res {
+    color: #e957c9;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+  }
+  .src-text2-res {
+    color: #372f62;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+  }
+  .cnt-right-res-img {
+    width: 100%;
+    display: block;
+    background: white;
+    padding: 20px 0;
+  }
+
+  .cnt-num-res {
+    font-size: 16px;
+    color: #e48e51;
+    margin: 0;
+    font-weight: bold;
+  }
+  .cnt-ttl-res {
+    margin: 0;
+    color: white;
+    font-size: 8px;
+  }
+  .cnt-graphs-res {
+    height: 130px;
+  }
+
+  .reslogo {
+    height: 30px;
+    width: 100px;
+    padding: 30px 20px 0;
+  }
+  .launch {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 0;
+  }
+
+  .launch-soon {
+    background: #372f62;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #e49356;
+    border: 1px solid #e4c17f;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .res-loc {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .cnt-main {
+    padding: 0 40px 0 40px;
+  }
+  .src-text1,
+  .src-text2 {
+    font-size: 40px;
+  }
+  .src-para {
+    font-size: 16px;
+  }
+  .cnt-display {
+    gap: 40px;
+  }
+  .search-container {
+    width: 90%;
+  }
+  .cnt-left {
+    width: 60vw;
+  }
+  .cnt-right {
+    width: 40vw;
+  }
+}

@@ -1,0 +1,169 @@
+.availability-main {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .availability-main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .avail-icon {
+    width: 80%;
+  }
+  .avail-lbl {
+    color: #372f62;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .avail-main {
+    background: #372f62;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 620px;
+  }
+  .avail-ttl1 {
+    font-size: 34px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 20px 20px 0 20px;
+  }
+  .avail-ttl2 {
+    font-size: 34px;
+    font-weight: 500;
+    color: #ff61dd;
+  }
+  .avail-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: rgba(99, 97, 128, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 30px;
+    padding: 10px;
+
+    position: absolute;
+    right: 50px;
+    left: 50px;
+    top: 58%;
+  }
+  .avail-form-cnt {
+    background: rgba(99, 97, 128, 0.6);
+    border-radius: 100px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+  }
+  .avail-licicon1,
+  .avail-licicon2,
+  .avail-licicon3,
+  .avail-arrow {
+    color: #fff;
+    font-size: 20px;
+
+  }
+  /* .avail-licicon1 {
+    font-size: 18px;
+  } */
+  /* .avail-licicon {
+    font-size: 14px;
+  } */
+  /* .avail-licicon3 {
+    font-size: 18px;
+  } */
+  .avail-form-cnt input:focus-visible {
+    outline: none;
+  }
+  .avail-form-cnt input {
+    background: none;
+    border: none;
+    color: #fff;
+    flex-grow: 1; 
+  }
+  .avail-form-cnt input::placeholder {
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: "League Spartan", sans-serif;
+  }
+  .avail-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(to right, #e8d48f, #e48e51);
+    width:-webkit-fill-available;
+    flex-grow: 1; /* Make the button grow to fill the available space */
+  /* max-width: 200px; */
+  }
+
+  .help-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px 30px 20px;
+    background: #ffcff5;
+  }
+  .help-ttl {
+    color: #c478b4;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .help-groups {
+    display: flex;
+  }
+  .help-ic-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .download-main {
+    display: flex;
+  }
+  .download-left {
+    padding: 20px 0px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+  }
+  .download-icon {
+    width: 60%;
+  }
+  .download-ttl {
+    font-size: 30px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #e49356, #e7cb87);
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+  }
+  .download-cnt {
+    color: #372f62;
+    font-size: 12px;
+  }
+  .download-icons {
+    display: flex;
+    gap: 10px;
+  }
+  .download-play,
+  .download-apple {
+    width: 40%;
+  }
+  .download-right {
+    width: 50%;
+  }
+}

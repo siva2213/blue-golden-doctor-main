@@ -1,0 +1,220 @@
+.spec-main {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .paginationdot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #d3b36c;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .spec-main {
+    display: block;
+    border-radius: 50% 50% 0 0;
+  }
+
+  .spec-one {
+    background: #e7c985;
+    padding: 0px 20px 30px 20px;
+  }
+  .spec-ttl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .spec-ttl1 {
+    color: #fff;
+    font-size: 30px;
+  }
+  .spec-img {
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+  }
+  .spec-page {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .spec-doclist {
+    display: flex;
+    gap: 20px;
+    overflow-y: auto;
+    max-height: 300px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .spec-doclist::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+  }
+  .spec-doc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+  }
+  .spec-docname {
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .spec-docspec {
+    margin: 0;
+    color: #fff;
+    font-size: 10px;
+  }
+  .spec-two {
+    position: relative;
+    display: flex;
+    background: #1e1745;
+    padding: 0 0 0 20px;
+  }
+  .spec-two-left {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    padding: 30px 0 0 0;
+  }
+  .del-btn-cnt {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .spec-two-ttl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .medicine-abt {
+    display: flex;
+    padding: 0 0 20px 0;
+  }
+  .del-ttl1 {
+    color: #ff86e5;
+    font-size: 12px;
+    margin: 0;
+  }
+  .del-ttl2 {
+    font-size: 26px;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+  }
+  .del-ttl3 {
+    font-size: 26px;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #e8d48f, #e48e51);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: block;
+  }
+  .del-cnt {
+    margin: 0;
+    font-size: 10px;
+    color: #fff;
+  }
+  .del-btn {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 100px;
+    border: none;
+    white-space: nowrap;
+    background: linear-gradient(to right, #e49356, #e7cb87);
+  }
+  .delivery-boy {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .amnt-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .amen-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .amenities-icon {
+    font-size: 36px;
+    color: #e957c9;
+  }
+  .amenities {
+    margin: 0;
+    color: #372f62;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .spec-three {
+    padding: 0 10px 30px 10px;
+  }
+  .reviews {
+    background: #f3f1fd;
+    border-radius: 50px;
+    padding: 0px 0px 20px 0px;
+  }
+  .rev-ttl {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+  }
+  .rev-customers {
+    display: flex;
+    background: #fff;
+    margin: 0 10px 0 10px;
+    border-radius: 40px;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+  .rev-ttl1 {
+    color: #372f62;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .rev-ttl2 {
+    color: #372f62;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #e957c9;
+  }
+  .cus-img {
+    width: 150px;
+    height: 150px;
+  }
+  .cust-name {
+    color: #372f62;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .cust-cnt {
+    font-size: 10px;
+    color: #372f62;
+  }
+  .cust-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}

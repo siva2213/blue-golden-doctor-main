@@ -1,0 +1,185 @@
+.ft-left,
+.ft-right {
+  width: 50vw;
+}
+.ft-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.ft-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.ftr-cpny {
+  display: none;
+}
+.ft-main {
+  background: #e7c985;
+  border-radius: 0 100px 0 0;
+  padding: 50px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.ft-logo {
+  width: 30%;
+}
+h2 {
+  margin: 0;
+  text-align: left;
+  padding: 6px;
+  color: #352e60;
+}
+.ft-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+.ft-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  line-height: 3rem;
+}
+.ins-logo,
+.twt-logo,
+.fbk-logo {
+  background: #352e60;
+  padding: 16px;
+  border-radius: 100%;
+  color: #e49356;
+  font-size: 28px;
+}
+.ft-det {
+  color: #372f62;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "League Spartan", sans-serif;
+  text-align: left;
+  line-height: 1.2rem;
+}
+.ft-scl {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.ft-detail {
+  color: #372f62;
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+.ft-cpy {
+  color: #372f62;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+.res-curves {
+  display: none;
+}
+.curves {
+  display: block;
+  width: 80%;
+}
+/* media query for other devices */
+@media only screen and (max-width: 767px) {
+  .ft-main {
+    border-radius: 0;
+    /* padding: 40px 20px; */
+    gap: 2px;
+    padding: 0;
+    background: #fff;
+  }
+  .ftr-company-ttl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+  .ftr-cpny {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #352e60;
+    margin: 0;
+    padding: 0;
+  }
+  .ft-logo {
+    display: none;
+  }
+  .ft-det {
+    font-size: 12px;
+    text-align: left;
+    margin: 0;
+  }
+  .ft-top {
+    flex-direction: column;
+    gap: 0;
+    padding: 40px 20px 10px 20px;
+    background: #e7c985;
+    border-radius: 0 0 30px 30px;
+  }
+  .ft-grid {
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    gap: 10px 40px;
+    line-height: normal;
+  }
+  .ft-detail {
+    font-size: 14px;
+  }
+  .ft-cpy {
+    font-size: 12px;
+  }
+  .ft-grid h2 {
+    font-size: 22px;
+  }
+  .ft-right {
+    padding: 20px 0;
+    align-items: flex-start;
+  }
+  .curves {
+    display: none;
+  }
+  .res-curves {
+    display: block;
+  }
+  .ins-logo,
+  .twt-logo,
+  .fbk-logo {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .ft-left {
+    align-items: flex-start;
+  }
+  .ft-left,
+  .ft-right {
+    width: 100%;
+  }
+  .ftr-bottom{
+        padding: 10px 10px 30px 10px;
+    background: #e7c985;
+    border-radius: 30px 30px 0 0;
+
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .ft-main {
+    padding: 20px 40px;
+  }
+  .res-curves {
+    display: none;
+  }
+  .ft-top {
+    gap: 50px;
+  }
+}
