@@ -1,0 +1,77 @@
+@media only screen and (max-width: 767px) {
+  .about-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+  }
+  .about-ttl {
+    font-size: 30px;
+    color: #e957c9;
+  }
+  .about-page {
+    color: #e957c9;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .about-list {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .about-list::-webkit-scrollbar {
+    display: none;
+  }
+  .about-paragraphsone,
+  .about-paragraphstwo,
+  .about-paragraphsthree {
+    padding: 20px;
+  }
+  .aboutcontainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0px 10px;
+  }
+  .about-title {
+    color: #372f62;
+    font-size: 18px;
+    font-weight: bold;
+    /* white-space: nowrap; */
+    text-align: left;
+  }
+  .about-icttl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about-content {
+    display: block;
+    margin: 0;
+    text-align: left;
+    color: #615f6f;
+    font-size: 12px;
+  }
+  .about-image {
+    /* width: 130px; */
+    height: 40px;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+  }
+  .about-imageenlarge {
+    border-radius: 20px;
+    transition: width 0.3s ease;
+    height: 70px;
+  }
+}

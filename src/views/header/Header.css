@@ -52,7 +52,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 30px;
+    gap: 20px;
   }
   .hd-logo {
     height: 40px;
@@ -60,6 +60,68 @@
 
   .hd-menu {
     display: none; /* Hide on mobile */
+  }
+  .hd-citymain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 50px;
+  }
+  .city-txt {
+    font-size: 14px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #e4c17f, #e48e51);
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .citypagenum {
+    color: #e957c9;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+  }
+  .tooltip-main {
+    display: flex;
+    align-items: center;
+    background-color: rgba(99, 97, 128, 0.5);
+    backdrop-filter: blur(2px);
+    padding: 10px 10px;
+    border-radius: 10px;
+    /* width: 118px;
+    height: 58px;
+    justify-content: flex-start; */
+  }
+  .tt-months-cnt {
+    transform: rotate(-90deg);
+    padding: 10px 0px;
+  }
+  .tt-months {
+    font-size: 10px;
+    color: #e4ac6e;
+    margin: 0;
+    white-space: nowrap;
+  }
+  .tooltip-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .tt-num {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+  }
+  .tt-pat {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
   }
 
   .ham-opn,

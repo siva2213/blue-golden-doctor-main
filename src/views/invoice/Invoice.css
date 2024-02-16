@@ -1,0 +1,250 @@
+@media only screen and (max-width: 767px) {
+  .invoice-main {
+    background: #372f62;
+    padding-top: 20px;
+    position: relative;
+    top: -2px;
+  }
+  .invoice-container {
+    display: flex;
+    flex-direction: column;
+    background: #372f62;
+    box-shadow: inset -3px -3px 6px 0px #403672, inset 3px 3px 6px 3px #2d2653;
+    border-radius: 30px;
+    padding: 20px;
+    gap: 30px;
+    margin: 20px 20px 0 20px;
+  }
+  .invoice-title {
+    color: #e957c9;
+    margin: 0;
+  }
+  .invoice-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .invoice-item,
+  .total-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .invoice-fee {
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+  }
+  .invoice-amount,
+  .invoice-coupon {
+    color: #fff;
+  }
+  .invoice-amount,
+  .invoice-coupon {
+    background: #372f62;
+    border: none;
+    text-align: right;
+  }
+  .invoice-amount:focus-visible,
+  .invoice-coupon:focus-visible {
+    outline: none;
+  }
+  .total-amount {
+    box-shadow: -3px -3px 6px 0px #403672, 3px 3px 6px 3px #2d2653;
+    padding: 14px;
+    border-radius: 50px;
+  }
+  .invoice-total-title,
+  .invoice-total-amount {
+    background-image: linear-gradient(to right, #e48e51, #e8d48f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .invoice-doctor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  .invoice-doctor-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+  }
+  .doctore-profileimage {
+    width: 30%;
+    border-radius: 100px;
+  }
+  .invoice-doctor-name,
+  .invoice-doctor-edu,
+  .invoice-doctor-spec {
+    color: #fff;
+  }
+  .invoice-doctor-name {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .invoice-doctor-edu,
+  .invoice-doctor-spec {
+    font-size: 12px;
+  }
+  .doctor-rating-count {
+    background: #ebebeb;
+    padding: 4px 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .doctor-pic-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .doctor-reviewstar {
+    color: #372f62;
+    border: 1px solid #372f62;
+    border-radius: 100px;
+    padding: 2px;
+    font-size: 14px;
+  }
+  .doctor-reviewcount {
+    font-size: 14px;
+    color: #372f62;
+    font-weight: 600;
+  }
+  .clinic-details {
+    box-shadow: inset -3px -3px 6px 0px #403672, inset 3px 3px 6px 3px #2d2653;
+    padding: 24px;
+    border-radius: 20px;
+    margin: 0px 20px 20px 20px;
+  }
+  .clinic-address {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 6px;
+  }
+  .clinic-visit {
+    display: flex;
+    justify-content: space-between;
+  }
+  .clinic-time {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cdate-time {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .cdate-treatment {
+    background-image: linear-gradient(to right, #e48e51, #e8d48f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .clinic-name {
+    color: #e957c9;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .clinic-fulladd {
+    font-size: 12px;
+    color: #fff;
+    line-break: auto;
+  }
+  .clinic-whatsapp,
+  .clinic-phone {
+    color: #fff;
+    box-shadow: -3px -3px 6px 0px #403672, 3px 3px 6px 3px #2d2653;
+    padding: 10px;
+    border-radius: 100px;
+  }
+  .clinic-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .clinic-page {
+    color: #372f62;
+    background: linear-gradient(to right, #d98952, #e8d38e);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .coupons-main {
+    background: #fff;
+    border-radius: 90%/160px 160px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+  }
+  .coupons-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+  .coupon-row {
+    display: flex;
+    flex-direction: column;
+    background: #e7c985;
+    padding: 10px;
+    border-radius: 20px;
+    width: 50%;
+    gap: 10px;
+  }
+  .coupons-hd {
+    color: #e957c9;
+    text-align: center;
+  }
+  .coupon-cnt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .coupon-code {
+    width: 30px;
+    background: #372f62;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .coupon-codetext {
+    color: #fff;
+    text-align: left;
+    /* line-break: auto;
+    word-break: break-word; */
+  }
+  .validity-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .coupon-title {
+    color: #372f62;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+  }
+  .coupon-btn {
+    background-color: #372f62;
+    background-image: linear-gradient(to right, #e48e51, #e8d48f);
+    color: transparent;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 20px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
   Bar,
 } from "recharts";
-// import "@fontsource/league-spartan";
+import "../views/header/Header.css";
 
 const data = [
   { name: "A", value: 40, color: "#E6AD6D" },
@@ -18,18 +18,16 @@ const data = [
 
 const CustomTooltip = () => {
   return (
-    <div className=" drop-shadow-lg custom-tooltip rounded-lg   bg-[transparent]  w-[118px] h-[58px] backdrop-blur-2xl flex justify-start items-center">
-      <div className="w-fit rotate-[-90deg]">
-        <p className="text-[#E4AC6E] text-[10px] font-semibold border-b border-dashed">
-          this Month
-        </p>
+    <div className="tooltip-main">
+      {/* <div className=" drop-shadow-lg custom-tooltip rounded-lg   bg-[transparent]  w-[118px] h-[58px] backdrop-blur-2xl flex justify-start items-center"> */}
+      <div className="tt-months-cnt">
+        <p className="tt-months">this Month</p>
+        <p style={{ borderTop: "1px dashed #fff",margin:"0" }} />
       </div>
 
-      <div className=" flex flex-col items-center">
-        <h3 className="mb-[0.2em] text-[26px] font-black leading-4 text-white">
-          5K+
-        </h3>
-        <p className="text-[12px] leading-4 text-white font-bold">patients</p>
+      <div className=" tooltip-count">
+        <h3 className="tt-num">5K+</h3>
+        <p className="tt-pat">patients</p>
       </div>
     </div>
   );

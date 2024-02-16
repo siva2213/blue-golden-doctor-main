@@ -2,12 +2,36 @@
   display: none;
 }
 @media only screen and (max-width: 767px) {
+  /* Services.css */
+  .ser-main {
+    /* Add CSS properties to enable horizontal scrolling */
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .services-paragraphs {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+  .services-paraone,
+  .services-paratwo,
+  .services-parathree {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+  }
+
+  .container {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+  }
+
   .ser-main {
     display: block;
-    /* padding-bottom: 30px; */
-    /* background-color: #fff; */
-    /* border-bottom-left-radius: 50%; 
-    border-bottom-right-radius: 50%; */
   }
 
   .ser-top {
@@ -31,7 +55,7 @@
   }
   .ser-page {
     color: #e957c9;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
   }
   .ser-icttl {
@@ -39,10 +63,9 @@
     flex-direction: column;
     gap: 10px;
   }
-  .container.ser-active {
-    /* width: 100vw; */
+  /* .container.ser-active {
     padding: 10px 20px 20px 20px;
-  }
+  } */
 
   .icon {
     width: 26px;
@@ -55,7 +78,7 @@
     color: #372f62;
     font-size: 18px;
     font-weight: bold;
-    white-space: nowrap;
+    text-align: left;
   }
 
   .image {
@@ -76,20 +99,18 @@
     text-align: left;
     color: #615f6f;
     font-size: 12px;
+    white-space: normal;
   }
-
-  /* .container.ser-active .content {
-    display: block;
-    color: #615f6f;
-    font-size: 12px;
-    text-align: left;
-    margin: 0;
-  } */
 
   .container.ser-active .image {
     /* width: 50vw; */
     height: auto;
     border-radius: 20px;
+  }
+  .imageenlarge {
+    border-radius: 20px;
+    transition: width 0.3s ease;
+    height: 70px;
   }
   .curve-colorone {
     background: #e7c985;
