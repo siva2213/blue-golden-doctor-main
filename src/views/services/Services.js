@@ -8,6 +8,7 @@ import dentist from "../../assets/dental.svg";
 import decay from "../../assets/decay.svg";
 import braces from "../../assets/braces.svg";
 import carbide from "../../assets/carbide.svg";
+import BookingModal from '../../components/Modal'
 
 const Services = () => {
   const [isActiveDental, setIsActiveDental] = useState(false);
@@ -15,6 +16,7 @@ const Services = () => {
   const [isActiveBraces, setIsActiveBraces] = useState(false);
   const [isActiveCarbide, setIsActiveCarbide] = useState(false);
   const [servicePage, setServicePage] = useState(1);
+  const [modalShow, setModalShow] = useState(false);
   const totalServicePages = 3;
   const servicesParaRef = useRef(null);
 
@@ -419,8 +421,15 @@ const Services = () => {
       </div>
       <div className="curve-colorone">
         <div className="curve-colortwo">
-          <button className="bk-btn">Start Booking</button>
+          <button className="bk-btn" onClick={() => setModalShow(true)}>Start Booking</button>
         </div>
+      </div>
+      <div style={{ borderRadius: '35px' }}>
+        <BookingModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+
+        />
       </div>
     </div>
   );

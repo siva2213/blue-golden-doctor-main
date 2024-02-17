@@ -58,10 +58,10 @@ const Booking = () => {
 
       <div className="buttons-and-image-container">
         <div className="book-btn">
-          {buttons.map((button) => (
-            <div className="book-item">
+          {buttons.map((button, i) => (
+            <div className="book-item" key={button.name + i}>
               <button
-                key={button.name}
+                
                 className={activeButton === button.name ? "active" : "inactive"}
                 onClick={() => handleButtonClick(button.name, button.onClick)}
               >
