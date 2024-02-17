@@ -186,7 +186,7 @@ const Specialists = () => {
                 currentPage={reviewPage}
                 totalPages={totalreviewPages}
                 dotActiveColor="#E957C9"
-                dotInactiveColor="#DDDDDD"
+                dotInactiveColor="#fff"
               />
             </p>
           </div>

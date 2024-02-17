@@ -38,7 +38,6 @@ const Availability = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can perform any action with the form data, such as sending it to a server
     console.log("Location:", location);
     console.log("Date:", date);
     console.log("Time:", time);

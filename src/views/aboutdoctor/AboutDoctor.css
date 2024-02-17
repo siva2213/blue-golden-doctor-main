@@ -18,6 +18,20 @@
     font-size: 16px;
     font-weight: 700;
   }
+  /* Hide the default scrollbar */
+  .about-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Optional: Style the scroll thumb */
+  .about-list::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  /* Optional: Style the track */
+  .about-list::-webkit-scrollbar-track {
+    display: none;
+  }
   .about-list {
     display: flex;
     overflow-x: scroll;

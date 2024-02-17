@@ -1,0 +1,181 @@
+.payment-card {
+  background-image: linear-gradient(to bottom right, #e48e51, #ffedad, #ffedad);
+  padding: 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.payment-cardnamelogo {
+  display: flex;
+  justify-content: space-between;
+}
+.card-logonumber {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card-number {
+  display: flex;
+  gap: 50px;
+}
+.card-numberone,
+.card-numbertwo,
+.card-numberthree,
+.card-numberfour {
+  width: 30px;
+  background: none;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+.owner-name,
+.card-expiredate,
+.owner-cvvnum {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+}
+.payment-two-cvv {
+  width: 40%;
+}
+.owner-nametitle,
+.owner-cardexptitle,
+.owner-cvvtitle {
+  font-size: 12px;
+  font-weight: bold;
+}
+.card-owner-details {
+  display: flex;
+  gap: 60px;
+}
+.owner-cardname,
+.owner-cardexpire,
+.owner-cardcvv {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #fff;
+}
+.payment-screen-one {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 20px 0px 20px;
+  background: #fff;
+  border-radius: 90%/160px 160px 0 0;
+}
+
+.payments-title {
+  color: #e957c9;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.payment-type {
+  display: flex;
+  align-items: center;
+  background: #372f62;
+  border-radius: 50px;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+.payment-type-texts {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.payment-select-btn {
+  color: #fff;
+  background-image: linear-gradient(to right, #e48e51, #e8d48f);
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 12px;
+}
+.payment-img-texts {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.payment-type-imgone {
+  width: 26%;
+}
+.payment-type-imgtwo {
+  width: 24%;
+}
+.payment-type-imgthree {
+  width: 24%;
+}
+.payment-type-imgfour {
+  width: 24%;
+}
+.payment-type-ttl1 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+.payment-type-ttl2 {
+  font-size: 12px;
+  color: #b4acac;
+  font-weight: 500;
+}
+.payment-screen-two {
+  background: #f3f1fd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 30px;
+  text-align: left;
+}
+.payment-two-title {
+  margin: 0;
+}
+.payment-two-cardnum,
+.payment-two-expdate,
+.payment-two-cvv,
+.payment-two-cardname {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #89878f;
+}
+.payment-two-cardnum:focus-visible,
+.payment-two-expdate:focus-visible,
+.payment-two-cvv:focus-visible,
+.payment-two-cardname:focus-visible {
+  outline: none;
+}
+.payment-two-datecvv {
+  display: flex;
+  gap: 10px;
+}
+.payment-two-addcard {
+  color: #fff;
+  background: #372f62;
+  padding: 14px 10px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.payment-card-fulldetail {
+  padding: 60px 20px;
+  background: #372f62;
+}
+.payment-screen {
+  background: #372f62;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -1px;
+}
+.payment-addcard-details {
+  padding: 20px;
+  background: #fff;
+}

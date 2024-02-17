@@ -51,31 +51,46 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px;
+    justify-content: space-between;
   }
+
   .hd-logo {
     height: 40px;
   }
 
   .hd-menu {
-    display: none; /* Hide on mobile */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: calc(100% + 10px); /* Position below the hamburger icon */
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
   }
   .hd-citymain {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: #fff;
     border-radius: 50px;
+    padding: 4px 6px;
+    gap: 10px;
   }
   .city-txt {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     background-image: linear-gradient(to right, #e4c17f, #e48e51);
     background-clip: text;
     color: transparent;
     white-space: nowrap;
     margin: 0;
+  }
+  .citypagenum {
+    font-size: 10px;
+    font-weight: bold;
+    color: #e957c9;
   }
   .citypagenum {
     color: #e957c9;
@@ -138,9 +153,10 @@
     box-shadow: -5px -5px 10px 0 #403672, 5px 5px 10px 0 #2d2653;
     padding: 6px 14px;
     border-radius: 20px;
+    cursor: pointer;
   }
 
-  .hd-menu.open {
+  .hd-menu.hd-open {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,6 +174,18 @@
     height: 130px;
     width: 300px;
     display: block;
+  }
+  .hd-cityimg {
+    border-radius: 30px;
+  }
+  .citypagenum .paginationdot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #d3b36c;
+    margin-right: 5px;
+    cursor: pointer;
   }
 }
 

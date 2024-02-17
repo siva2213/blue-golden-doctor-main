@@ -43,12 +43,19 @@ const Services = () => {
       }
     };
 
-    servicesParaRef.current.addEventListener("scroll", handleScroll);
+    const paraRef = servicesParaRef.current; // save a reference
+
+    if (paraRef) {
+      paraRef.addEventListener("scroll", handleScroll);
+    }
 
     return () => {
-      servicesParaRef.current.removeEventListener("scroll", handleScroll);
+      if (paraRef) {
+        paraRef.removeEventListener("scroll", handleScroll);
+      }
     };
-  }, []);
+  }, [servicesParaRef.current]);
+
 
   const toggleService = (service) => {
     switch (service) {

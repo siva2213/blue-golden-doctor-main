@@ -1,3 +1,8 @@
+.invoice-container,
+.invoice-doctor {
+  display: none;
+}
+
 @media only screen and (max-width: 767px) {
   .invoice-main {
     background: #372f62;
@@ -18,6 +23,7 @@
   .invoice-title {
     color: #e957c9;
     margin: 0;
+    text-align: left;
   }
   .invoice-details {
     display: flex;
@@ -40,15 +46,32 @@
   .invoice-coupon {
     color: #fff;
   }
-  .invoice-amount,
-  .invoice-coupon {
+  .invoice-amount {
     background: #372f62;
     border: none;
     text-align: right;
+    font-size: 12px;
   }
   .invoice-amount:focus-visible,
   .invoice-coupon:focus-visible {
     outline: none;
+  }
+  .invoice-coupon {
+    background-image: linear-gradient(to right, #e49457, #e7ca86);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border: none;
+    text-align: right;
+    font-size: 12px;
+  }
+  .couponcode {
+    background-image: linear-gradient(to right, #e49457, #e7ca86);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
   }
   .total-amount {
     box-shadow: -3px -3px 6px 0px #403672, 3px 3px 6px 3px #2d2653;

@@ -15,6 +15,17 @@
     overflow-y: hidden;
     scrollbar-width: none;
   }
+  .services-paragraphs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-paragraphs::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  .services-paragraphs::-webkit-scrollbar-track {
+    display: none;
+  }
   .services-paraone,
   .services-paratwo,
   .services-parathree {

@@ -8,13 +8,13 @@ import qrcode from "../../assets/qrcode.svg";
 import { MdOutlineStarBorder } from "react-icons/md";
 
 const Invoice = () => {
-  const [consultationFee, setConsultationFee] = useState(0);
-  const [serviceFee, setServiceFee] = useState(0);
-  const [technologyFee, setTechnologyFee] = useState(0);
-  const [testFee, setTestFee] = useState(0);
-  const [surgeryFee, setSurgeryFee] = useState(0);
-  const [medicineFee, setMedicineFee] = useState(0);
-  const [couponApplied, setCouponApplied] = useState(0);
+  const [consultationFee, setConsultationFee] = useState("Rs.1000");
+  const [serviceFee, setServiceFee] = useState("Rs.100");
+  const [technologyFee, setTechnologyFee] = useState("Rs.100");
+  const [testFee, setTestFee] = useState("-");
+  const [surgeryFee, setSurgeryFee] = useState("-");
+  const [medicineFee, setMedicineFee] = useState("-");
+  const [couponApplied, setCouponApplied] = useState("Rs.-100");
 
   const handleCouponApply = () => {
     if (!couponApplied) {
@@ -38,7 +38,7 @@ const Invoice = () => {
           <div className="invoice-item">
             <span className="invoice-fee">Consultation Fee:</span>
             <input
-              type="number"
+              type="text"
               value={consultationFee}
               onChange={(e) => setConsultationFee(Number(e.target.value))}
               placeholder="Rs."
@@ -48,7 +48,7 @@ const Invoice = () => {
           <div className="invoice-item">
             <span className="invoice-fee">Service Fee:</span>
             <input
-              type="number"
+              type="text"
               value={serviceFee}
               className="invoice-amount"
               onChange={(e) => setServiceFee(Number(e.target.value))}
@@ -57,7 +57,7 @@ const Invoice = () => {
           <div className="invoice-item">
             <span className="invoice-fee">Technology Fee:</span>
             <input
-              type="number"
+              type="text"
               value={technologyFee}
               className="invoice-amount"
               onChange={(e) => setTechnologyFee(Number(e.target.value))}
@@ -66,7 +66,7 @@ const Invoice = () => {
           <div className="invoice-item">
             <span className="invoice-fee">Test Fee:</span>
             <input
-              type="number"
+              type="text"
               value={testFee}
               className="invoice-amount"
               onChange={(e) => setTestFee(Number(e.target.value))}
@@ -75,7 +75,7 @@ const Invoice = () => {
           <div className="invoice-item">
             <span className="invoice-fee">Surgery Fee:</span>
             <input
-              type="number"
+              type="text"
               value={surgeryFee}
               className="invoice-amount"
               onChange={(e) => setSurgeryFee(Number(e.target.value))}
@@ -84,16 +84,18 @@ const Invoice = () => {
           <div className="invoice-item">
             <span className="invoice-fee">Medicine Fee:</span>
             <input
-              type="number"
+              type="text"
               value={medicineFee}
               className="invoice-amount"
               onChange={(e) => setMedicineFee(Number(e.target.value))}
             />
           </div>
           <div className="invoice-item">
-            <span className="invoice-fee">Coupon (CONSULT100)</span>
+            <span className="invoice-fee">
+              Coupon <span className="couponcode">(CONSULT100)</span>
+            </span>
             <input
-              type="number"
+              type="text"
               value={couponApplied}
               className="invoice-coupon"
               onChange={(e) => setCouponApplied(Number(e.target.value))}
@@ -101,7 +103,7 @@ const Invoice = () => {
           </div>
           <div className="total-amount">
             <span className="invoice-total-title">Total Amount:</span>
-            <span className="invoice-total-amount">Rs.{totalAmount}</span>
+            <span className="invoice-total-amount">Rs.1100</span>
           </div>
         </div>
       </div>
