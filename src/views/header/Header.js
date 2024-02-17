@@ -18,7 +18,10 @@ const Header = () => {
     setIsOpen(!isOpen);
     console.log(isOpen);
   };
-
+  const closeMenuAndDoSomething = () => {
+    setIsOpen(false);
+    // Add additional functionality here when a menu item is chosen
+  };
   return (
     <div className="hd-main">
       <div className="hd-hamburger" onClick={toggleMenu}>
@@ -33,20 +36,30 @@ const Header = () => {
 
       <div className={`hd-menu ${isOpen ? "hd-open" : "hd-close"}`}>
         <Link to="/blue-golden-doctor-main">
-          <button className="hd-btn1">Home</button>
+          <button className="hd-btn1" onClick={closeMenuAndDoSomething}>
+            Home
+          </button>
         </Link>
 
         <Link to="/Invoice">
-          <button className="hd-btn4">Invoice</button>
+          <button className="hd-btn4" onClick={closeMenuAndDoSomething}>
+            Invoice
+          </button>
         </Link>
         <Link to="/PaymentScreen">
-          <button className="hd-btn4">Payment Screen</button>
+          <button className="hd-btn4" onClick={closeMenuAndDoSomething}>
+            Payment Screen
+          </button>
         </Link>
         <Link to="/PaymentSuccess">
-          <button className="hd-btn4">Payment Success</button>
+          <button className="hd-btn4" onClick={closeMenuAndDoSomething}>
+            Payment Success
+          </button>
         </Link>
         <Link to="/OtherPayment">
-          <button className="hd-btn4">Other Payment</button>
+          <button className="hd-btn4" onClick={closeMenuAndDoSomething}>
+            Other Payment
+          </button>
         </Link>
         {/* <Link to="/aboutdoctor">
           <button className="hd-btn4">AboutDoctor</button>

@@ -30,6 +30,7 @@ function App() {
           <Route path="/specialists" element={<Specialists />} />
           <Route path="/aboutdoctor" element={<AboutDoctor />} />
           <Route path="/Availability" element={<Availability />} />
+          <Route path="/" element={<Content />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
