@@ -33,7 +33,7 @@
 .hd-btn1,
 .hd-btn2,
 .hd-btn3,
-.hd-btn4 {
+.hd-btn4{
   background: none;
   font-size: 24px;
   border: none;
@@ -55,7 +55,20 @@
   }
 
   .hd-logo {
-    height: 40px;
+    height: 36px;
+  }
+  .hd-btn1,
+  .hd-btn2,
+  .hd-btn3,
+  .hd-btn4,.hd-btn5,.hd-btn6,
+.hd-btn7,.hd-btn8,.hd-btn9  {
+    background: none;
+    font-size: 16px;
+    border: none;
+    font-weight: 600;
+    font-family: "League Spartan", sans-serif;
+    color: #ffffff;
+    text-align: left;
   }
 
   .hd-menu {
@@ -64,7 +77,8 @@
     position: fixed;
     top: calc(100% + 10px); /* Position below the hamburger icon */
     left: 0;
-    width: 250px;
+    width: fit-content;
+    padding: 20px;
     height: 100vh;
     background-color: #fff;
     z-index: 1000;
@@ -160,14 +174,39 @@
   .hd-menu.hd-open {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 30px;
     position: absolute;
-    top: 100px;
+    top: 110px;
     text-align: left;
     background: #372f62;
   }
+  .menuactive {
+    background-image: linear-gradient(to right, #e48e51, #e8d48f);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+  }
 
+  .citylist {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    /* max-height: 300px; */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .citylist::-webkit-scrollbar {
+    display: none; 
+  }
+  .cityitem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+  }
   .hd-header {
     position: absolute;
     right: 0;

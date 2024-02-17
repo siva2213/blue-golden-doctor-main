@@ -8,7 +8,7 @@ import dentist from "../../assets/dental.svg";
 import decay from "../../assets/decay.svg";
 import braces from "../../assets/braces.svg";
 import carbide from "../../assets/carbide.svg";
-import BookingModal from '../../components/Modal'
+import BookingModal from "../../components/Modal";
 
 const Services = () => {
   const [isActiveDental, setIsActiveDental] = useState(false);
@@ -51,13 +51,12 @@ const Services = () => {
       paraRef.addEventListener("scroll", handleScroll);
     }
 
-    return () => {
-      if (paraRef) {
-        paraRef.removeEventListener("scroll", handleScroll);
-      }
-    };
+    // return () => {
+    //   if (paraRef) {
+    //     paraRef.removeEventListener("scroll", handleScroll);
+    //   }
+    // };
   }, [servicesParaRef.current]);
-
 
   const toggleService = (service) => {
     switch (service) {
@@ -428,15 +427,13 @@ const Services = () => {
       </div>
       <div className="curve-colorone">
         <div className="curve-colortwo">
-          <button className="bk-btn" onClick={() => setModalShow(true)}>Start Booking</button>
+          <button className="bk-btn" onClick={() => setModalShow(true)}>
+            Start Booking
+          </button>
         </div>
       </div>
-      <div style={{ borderRadius: '35px' }}>
-        <BookingModal
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-
-        />
+      <div style={{ borderRadius: "35px" }}>
+        <BookingModal show={modalShow} onHide={() => setModalShow(false)} />
       </div>
     </div>
   );

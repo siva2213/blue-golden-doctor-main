@@ -32,7 +32,7 @@ const Pagination = ({
               backgroundColor:
                 currentPage === i + 1 ? dotActiveColor : dotInactiveColor,
             }}
-            onClick={() => handleClick(i + 1)}
+            // onClick={() => handleClick(i + 1)}
           ></span>
         ))}
       </div>

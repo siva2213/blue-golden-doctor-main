@@ -38,25 +38,26 @@ const AboutDoctor = () => {
       const scrollPosition = aboutListRef.current.scrollLeft;
       const scrollWidth = aboutListRef.current.scrollWidth;
       const clientWidth = aboutListRef.current.clientWidth;
-      const threshold = scrollWidth - clientWidth - 10; 
+      const threshold = scrollWidth - clientWidth - 10;
 
-       if (scrollPosition >= threshold) {
-      document.querySelector(".about-paragraphsthree").style.display = "block";
-      setDoctorPage(3); 
-    } else if (scrollPosition >= threshold / 2) {
-      document.querySelector(".about-paragraphstwo").style.display = "block";
-      setDoctorPage(2); 
-    } else {
-      document.querySelector(".about-paragraphsone").style.display = "block";
-      setDoctorPage(1); 
-    }
-  };
+      if (scrollPosition >= threshold) {
+        document.querySelector(".about-paragraphsthree").style.display =
+          "block";
+        setDoctorPage(3);
+      } else if (scrollPosition >= threshold / 2) {
+        document.querySelector(".about-paragraphstwo").style.display = "block";
+        setDoctorPage(2);
+      } else {
+        document.querySelector(".about-paragraphsone").style.display = "block";
+        setDoctorPage(1);
+      }
+    };
 
     aboutListRef.current.addEventListener("scroll", handleScroll);
 
-    return () => {
-      aboutListRef.current.removeEventListener("scroll", handleScroll);
-    };
+    // return () => {
+    //   aboutListRef.current.removeEventListener("scroll", handleScroll);
+    // };
   }, []);
 
   return (

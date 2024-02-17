@@ -107,9 +107,9 @@ const Specialists = () => {
 
     reviewListRef.current.addEventListener("scroll", handleScroll);
 
-    return () => {
-      reviewListRef.current.removeEventListener("scroll", handleScroll);
-    };
+    // return () => {
+    //   reviewListRef.current.removeEventListener("scroll", handleScroll);
+    // };
   }, []);
 
   return (
@@ -120,7 +120,7 @@ const Specialists = () => {
           <p className="spec-page">
             <Pagination
               currentPage={currentPage}
-              totalPages={totalPages}
+              totalPages={totalreviewPages}
               // onPageChange={handlePageChange}
               dotActiveColor="#fff"
               dotInactiveColor="#d3b36c"
