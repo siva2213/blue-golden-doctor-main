@@ -32,7 +32,7 @@ const Header = () => {
       <img src={header} alt="greoilc" className="hd-header" />
 
       <div className={`hd-menu ${isOpen ? "hd-open" : "hd-close"}`}>
-        <Link to="/">
+        <Link to="/blue-golden-doctor-main">
           <button className="hd-btn1">Home</button>
         </Link>
 

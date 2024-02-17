@@ -21,7 +21,7 @@ function App() {
         <TopAdvertisement />
         <Header />
         <Routes>
-          <Route path="/" element={<Content />} />
+          <Route path="/blue-golden-doctor-main" element={<Content />} />
           <Route path="/invoice" element={<Invoice />} />
           <Route path="/PaymentScreen" element={<PaymentScreen />} />
           <Route path="/PaymentSuccess" element={<SuccessScreen />} />
