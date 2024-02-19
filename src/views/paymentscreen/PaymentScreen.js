@@ -34,15 +34,15 @@ const PaymentSuccess = () => {
           </div>
           <div className="card-owner-details">
             <div className="owner-cardname">
-              <span className="owner-nametitle">Name</span>
+              <label className="owner-nametitle">Name</label>
               <input className="owner-name" value="Evelyn" />
             </div>
             <div className="owner-cardexpire">
-              <span className="owner-cardexptitle">Expire</span>
+              <label className="owner-cardexptitle">Expire</label>
               <input className="card-expiredate" value="03/25" />
             </div>
             <div className="owner-cardcvv">
-              <span className="owner-cvvtitle">CVV</span>
+              <label className="owner-cvvtitle">CVV</label>
               <input className="owner-cvvnum" value="544" />
             </div>
           </div>

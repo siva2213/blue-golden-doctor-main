@@ -47,7 +47,7 @@
   .about-paragraphsone,
   .about-paragraphstwo,
   .about-paragraphsthree {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
   }
   .aboutcontainer {
     display: flex;
