@@ -69,7 +69,7 @@ const Specialists = () => {
 
   // DOCTORS
   useEffect(() => {
-    const itemsPerPage = 2;
+    const itemsPerPage = 1;
     const totalItems = displayedDoctors.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
     setTotalPages(totalPages);
@@ -79,7 +79,6 @@ const Specialists = () => {
     const container = event.target;
     const containerWidth = container.offsetWidth;
     const scrollLeft = container.scrollLeft;
-    const totalWidth = container.scrollWidth;
     const currentPage = Math.ceil(
       (scrollLeft + containerWidth) / containerWidth
     );

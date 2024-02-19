@@ -25,15 +25,16 @@ const Header = () => {
     setActiveMenu(menuTitle);
   };
 
- useEffect(() => {
-   const citylist = [
-     { name: "50 Cities", image: city },
-     { name: "25 Cities", image: city },
-     { name: "40 Cities", image: city },
-   ];
-   setCityList(citylist);
-   setTotalPages(Math.ceil(citylist.length / itemsPerPage));
- }, []);
+  useEffect(() => {
+    const citylist = [
+      { name: "50 Cities", image: city },
+      { name: "25 Cities", image: city },
+      { name: "40 Cities", image: city },
+    ];
+    setCityList(citylist);
+    // setTotalPages(Math.ceil(citylist.length / itemsPerPage));
+
+  }, []);
 
   useEffect(() => {
     const itemsPerPage = 1;
@@ -46,11 +47,13 @@ const Header = () => {
     const container = event.target;
     const containerWidth = container.offsetWidth;
     const scrollLeft = container.scrollLeft;
-    const currentPage = Math.ceil(scrollLeft / containerWidth) + 1;
+    // const currentPage = Math.ceil(
+    //   (scrollLeft + containerWidth) / containerWidth
+    // );
+    const currentPage = Math.floor(scrollLeft / containerWidth) + 1;
     setCurrentPage(currentPage);
-  };
-  const itemsPerPage = 1;
 
+  };
   return (
     <div className="hd-main">
       <div className="hd-hamburger" onClick={toggleMenu}>
@@ -65,75 +68,48 @@ const Header = () => {
 
       <div className={`hd-menu ${isOpen ? "hd-open" : "hd-close"}`}>
         <Link to="/blue-golden-doctor-main">
-          <button
-            className="hd-btn1"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn1" onClick={closeMenuAndDoSomething}>
             Home
           </button>
         </Link>
 
         <Link to="/Invoice">
-          <button
-            className="hd-btn2"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn2" onClick={closeMenuAndDoSomething}>
             Invoice
           </button>
         </Link>
         <Link to="/PaymentScreen">
-          <button
-            className="hd-btn3"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn3" onClick={closeMenuAndDoSomething}>
             Payment Screen
           </button>
         </Link>
         <Link to="/PaymentSuccess">
-          <button
-            className="hd-btn4"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn4" onClick={closeMenuAndDoSomething}>
             Payment Success
           </button>
         </Link>
         <Link to="/OtherPayment">
-          <button
-            className="hd-btn5"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn5" onClick={closeMenuAndDoSomething}>
             Other Payment
           </button>
         </Link>
         <Link to="/aboutdoctor">
-          <button
-            className="hd-btn6"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn6" onClick={closeMenuAndDoSomething}>
             AboutDoctor
           </button>
         </Link>
         <Link to="/services">
-          <button
-            className="hd-btn7"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn7" onClick={closeMenuAndDoSomething}>
             Services
           </button>
         </Link>
         <Link to="/specialists">
-          <button
-            className="hd-btn8"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn8" onClick={closeMenuAndDoSomething}>
             Specialists
           </button>
         </Link>
         <Link to="/availability">
-          <button
-            className="hd-btn9"
-            onClick={closeMenuAndDoSomething}
-          >
+          <button className="hd-btn9" onClick={closeMenuAndDoSomething}>
             Availability
           </button>
         </Link>
@@ -144,7 +120,7 @@ const Header = () => {
       <div className="hd-citymain">
         <div onScroll={handleScroll} className="citylist">
           {cityList
-            .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+            // .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
             .map((city, index) => (
               <div key={index} className="cityitem">
                 <img src={city.image} className="hd-cityimg" alt={city.name} />

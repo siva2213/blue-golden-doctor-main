@@ -33,7 +33,7 @@
 .hd-btn1,
 .hd-btn2,
 .hd-btn3,
-.hd-btn4{
+.hd-btn4 {
   background: none;
   font-size: 24px;
   border: none;
@@ -47,21 +47,39 @@
 /* media query */
 @media only screen and (max-width: 767px) {
   .hd-main {
-    padding: 20px 20px;
+    padding: 20px 10px;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
   }
+  .hd-citymain {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    /* Add any other necessary styles */
+  }
 
+  .citylist {
+    display: flex;
+    /* Add any other necessary styles */
+  }
+
+  /* Adjust the width of city items as needed */
+  .cityitem {
+    margin-right: 20px; /* Add some spacing between city items */
+  }
   .hd-logo {
     height: 36px;
   }
   .hd-btn1,
   .hd-btn2,
   .hd-btn3,
-  .hd-btn4,.hd-btn5,.hd-btn6,
-.hd-btn7,.hd-btn8,.hd-btn9  {
+  .hd-btn4,
+  .hd-btn5,
+  .hd-btn6,
+  .hd-btn7,
+  .hd-btn8,
+  .hd-btn9 {
     background: none;
     font-size: 16px;
     border: none;
@@ -197,15 +215,16 @@
     /* max-height: 300px; */
     scrollbar-width: none;
     -ms-overflow-style: none;
+    width: 110px;
   }
   .citylist::-webkit-scrollbar {
-    display: none; 
+    display: none;
   }
   .cityitem {
     display: flex;
     align-items: center;
     gap: 10px;
-    overflow-x: auto;
+    margin: 0;
   }
   .hd-header {
     position: absolute;
