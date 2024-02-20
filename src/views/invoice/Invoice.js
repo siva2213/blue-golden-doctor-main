@@ -157,7 +157,9 @@ const Invoice = () => {
               <span className="coupon-title">
                 Get Rs.100 OFF on technology fee
               </span>
-              <button className="coupon-btn">Selected</button>
+              <span className="coupon-btn-cntr">
+                <button className="coupon-btn">Selected</button>
+              </span>
             </div>
           </div>
           <div className="coupon-row">
@@ -169,7 +171,9 @@ const Invoice = () => {
               <span className="coupon-title">
                 Get Rs.100 OFF on technology fee
               </span>
-              <button className="coupon-btn">Select</button>
+              <span className="coupon-btn-cntr">
+                <button className="coupon-btn">Select</button>
+              </span>
             </div>
           </div>
           <div className="coupon-row">
@@ -181,7 +185,9 @@ const Invoice = () => {
               <span className="coupon-title">
                 Get Rs.100 OFF on technology fee
               </span>
-              <button className="coupon-btn">Select</button>
+              <span className="coupon-btn-cntr">
+                <button className="coupon-btn">Select</button>
+              </span>
             </div>
           </div>
         </div>

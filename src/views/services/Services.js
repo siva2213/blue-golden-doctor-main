@@ -91,6 +91,8 @@ const Services = () => {
         </div>
       </div>
       <hr style={{ width: "90vw", border: "0.2px solid #726D8E" }} />
+
+
       <div className="services-paragraphs" ref={servicesParaRef}>
         <div className="services-paraone">
           <div
@@ -102,7 +104,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Dental Crown</div>
+                <span className="title">Dental Crown</span>
               </div>
               {isActiveDental && (
                 <div className="content">
@@ -129,7 +131,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Decayed Tooth</div>
+                <span className="title">Decayed Tooth</span>
               </div>
               {isActiveDecay && (
                 <div className="content">
@@ -156,7 +158,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Dental Braces</div>
+                <span className="title">Dental Braces</span>
               </div>
               {isActiveBraces && (
                 <div className="content">
@@ -183,7 +185,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Carbide Finishing Bur</div>
+                <span className="title">Carbide Finishing Bur</span>
               </div>
               {isActiveCarbide && (
                 <div className="content">
@@ -213,7 +215,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Dental Crown</div>
+                <span className="title">Dental Crown</span>
               </div>
               {isActiveDental && (
                 <div className="content">
@@ -240,7 +242,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Decayed Tooth</div>
+                <span className="title">Decayed Tooth</span>
               </div>
               {isActiveDecay && (
                 <div className="content">
@@ -267,7 +269,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Dental Braces</div>
+                <span className="title">Dental Braces</span>
               </div>
               {isActiveBraces && (
                 <div className="content">
@@ -294,7 +296,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Carbide Finishing Bur</div>
+                <span className="title">Carbide Finishing Bur</span>
               </div>
               {isActiveCarbide && (
                 <div className="content">
@@ -323,7 +325,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Dental Crown</div>
+                <span className="title">Dental Crown</span>
               </div>
               {isActiveDental && (
                 <div className="content">
@@ -350,7 +352,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Decayed Tooth</div>
+                <span className="title">Decayed Tooth</span>
               </div>
               {isActiveDecay && (
                 <div className="content">
@@ -377,7 +379,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Dental Braces</div>
+                <span className="title">Dental Braces</span>
               </div>
               {isActiveBraces && (
                 <div className="content">
@@ -404,7 +406,7 @@ const Services = () => {
                 style={{ display: "flex", alignItems: "center", gap: "20px" }}
               >
                 <img src={tooth} className="icon" />
-                <div className="title">Carbide Finishing Bur</div>
+                <span className="title">Carbide Finishing Bur</span>
               </div>
               {isActiveCarbide && (
                 <div className="content">
@@ -425,6 +427,8 @@ const Services = () => {
           <hr style={{ width: "90vw", color: "#615f6f" }} />
         </div>
       </div>
+
+
       <div className="curve-colorone">
         <div className="curve-colortwo">
           <button className="bk-btn" onClick={() => setModalShow(true)}>

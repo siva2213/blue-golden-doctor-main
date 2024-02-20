@@ -40,10 +40,7 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-
-  .about-list::-webkit-scrollbar {
-    display: none;
-  }
+  
   .about-paragraphsone,
   .about-paragraphstwo,
   .about-paragraphsthree {

@@ -6,7 +6,7 @@
   .ser-main {
     /* Add CSS properties to enable horizontal scrolling */
     overflow-x: auto;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
 
   .services-paragraphs {
@@ -14,6 +14,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   .services-paragraphs::-webkit-scrollbar {
     display: none;
@@ -29,16 +30,24 @@
   .services-paraone,
   .services-paratwo,
   .services-parathree {
-    width: 100%;
+    /* width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
     /* padding: 20px; */
+    padding: 0 20px 20px 20px;
+
   }
 
-  .container {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 20px;
+   .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* padding: 0px 10px;
+    margin-right: 20px; */
+
   }
 
   .ser-main {
@@ -55,15 +64,7 @@
     font-size: 30px;
     color: #e957c9;
   }
-  .container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 0px 10px;
-  }
+ 
   .ser-page {
     color: #e957c9;
     font-size: 16px;
