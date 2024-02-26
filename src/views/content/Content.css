@@ -182,8 +182,9 @@
     top: -1px;
   }
   .cnt-right-res {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    display: none;
   }
 
   .src-input {

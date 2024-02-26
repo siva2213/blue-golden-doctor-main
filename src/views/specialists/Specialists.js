@@ -1,25 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect} from "react";
 import "./Specialists.css";
 import boy from "../../assets/boy.png";
 import medicine from "../../assets/medicine.svg";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaAward, FaTooth } from "react-icons/fa6";
 import { PiHeadsetFill } from "react-icons/pi";
-import ReactStars from "react-rating-stars-component";
 import person from "../../assets/person.png";
 import Pagination from "../../components/Pagination";
-import dentistone from "../../assets/dentistone.svg";
-import dentisttwo from "../../assets/dentisttwo.svg";
-import layer from "../../assets/layer.svg";
-import reviewimg from "../../assets/reviewimg.svg";
 
 const Specialists = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [reviewPage, setReviewPage] = useState(1);
   const [displayedDoctors, setDisplayedDoctors] = useState([]);
   const totalreviewPages = 3;
-  const reviewListRef = useRef(null);
 
   useEffect(() => {
     const doctorList = [
@@ -85,31 +78,7 @@ const Specialists = () => {
     setCurrentPage(currentPage);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = reviewListRef.current.scrollLeft;
-      const scrollWidth = reviewListRef.current.scrollWidth;
-      const clientWidth = reviewListRef.current.clientWidth;
-      const threshold = scrollWidth - clientWidth - 10;
-
-      if (scrollPosition >= threshold) {
-        document.querySelector(".reviews-cust-three").style.display = "flex";
-        setReviewPage(3);
-      } else if (scrollPosition >= threshold / 2) {
-        document.querySelector(".reviews-cust-two").style.display = "flex";
-        setReviewPage(2);
-      } else {
-        document.querySelector(".reviews-cust-one").style.display = "flex";
-        setReviewPage(1);
-      }
-    };
-
-    reviewListRef.current.addEventListener("scroll", handleScroll);
-
-    // return () => {
-    //   reviewListRef.current.removeEventListener("scroll", handleScroll);
-    // };
-  }, []);
+ 
 
   return (
     <div className="spec-main">
@@ -177,175 +146,7 @@ const Specialists = () => {
             <p className="amenities">24/7 Support</p>
           </div>
         </div>
-        <div className="reviews">
-          <div className="rev-ttl">
-            <p className="rev-ttl1">1800+ Reviews</p>
-            <p className="rev-ttl2">
-              <Pagination
-                currentPage={reviewPage}
-                totalPages={totalreviewPages}
-                dotActiveColor="#E957C9"
-                dotInactiveColor="#fff"
-              />
-            </p>
-          </div>
-          <div ref={reviewListRef} className="reviews-list">
-            <div className="reviews-cust-one">
-              <div className="rev-customersone">
-                <img className="cus-imgone" src={reviewimg} />
-
-                <div className="cust-detail">
-                  <p className="cust-name">Melvin Dennis</p>
-                  <ReactStars
-                    count={5}
-                    // onChange={ratingChanged}
-                    size={24}
-                    activeColor="#E957C9"
-                    value={5}
-                    color="#E957C9"
-                  />
-                  <p className="cust-cnt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
-                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
-                    sollicitudin lacus, ut interdum tellus elit sed risus. Est
-                    an maecenas eget condimentum velit.
-                  </p>
-                </div>
-              </div>
-
-              <div className="rev-customerstwo">
-                <img className="cus-imgtwo" src={dentisttwo} />
-                <div className="cust-detail">
-                  <p className="cust-name">Veronica Rees</p>
-                  <ReactStars
-                    count={5}
-                    // onChange={ratingChanged}
-                    size={24}
-                    activeColor="#E957C9"
-                    value={5}
-                    color="#E957C9"
-                  />
-                  <p className="cust-cnt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
-                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
-                    sollicitudin lacus, ut interdum tellus elit sed risus. Est
-                    an maecenas eget condimentum velit.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="reviews-cust-two">
-              <div className="rev-customersone">
-                <img
-                  className="cus-imgone"
-                  src={reviewimg}
-                  alt="customer-image"
-                />
-
-                <div className="cust-detail">
-                  <p className="cust-name">Melvin Dennis</p>
-                  <ReactStars
-                    count={5}
-                    // onChange={ratingChanged}
-                    size={24}
-                    activeColor="#E957C9"
-                    value={5}
-                    color="#E957C9"
-                  />
-                  <p className="cust-cnt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
-                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
-                    sollicitudin lacus, ut interdum tellus elit sed risus. Est
-                    an maecenas eget condimentum velit.
-                  </p>
-                </div>
-              </div>
-
-              <div className="rev-customerstwo">
-                <img
-                  className="cus-imgtwo"
-                  src={dentisttwo}
-                  alt="customer-image"
-                />
-                <div className="cust-detail">
-                  <p className="cust-name">Veronica Rees</p>
-                  <ReactStars
-                    count={5}
-                    // onChange={ratingChanged}
-                    size={24}
-                    activeColor="#E957C9"
-                    value={5}
-                    color="#E957C9"
-                  />
-                  <p className="cust-cnt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
-                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
-                    sollicitudin lacus, ut interdum tellus elit sed risus. Est
-                    an maecenas eget condimentum velit.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="reviews-cust-three">
-              <div className="rev-customersone">
-                <img
-                  className="cus-imgone"
-                  src={reviewimg}
-                  alt="customer-image"
-                />
-
-                <div className="cust-detail">
-                  <p className="cust-name">Melvin Dennis</p>
-                  <ReactStars
-                    count={5}
-                    // onChange={ratingChanged}
-                    size={24}
-                    activeColor="#E957C9"
-                    value={5}
-                    color="#E957C9"
-                  />
-                  <p className="cust-cnt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
-                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
-                    sollicitudin lacus, ut interdum tellus elit sed risus. Est
-                    an maecenas eget condimentum velit.
-                  </p>
-                </div>
-              </div>
-
-              <div className="rev-customerstwo">
-                <img
-                  className="cus-imgtwo"
-                  src={dentisttwo}
-                  alt="customer-image"
-                />
-                <div className="cust-detail">
-                  <p className="cust-name">Veronica Rees</p>
-                  <ReactStars
-                    count={5}
-                    // onChange={ratingChanged}
-                    size={24}
-                    activeColor="#E957C9"
-                    value={5}
-                    color="#E957C9"
-                  />
-                  <p className="cust-cnt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
-                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
-                    sollicitudin lacus, ut interdum tellus elit sed risus. Est
-                    an maecenas eget condimentum velit.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );

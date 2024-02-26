@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "./PaymentScreen.css";
 import cash from "../../assets/cash.svg";
 import upi from "../../assets/upi.svg";
@@ -8,6 +8,14 @@ import cardname from "../../assets/cardname.svg";
 import cardlogo from "../../assets/cardlogo.svg";
 
 const PaymentSuccess = () => {
+
+    const [selectedPayment, setSelectedPayment] = useState(null);
+
+    const handleSelect = (paymentType) => {
+      setSelectedPayment(paymentType);
+  };
+  
+
   return (
     <div className="payment-screen">
       <div className="payment-card-fulldetail">

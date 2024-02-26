@@ -93,7 +93,7 @@ const Header = () => {
             Other Payment
           </button>
         </Link>
-        <Link to="/aboutdoctor">
+        {/* <Link to="/aboutdoctor">
           <button className="hd-btn6" onClick={closeMenuAndDoSomething}>
             AboutDoctor
           </button>
@@ -112,7 +112,7 @@ const Header = () => {
           <button className="hd-btn9" onClick={closeMenuAndDoSomething}>
             Availability
           </button>
-        </Link>
+        </Link> */}
         {/* <button className="hd-btn2">Services</button>
           <button className="hd-btn3">Booking</button>
           <button className="hd-btn4">Contact</button> */}

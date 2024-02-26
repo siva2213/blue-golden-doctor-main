@@ -17,16 +17,17 @@
 }
 .card-number {
   display: flex;
-  gap: 50px;
+  gap: 20px;
 }
 .card-numberone,
 .card-numbertwo,
 .card-numberthree,
 .card-numberfour {
-  width: 30px;
+  width: 46px;
   background: none;
   color: #fff;
   border: none;
+  font-size: 20px;
   font-weight: 600;
   font-family: "League Spartan", sans-serif;
 }
@@ -36,6 +37,7 @@
   background: none;
   border: none;
   color: #fff;
+  font-size: 20px;
   font-weight: bold;
   width: 100%;
   font-family: "League Spartan", sans-serif;
@@ -46,12 +48,12 @@
 .owner-nametitle,
 .owner-cardexptitle,
 .owner-cvvtitle {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 .card-owner-details {
   display: flex;
-  gap: 60px;
+  gap: 50px;
 }
 .owner-cardname,
 .owner-cardexpire,
@@ -130,7 +132,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   border-radius: 30px;
   text-align: left;
 }
@@ -144,7 +146,7 @@
   padding: 10px;
   border-radius: 20px;
   border: none;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: #89878f;
   font-family: "League Spartan", sans-serif;

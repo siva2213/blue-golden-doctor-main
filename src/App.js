@@ -21,16 +21,16 @@ function App() {
         <TopAdvertisement />
         <Header />
         <Routes>
-          <Route path="/blue-golden-doctor-main" element={<Content />} />
+          <Route path="/blue-golden-doctor-main" element={<Services />} />
           <Route path="/invoice" element={<Invoice />} />
           <Route path="/PaymentScreen" element={<PaymentScreen />} />
           <Route path="/PaymentSuccess" element={<SuccessScreen />} />
           <Route path="/OtherPayment" element={<OtherPayment />} />
-          <Route path="/services" element={<Services />} />
+          {/* <Route path="/services" element={<Services />} />
           <Route path="/specialists" element={<Specialists />} />
           <Route path="/aboutdoctor" element={<AboutDoctor />} />
-          <Route path="/Availability" element={<Availability />} />
-          <Route path="/" element={<Content />} />
+          <Route path="/Availability" element={<Availability />} /> */}
+          <Route path="/" element={<Services />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -9,6 +9,10 @@ import decay from "../../assets/decay.svg";
 import braces from "../../assets/braces.svg";
 import carbide from "../../assets/carbide.svg";
 import BookingModal from "../../components/Modal";
+import Content from "../content/Content";
+import Specialists from "../specialists/Specialists";
+import Availability from "../availability/Availability";
+import Reviews from "../reviews/Reviews";
 
 const Services = () => {
   const [isActiveDental, setIsActiveDental] = useState(false);
@@ -78,367 +82,371 @@ const Services = () => {
   };
 
   return (
-    <div className="ser-main">
-      <div className="ser-top">
-        <h2 className="ser-ttl">Our Services</h2>
-        <div className="ser-page">
-          <Pagination
-            currentPage={servicePage}
-            totalPages={totalServicePages}
-            dotActiveColor="#E957C9"
-            dotInactiveColor="#DDDDDD"
-          />
+    <div>
+      <Content />
+      <div className="ser-main">
+        <div className="ser-top">
+          <h2 className="ser-ttl">Our Services</h2>
+          <div className="ser-page">
+            <Pagination
+              currentPage={servicePage}
+              totalPages={totalServicePages}
+              dotActiveColor="#E957C9"
+              dotInactiveColor="#DDDDDD"
+            />
+          </div>
+        </div>
+        <hr style={{ width: "90vw", border: "0.2px solid #726D8E" }} />
+
+        <div className="services-paragraphs" ref={servicesParaRef}>
+          <div className="services-paraone">
+            <div
+              className={`container ${isActiveDental ? "ser-active" : ""}`}
+              onClick={() => toggleService("dental")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Dental Crown</span>
+                </div>
+                {isActiveDental && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={dentist}
+                alt="Image"
+                className={isActiveDental ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveDecay ? "ser-active" : ""}`}
+              onClick={() => toggleService("decay")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Decayed Tooth</span>
+                </div>
+                {isActiveDecay && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={decay}
+                alt="Image"
+                className={isActiveDecay ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveBraces ? "ser-active" : ""}`}
+              onClick={() => toggleService("braces")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Dental Braces</span>
+                </div>
+                {isActiveBraces && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={braces}
+                alt="Image"
+                className={isActiveBraces ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveCarbide ? "ser-active" : ""}`}
+              onClick={() => toggleService("carbide")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Carbide Finishing Bur</span>
+                </div>
+                {isActiveCarbide && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              {/* <img src={carbide} alt="Image" className="imageservice" /> */}
+              <img
+                src={carbide}
+                alt="Dentist Image"
+                className={isActiveCarbide ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+          </div>
+          <div className="services-paratwo">
+            <div
+              className={`container ${isActiveDental ? "ser-active" : ""}`}
+              onClick={() => toggleService("dental")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Dental Crown</span>
+                </div>
+                {isActiveDental && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={dentist}
+                alt="Image"
+                className={isActiveDental ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveDecay ? "ser-active" : ""}`}
+              onClick={() => toggleService("decay")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Decayed Tooth</span>
+                </div>
+                {isActiveDecay && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={decay}
+                alt="Image"
+                className={isActiveDecay ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveBraces ? "ser-active" : ""}`}
+              onClick={() => toggleService("braces")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Dental Braces</span>
+                </div>
+                {isActiveBraces && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={braces}
+                alt="Image"
+                className={isActiveBraces ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveCarbide ? "ser-active" : ""}`}
+              onClick={() => toggleService("carbide")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Carbide Finishing Bur</span>
+                </div>
+                {isActiveCarbide && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={carbide}
+                alt="Dentist Image"
+                className={isActiveCarbide ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+          </div>
+          <div className="services-parathree">
+            <div
+              className={`container ${isActiveDental ? "ser-active" : ""}`}
+              onClick={() => toggleService("dental")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Dental Crown</span>
+                </div>
+                {isActiveDental && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={dentist}
+                alt="Image"
+                className={isActiveDental ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveDecay ? "ser-active" : ""}`}
+              onClick={() => toggleService("decay")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Decayed Tooth</span>
+                </div>
+                {isActiveDecay && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={decay}
+                alt="Image"
+                className={isActiveDecay ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveBraces ? "ser-active" : ""}`}
+              onClick={() => toggleService("braces")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Dental Braces</span>
+                </div>
+                {isActiveBraces && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              <img
+                src={braces}
+                alt="Image"
+                className={isActiveBraces ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+            <div
+              className={`container ${isActiveCarbide ? "ser-active" : ""}`}
+              onClick={() => toggleService("carbide")}
+            >
+              <div className="ser-icttl">
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <img src={tooth} className="icon" />
+                  <span className="title">Carbide Finishing Bur</span>
+                </div>
+                {isActiveCarbide && (
+                  <div className="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam eu turpis amet molestie, dictum est a, mattis tellus.
+                    Sed dignissim, metus nec fringilla egets accumsan, risus sem
+                    sollicitudin lacus.
+                  </div>
+                )}
+              </div>
+              {/* <img src={carbide} alt="Image" className="imageservice" /> */}
+              <img
+                src={carbide}
+                alt="Dentist Image"
+                className={isActiveCarbide ? "imageenlarge" : "imageservice"}
+              />
+            </div>
+            <hr style={{ width: "90vw", color: "#615f6f" }} />
+          </div>
+        </div>
+
+        <div className="curve-colorone">
+          <div className="curve-colortwo">
+            <button className="bk-btn" onClick={() => setModalShow(true)}>
+              Start Booking
+            </button>
+          </div>
+        </div>
+        <div style={{ borderRadius: "35px" }}>
+          <BookingModal show={modalShow} onHide={() => setModalShow(false)} />
         </div>
       </div>
-      <hr style={{ width: "90vw", border: "0.2px solid #726D8E" }} />
-
-
-      <div className="services-paragraphs" ref={servicesParaRef}>
-        <div className="services-paraone">
-          <div
-            className={`container ${isActiveDental ? "ser-active" : ""}`}
-            onClick={() => toggleService("dental")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Dental Crown</span>
-              </div>
-              {isActiveDental && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={dentist}
-              alt="Image"
-              className={isActiveDental ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveDecay ? "ser-active" : ""}`}
-            onClick={() => toggleService("decay")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Decayed Tooth</span>
-              </div>
-              {isActiveDecay && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={decay}
-              alt="Image"
-              className={isActiveDecay ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveBraces ? "ser-active" : ""}`}
-            onClick={() => toggleService("braces")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Dental Braces</span>
-              </div>
-              {isActiveBraces && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={braces}
-              alt="Image"
-              className={isActiveBraces ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveCarbide ? "ser-active" : ""}`}
-            onClick={() => toggleService("carbide")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Carbide Finishing Bur</span>
-              </div>
-              {isActiveCarbide && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            {/* <img src={carbide} alt="Image" className="imageservice" /> */}
-            <img
-              src={carbide}
-              alt="Dentist Image"
-              className={isActiveCarbide ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-        </div>
-        <div className="services-paratwo">
-          <div
-            className={`container ${isActiveDental ? "ser-active" : ""}`}
-            onClick={() => toggleService("dental")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Dental Crown</span>
-              </div>
-              {isActiveDental && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={dentist}
-              alt="Image"
-              className={isActiveDental ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveDecay ? "ser-active" : ""}`}
-            onClick={() => toggleService("decay")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Decayed Tooth</span>
-              </div>
-              {isActiveDecay && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={decay}
-              alt="Image"
-              className={isActiveDecay ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveBraces ? "ser-active" : ""}`}
-            onClick={() => toggleService("braces")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Dental Braces</span>
-              </div>
-              {isActiveBraces && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={braces}
-              alt="Image"
-              className={isActiveBraces ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveCarbide ? "ser-active" : ""}`}
-            onClick={() => toggleService("carbide")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Carbide Finishing Bur</span>
-              </div>
-              {isActiveCarbide && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={carbide}
-              alt="Dentist Image"
-              className={isActiveCarbide ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-        </div>
-        <div className="services-parathree">
-          <div
-            className={`container ${isActiveDental ? "ser-active" : ""}`}
-            onClick={() => toggleService("dental")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Dental Crown</span>
-              </div>
-              {isActiveDental && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={dentist}
-              alt="Image"
-              className={isActiveDental ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveDecay ? "ser-active" : ""}`}
-            onClick={() => toggleService("decay")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Decayed Tooth</span>
-              </div>
-              {isActiveDecay && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={decay}
-              alt="Image"
-              className={isActiveDecay ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveBraces ? "ser-active" : ""}`}
-            onClick={() => toggleService("braces")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Dental Braces</span>
-              </div>
-              {isActiveBraces && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            <img
-              src={braces}
-              alt="Image"
-              className={isActiveBraces ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-          <div
-            className={`container ${isActiveCarbide ? "ser-active" : ""}`}
-            onClick={() => toggleService("carbide")}
-          >
-            <div className="ser-icttl">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
-              >
-                <img src={tooth} className="icon" />
-                <span className="title">Carbide Finishing Bur</span>
-              </div>
-              {isActiveCarbide && (
-                <div className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis amet molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla egets accumsan, risus sem
-                  sollicitudin lacus.
-                </div>
-              )}
-            </div>
-            {/* <img src={carbide} alt="Image" className="imageservice" /> */}
-            <img
-              src={carbide}
-              alt="Dentist Image"
-              className={isActiveCarbide ? "imageenlarge" : "imageservice"}
-            />
-          </div>
-          <hr style={{ width: "90vw", color: "#615f6f" }} />
-        </div>
-      </div>
-
-
-      <div className="curve-colorone">
-        <div className="curve-colortwo">
-          <button className="bk-btn" onClick={() => setModalShow(true)}>
-            Start Booking
-          </button>
-        </div>
-      </div>
-      <div style={{ borderRadius: "35px" }}>
-        <BookingModal show={modalShow} onHide={() => setModalShow(false)} />
-      </div>
+      <Specialists />
+      <Reviews />
+      <Availability />
     </div>
   );
 };
