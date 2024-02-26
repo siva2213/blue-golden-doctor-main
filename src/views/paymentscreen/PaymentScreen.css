@@ -50,10 +50,12 @@
 .owner-cvvtitle {
   font-size: 14px;
   font-weight: bold;
+  margin-left: 2px;
 }
 .card-owner-details {
   display: flex;
-  gap: 50px;
+  /* gap: 50px; */
+  justify-content: space-between;
 }
 .owner-cardname,
 .owner-cardexpire,
@@ -62,6 +64,7 @@
   flex-direction: column;
   text-align: left;
   color: #fff;
+  gap: 4px;
 }
 .payment-screen-one {
   display: flex;
