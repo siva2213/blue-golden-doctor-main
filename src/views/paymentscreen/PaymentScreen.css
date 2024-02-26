@@ -4,7 +4,7 @@
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 80px;
 }
 .payment-cardnamelogo {
   display: flex;
@@ -81,7 +81,7 @@
   align-items: center;
   background: #372f62;
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 16px 20px;
   justify-content: space-between;
 }
 .payment-type-texts {
@@ -169,7 +169,7 @@
   font-size: 16px;
 }
 .payment-card-fulldetail {
-  padding: 60px 20px;
+  padding: 60px 30px;
   background: #372f62;
 }
 .payment-screen {

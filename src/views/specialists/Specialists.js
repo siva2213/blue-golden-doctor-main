@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Specialists.css";
-import boy from "../../assets/boy.svg";
+import boy from "../../assets/boy.png";
 import medicine from "../../assets/medicine.svg";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaAward, FaTooth } from "react-icons/fa6";
