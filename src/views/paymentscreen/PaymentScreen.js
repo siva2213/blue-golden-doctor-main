@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./PaymentScreen.css";
 import cash from "../../assets/cash.svg";
 import upi from "../../assets/upi.svg";
@@ -8,13 +8,15 @@ import cardname from "../../assets/cardname.svg";
 import cardlogo from "../../assets/cardlogo.svg";
 
 const PaymentSuccess = () => {
+  const [selectedPayment, setSelectedPayment] = useState(null);
 
-    const [selectedPayment, setSelectedPayment] = useState(null);
-
-    const handleSelect = (paymentType) => {
+  const handleSelect = (paymentType) => {
+    if (selectedPayment === paymentType) {
+      setSelectedPayment(null);
+    } else {
       setSelectedPayment(paymentType);
+    }
   };
-  
 
   return (
     <div className="payment-screen">
@@ -66,7 +68,16 @@ const PaymentSuccess = () => {
               <span className="payment-type-ttl2">Pay with cash</span>
             </div>
           </div>
-          <button className="payment-select-btn">Selected</button>
+          <button
+            className={
+              selectedPayment === "cash"
+                ? "payment-select-btn selected"
+                : "payment-select-btn"
+            }
+            onClick={() => handleSelect("cash")}
+          >
+            {selectedPayment === "cash" ? "Selected" : "Select"}
+          </button>
         </div>
 
         <div className="payment-type">
@@ -78,7 +89,16 @@ const PaymentSuccess = () => {
             </div>
           </div>
 
-          <button className="payment-select-btn">Selected</button>
+          <button
+            className={
+              selectedPayment === "upi"
+                ? "payment-select-btn selected"
+                : "payment-select-btn"
+            }
+            onClick={() => handleSelect("upi")}
+          >
+            {selectedPayment === "upi" ? "Selected" : "Select"}
+          </button>
         </div>
         <div className="payment-type">
           <div className="payment-img-texts">
@@ -93,7 +113,16 @@ const PaymentSuccess = () => {
             </div>
           </div>
 
-          <button className="payment-select-btn">Selected</button>
+          <button
+            className={
+              selectedPayment === "netBanking"
+                ? "payment-select-btn selected"
+                : "payment-select-btn"
+            }
+            onClick={() => handleSelect("netBanking")}
+          >
+            {selectedPayment === "netBanking" ? "Selected" : "Select"}
+          </button>
         </div>
         <div className="payment-type">
           <div className="payment-img-texts">
@@ -104,7 +133,16 @@ const PaymentSuccess = () => {
             </div>
           </div>
 
-          <button className="payment-select-btn">Selected</button>
+          <button
+            className={
+              selectedPayment === "wallet"
+                ? "payment-select-btn selected"
+                : "payment-select-btn"
+            }
+            onClick={() => handleSelect("wallet")}
+          >
+            {selectedPayment === "wallet" ? "Selected" : "Select"}
+          </button>
         </div>
       </div>
       <div className="payment-addcard-details">
