@@ -8,6 +8,7 @@ import qrcode from "../../assets/qrcode.svg";
 import { MdOutlineStarBorder } from "react-icons/md";
 import AboutDoctor from "../aboutdoctor/AboutDoctor";
 import Reviews from "../reviews/Reviews";
+import PaymentFooter from "../paymentfooter/PaymentFooter";
 
 const Invoice = () => {
   const [consultationFee, setConsultationFee] = useState("Rs.1000");
@@ -17,6 +18,7 @@ const Invoice = () => {
   const [surgeryFee, setSurgeryFee] = useState("-");
   const [medicineFee, setMedicineFee] = useState("-");
   const [couponApplied, setCouponApplied] = useState("Rs.-100");
+  const [selectedCoupon, setSelectedCoupon] = useState({});
 
   const handleCouponApply = () => {
     if (!couponApplied) {
@@ -31,6 +33,19 @@ const Invoice = () => {
     testFee +
     surgeryFee +
     medicineFee;
+
+  const handleCouponSelect = (couponCode) => {
+    setSelectedCoupon((prevSelected) => {
+      if (prevSelected[couponCode]) {
+        const updatedSelected = { ...prevSelected };
+        delete updatedSelected[couponCode];
+        return updatedSelected;
+      } else {
+        const updatedSelected = { [couponCode]: true };
+        return updatedSelected;
+      }
+    });
+  };
 
   return (
     <>
@@ -161,7 +176,18 @@ const Invoice = () => {
                   Get Rs.100 OFF on technology fee
                 </span>
                 <span className="coupon-btn-cntr">
-                  <button className="coupon-btn">Selected</button>
+                  <button
+                    className={`coupon-btn ${
+                      selectedCoupon && selectedCoupon["CONSULT100"]
+                        ? "selected"
+                        : ""
+                    }`}
+                    onClick={() => handleCouponSelect("CONSULT100")}
+                  >
+                    {selectedCoupon && selectedCoupon["CONSULT100"]
+                      ? "Selected"
+                      : "Select"}
+                  </button>
                 </span>
               </div>
             </div>
@@ -175,7 +201,18 @@ const Invoice = () => {
                   Get Rs.100 OFF on technology fee
                 </span>
                 <span className="coupon-btn-cntr">
-                  <button className="coupon-btn">Select</button>
+                  <button
+                    className={`coupon-btn ${
+                      selectedCoupon && selectedCoupon["CONSULT150"]
+                        ? "selected"
+                        : ""
+                    }`}
+                    onClick={() => handleCouponSelect("CONSULT150")}
+                  >
+                    {selectedCoupon && selectedCoupon["CONSULT150"]
+                      ? "Selected"
+                      : "Select"}
+                  </button>
                 </span>
               </div>
             </div>
@@ -189,7 +226,18 @@ const Invoice = () => {
                   Get Rs.100 OFF on technology fee
                 </span>
                 <span className="coupon-btn-cntr">
-                  <button className="coupon-btn">Select</button>
+                  <button
+                    className={`coupon-btn ${
+                      selectedCoupon && selectedCoupon["CONSULT200"]
+                        ? "selected"
+                        : ""
+                    }`}
+                    onClick={() => handleCouponSelect("CONSULT200")}
+                  >
+                    {selectedCoupon && selectedCoupon["CONSULT200"]
+                      ? "Selected"
+                      : "Select"}
+                  </button>
                 </span>
               </div>
             </div>
@@ -198,6 +246,7 @@ const Invoice = () => {
         <AboutDoctor />
       </div>
       <Reviews />
+      <PaymentFooter />
     </>
   );
 };

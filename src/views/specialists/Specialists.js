@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Specialists.css";
 import boy from "../../assets/boy.png";
-import medicine from "../../assets/medicine.svg";
+import medicine from "../../assets/medicine.png";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaAward, FaTooth } from "react-icons/fa6";
 import { PiHeadsetFill } from "react-icons/pi";
@@ -72,13 +72,13 @@ const Specialists = () => {
     const container = event.target;
     const containerWidth = container.offsetWidth;
     const scrollLeft = container.scrollLeft;
-    const currentPage = Math.ceil(
+    const totalPages = totalreviewPages;
+    let currentPage = Math.ceil(
       (scrollLeft + containerWidth) / containerWidth
     );
+    currentPage = Math.min(currentPage, totalPages);
     setCurrentPage(currentPage);
   };
-
- 
 
   return (
     <div className="spec-main">
@@ -115,8 +115,9 @@ const Specialists = () => {
             <p className="del-ttl1">
               <AiFillThunderbolt /> Lightning Fast Delivery
             </p>
-            <p className="del-ttl2">Book Medicines</p>
-            <span className="del-ttl3"> From Us.</span>
+            <p className="del-ttl2">
+              Book Medicines <span className="del-ttl3"> From Us.</span>
+            </p>
           </div>
           <div className="medicine-abt">
             <img src={medicine} alt="medicine" className="medicine-icon" />
@@ -146,7 +147,6 @@ const Specialists = () => {
             <p className="amenities">24/7 Support</p>
           </div>
         </div>
-       
       </div>
     </div>
   );

@@ -1,0 +1,115 @@
+@media only screen and (max-width: 767px) {
+  .ftr-profile-main {
+    display: flex;
+    background: #3d346b;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+  }
+  .ftr-profile-home,
+  .ftr-profile-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* .ftr-mode-icon { */
+  /* margin: 0 auto; */
+  /* background-color: dodgerblue; */
+  /* border-radius: 10px; */
+  /* width: 100px;
+    height: 63px;
+    box-sizing: border-box;
+    transition: all 1s;
+    border: 0.4vh solid transparent; */
+  /* clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%); */
+  /* } */
+
+  /* .ftr-mode-icon:before {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid;
+    border-color: inherit;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    position: absolute;
+    top: -30px;
+  }
+  .ftr-mode-icon:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -30px;
+    border-top: 30px solid;
+    border-color: inherit;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+  } */
+
+  /* .ftr-profile-home.profactive,
+  .ftr-profile-mode.profactive {
+    background-image: linear-gradient(to right, #e48e51, #e8d48f);
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .ftr-profile-home.profinactive,
+  .ftr-profile-mode.profinactive {
+    color: #ffff;
+    font-size: 10px;
+    font-weight: bold;
+  } */
+  /* .ftr-home-icon.profactive,
+  .ftr-mode-icon.profactive {
+    background-image: linear-gradient(to right, #e48e51, #e8d48f);
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } */
+  .ftr-home-text.profactive {
+    background-image: linear-gradient(to right, #e48e51, #e8d48f);
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 10px;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .ftr-home-text.profinactive {
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .ftr-home-icon.profactive {
+    font-size: 16px;
+    color: #e48e51;
+  }
+  .ftr-mode-icon-wrapper.profactive {
+    width: 19px;
+    height: 19px;
+    background-image: url("../../assets/hexagon.png");
+    background-size: cover;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ftr-mode-icon.profactive {
+    font-size: 16px;
+    color: #fff;
+  }
+  .ftr-home-icon.profinactive,
+  .ftr-mode-icon.profinactive {
+    font-size: 16px;
+    color: white;
+  }
+}

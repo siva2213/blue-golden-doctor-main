@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import header from "../../assets/header.svg";
@@ -10,13 +10,13 @@ import Pagination from "../../components/Pagination";
 
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(3);
   const [cityList, setCityList] = useState([]);
   const [activeMenu, setActiveMenu] = useState("Home");
-
+  const cityListRef = useRef(null);
   const toggleMenu = () => {
     setIsOpen((prevState) => !prevState);
   };
@@ -33,27 +33,31 @@ const Header = () => {
     ];
     setCityList(citylist);
     // setTotalPages(Math.ceil(citylist.length / itemsPerPage));
-
   }, []);
 
   useEffect(() => {
-    const itemsPerPage = 1;
-    const totalItems = cityList.length;
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
-    setTotalPages(totalPages);
-  }, [cityList]);
+    const scrollInterval = setInterval(() => {
+      const container = cityListRef.current;
+      if (container) {
+        const containerWidth = 130;
+        const scrollAmount = containerWidth;
 
-  const handleScroll = (event) => {
-    const container = event.target;
-    const containerWidth = container.offsetWidth;
-    const scrollLeft = container.scrollLeft;
-    // const currentPage = Math.ceil(
-    //   (scrollLeft + containerWidth) / containerWidth
-    // );
-    const currentPage = Math.floor(scrollLeft / containerWidth) + 1;
-    setCurrentPage(currentPage);
+        let newScrollLeft = container.scrollLeft + scrollAmount;
 
-  };
+        if (newScrollLeft >= container.scrollWidth) {
+          newScrollLeft = 0;
+          setCurrentPage(1);
+        } else {
+          const currentPage = Math.floor(newScrollLeft / containerWidth) + 1;
+          setCurrentPage(currentPage);
+        }
+
+        container.scrollTo({ left: newScrollLeft, behavior: "smooth" });
+      }
+    }, 2000);
+
+    return () => clearInterval(scrollInterval);
+  }, []);
   return (
     <div className="hd-main">
       <div className="hd-hamburger" onClick={toggleMenu}>
@@ -93,40 +97,15 @@ const Header = () => {
             Other Payment
           </button>
         </Link>
-        {/* <Link to="/aboutdoctor">
-          <button className="hd-btn6" onClick={closeMenuAndDoSomething}>
-            AboutDoctor
-          </button>
-        </Link>
-        <Link to="/services">
-          <button className="hd-btn7" onClick={closeMenuAndDoSomething}>
-            Services
-          </button>
-        </Link>
-        <Link to="/specialists">
-          <button className="hd-btn8" onClick={closeMenuAndDoSomething}>
-            Specialists
-          </button>
-        </Link>
-        <Link to="/availability">
-          <button className="hd-btn9" onClick={closeMenuAndDoSomething}>
-            Availability
-          </button>
-        </Link> */}
-        {/* <button className="hd-btn2">Services</button>
-          <button className="hd-btn3">Booking</button>
-          <button className="hd-btn4">Contact</button> */}
       </div>
       <div className="hd-citymain">
-        <div onScroll={handleScroll} className="citylist">
-          {cityList
-            // .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
-            .map((city, index) => (
-              <div key={index} className="cityitem">
-                <img src={city.image} className="hd-cityimg" alt={city.name} />
-                <p className="city-txt">{city.name}</p>
-              </div>
-            ))}
+        <div ref={cityListRef} className="citylist">
+          {cityList.map((city, index) => (
+            <div key={index} className="cityitem">
+              <img src={city.image} className="hd-cityimg" alt={city.name} />
+              <p className="city-txt">{city.name}</p>
+            </div>
+          ))}
         </div>
         <div className="citypagenum">
           <Pagination

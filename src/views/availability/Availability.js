@@ -3,7 +3,8 @@ import "./Availability.css";
 import kid from "../../assets/kid.png";
 import teen from "../../assets/teen.png";
 import adult from "../../assets/adult.png";
-import teeth from "../../assets/teeth.png";
+import teethone from "../../assets/teethone.png";
+
 import { TiLocation } from "react-icons/ti";
 import { SlCalender } from "react-icons/sl";
 import { MdAccessTimeFilled } from "react-icons/md";
@@ -65,7 +66,7 @@ const Availability = () => {
           Nurturing Your Smile With{" "}
           <span className="avail-ttl2">Precision & Care.</span>
         </p>
-        <img src={teeth} alt="availability" className="checkavailability"/>
+        <img src={teethone} alt="availability" className="checkavailability" />
         <form className="avail-form" onSubmit={handleSubmit}>
           <div className="avail-form-cnt">
             <TiLocation className="avail-licicon1" />

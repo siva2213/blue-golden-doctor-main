@@ -35,10 +35,9 @@
     flex-direction: column; */
     /* padding: 20px; */
     padding: 0 20px 20px 20px;
-
   }
 
-   .container {
+  .container {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -47,7 +46,6 @@
     transition: all 0.3s ease;
     /* padding: 0px 10px;
     margin-right: 20px; */
-
   }
 
   .ser-main {
@@ -64,7 +62,7 @@
     font-size: 30px;
     color: #e957c9;
   }
- 
+
   .ser-page {
     color: #e957c9;
     font-size: 16px;
@@ -136,13 +134,42 @@
     border-radius: 70%/150px 150px 0 0;
     transform: rotate(180deg);
   }
+  .bk-btn-bkgrd {
+    /* background: linear-gradient(to right, #e49356, #e7cb87); */
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #e7cb87 67%,
+      #e49356 100%
+    );
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "League Spartan", sans-serif;
+
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+  }
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
   .bk-btn {
     padding: 30px 50px;
     background: #372f62;
     border: none;
-    color: #e49356;
-    font-size: 22px;
-    font-weight: bold;
+
     border-radius: 50%;
     margin: 20px;
     transform: rotate(180deg);

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import Header from "./views/header/Header";
@@ -13,8 +14,18 @@ import AboutDoctor from "./views/aboutdoctor/AboutDoctor";
 import PaymentScreen from "./views/paymentscreen/PaymentScreen";
 import SuccessScreen from "./views/successpopup/SuccessScreen";
 import OtherPayment from "./views/otherpayment/OtherPayment";
+import FooterProfile from "./views/footerprofile/FooterProfile";
+import PaymentFooter from "./views/paymentfooter/PaymentFooter";
 // import NotFound from './views/NotFound.js'
 function App() {
+  const [showFooterProfile, setShowFooterProfile] = useState();
+  const [showPaymentFooter, setShowPaymentFooter] = useState();
+
+  // useEffect(() => {
+  //   setShowFooterProfile(sessionStorage.getItem("setShowFooterProfile"));
+  //   setShowPaymentFooter(sessionStorage.getItem("setShowPaymentFooter"));
+  //   console.log(showFooterProfile, showPaymentFooter);
+  // },[])
   return (
     <BrowserRouter>
       <div className="App">
@@ -35,6 +46,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        {/* {showFooterProfile && <FooterProfile />}
+        {showPaymentFooter && <PaymentFooter />} */}
       </div>
     </BrowserRouter>
   );

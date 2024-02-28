@@ -13,7 +13,7 @@ import Content from "../content/Content";
 import Specialists from "../specialists/Specialists";
 import Availability from "../availability/Availability";
 import Reviews from "../reviews/Reviews";
-
+import FooterProfile from "../footerprofile/FooterProfile";
 const Services = () => {
   const [isActiveDental, setIsActiveDental] = useState(false);
   const [isActiveDecay, setIsActiveDecay] = useState(false);
@@ -36,31 +36,25 @@ const Services = () => {
       const scrollWidth = servicesParaRef.current.scrollWidth;
       const clientWidth = servicesParaRef.current.clientWidth;
       const threshold = scrollWidth - clientWidth - 10;
-
-      if (scrollPosition >= threshold) {
-        document.querySelector(".services-parathree").style.display = "block";
-        setServicePage(3);
-      } else if (scrollPosition >= threshold / 2) {
-        document.querySelector(".services-paratwo").style.display = "block";
+      const halfwayThreshold = threshold / 2;
+      if (scrollPosition >= halfwayThreshold && scrollPosition < threshold) {
+        // document.querySelector(".services-parathree").style.display = "block";
         setServicePage(2);
+      } else if (scrollPosition >= threshold) {
+        // document.querySelector(".services-paratwo").style.display = "block";
+        setServicePage(3);
       } else {
-        document.querySelector(".services-paraone").style.display = "block";
+        // document.querySelector(".services-paraone").style.display = "block";
         setServicePage(1);
       }
     };
 
-    const paraRef = servicesParaRef.current; // save a reference
+    const paraRef = servicesParaRef.current;
 
     if (paraRef) {
       paraRef.addEventListener("scroll", handleScroll);
     }
-
-    // return () => {
-    //   if (paraRef) {
-    //     paraRef.removeEventListener("scroll", handleScroll);
-    //   }
-    // };
-  }, [servicesParaRef.current]);
+  }, []);
 
   const toggleService = (service) => {
     switch (service) {
@@ -436,7 +430,7 @@ const Services = () => {
         <div className="curve-colorone">
           <div className="curve-colortwo">
             <button className="bk-btn" onClick={() => setModalShow(true)}>
-              Start Booking
+              <span className="bk-btn-bkgrd">Start Booking</span>
             </button>
           </div>
         </div>
@@ -447,6 +441,7 @@ const Services = () => {
       <Specialists />
       <Reviews />
       <Availability />
+      <FooterProfile />
     </div>
   );
 };

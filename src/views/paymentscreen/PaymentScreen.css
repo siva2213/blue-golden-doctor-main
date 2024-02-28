@@ -72,7 +72,8 @@
   gap: 10px;
   padding: 30px 20px 0px 20px;
   background: #fff;
-  border-radius: 90%/160px 160px 0 0;
+  /* border-radius: 90%/160px 160px 0 0; */
+  border-radius: 70% / 90px 90px 0 0;
 }
 
 .payments-title {

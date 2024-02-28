@@ -6,7 +6,7 @@
 @media only screen and (max-width: 767px) {
   .invoice-main {
     background: #372f62;
-    padding-top: 20px;
+    padding-top: 6px;
     position: relative;
     top: -2px;
   }
@@ -18,7 +18,7 @@
     border-radius: 30px;
     padding: 20px;
     gap: 30px;
-    margin: 20px 20px 0 20px;
+    margin: 0px 20px 0 20px;
   }
   .invoice-title {
     color: #e957c9;
@@ -184,6 +184,7 @@
     font-size: 10px;
     color: #fff;
     line-break: auto;
+    line-height: 1.4;
   }
   .clinic-whatsapp,
   .clinic-phone {
@@ -207,7 +208,8 @@
   }
   .coupons-main {
     background: #fff;
-    border-radius: 90%/160px 160px 0 0;
+    /* border-radius: 90%/160px 160px 0 0; */
+    border-radius: 70% / 90px 90px 0 0;
     display: flex;
     flex-direction: column;
     gap: 30px;

@@ -1,0 +1,58 @@
+@media only screen and (max-width: 767px) {
+  .pay-ftr-main {
+    display: flex;
+    background: #3d346b;
+    border-radius: 60px;
+    padding: 10px 10px 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+    position: fixed;
+    bottom: 10px;
+    width: -webkit-fill-available;
+  }
+
+  .pay-ftr-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .pay-ftr-text.profactive {
+    background-image: linear-gradient(to right, #e48e51, #e8d48f);
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 10px;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .pay-ftr-text.profinactive {
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+.pay-ftr-icon.profactive,
+  .pay-ftr-icon.profactive {
+    font-size: 16px;
+    color: #e48e51;
+  }
+  .pay-ftr-icon.profinactive,
+  .pay-ftr-icon.profinactive {
+    font-size: 16px;
+    color: white;
+  }
+
+  .pay-proceed {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "League Spartan", sans-serif;
+    background: #e957c9;
+    border: none;
+    padding: 14px 28px;
+    color: #fff;
+    border-radius: 30px;
+  }
+}
