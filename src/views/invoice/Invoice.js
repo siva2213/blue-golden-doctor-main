@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Invoice.css";
-import invoiceprofile from "../../assets/invoiceprofile.svg";
+import invoiceprofile from "../../assets/invoiceprofile.png";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlinePhone } from "react-icons/md";
 import { FaArrowCircleRight } from "react-icons/fa";
