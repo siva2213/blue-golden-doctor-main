@@ -87,6 +87,9 @@
     font-family: "League Spartan", sans-serif;
     color: #ffffff;
     text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 16px;
   }
 
   .hd-menu {
@@ -188,17 +191,56 @@
     border-radius: 20px;
     cursor: pointer;
   }
-  
 
   .hd-menu.hd-open {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
+    gap: 0px;
     position: absolute;
     top: 110px;
     text-align: left;
     background: #372f62;
+    padding: 0;
+    height: fit-content;
+    padding-bottom: 20px;
+    border-radius: 0 0 0 40px;
+  }
+  .hdr-icon-user,
+  .hdr-icon-cal,
+  .hdr-icon-cale,
+  .hdr-icon-doc,
+  .hdr-icon-ins {
+    font-size: 14px;
+  }
+  .hdr-icon-pri {
+    font-size: 18px;
+  }
+  .hdr-icon-term {
+    font-size: 16px;
+  }
+  .hd-menu .hdractive.divactive {
+    background-image: linear-gradient(to right, #d98b54, #e7cc89);
+  }
+  /* .hdr-icon-wrapper {
+    background-image: linear-gradient(to right, #d98b54, #e7cc89);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  } */
+  .hdractive.divinactive {
+    background: #372f62;
+  }
+  .active-hdricon {
+    color: white;
+}
+
+.inactive-hdricon {
+  color: #e4ac6e;
+}
+  .hdractive {
+    width: 100%;
+    padding: 16px;
   }
   .menuactive {
     background-image: linear-gradient(to right, #e48e51, #e8d48f);
@@ -246,6 +288,48 @@
     background: #d3b36c;
     margin-right: 5px;
     cursor: pointer;
+  }
+  .hdr-app-dnld {
+    height: 100%;
+    width: 50%;
+  }
+  .hdr-dnld-ttl1,
+  .hdr-dnld-ttl2 {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right, #e49356, #e7cb87);
+    -webkit-background-clip: text; /* For webkit browsers */
+    background-clip: text;
+    color: transparent;
+  }
+  .hdr-dnld-ttl3 {
+    font-size: 12px;
+    color: white;
+  }
+  .hdr-download-app {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+  }
+  .hdr-dnld-ttls {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .hdr-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .hdr-dnld-icons {
+    display: flex;
+    gap: 10px;
+  }
+  .hdr-dnld-play,
+  .hdr-dnld-apple {
+    width: 50%;
+    box-shadow: -3px -3px 6px 0 #403672, 3px 3px 6px 0 #2d2653;
+    border-radius: 20px;
   }
 }
 

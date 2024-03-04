@@ -18,7 +18,7 @@
   }
   .book-btn {
     display: flex;
-    gap: 12px;
+    justify-content: space-between;
   }
   .book-item {
     display: flex;
@@ -26,28 +26,24 @@
     gap: 10px;
   }
   .active {
-    padding: 10px 0;
+    padding: 14px 18px;
     border-radius: 18px;
     margin: 0;
     border: none;
     outline: none;
     box-shadow: inset -5px -5px 10px #fcfcfc, inset 5px 5px 10px #e2e1e1;
     color: #e48e51;
-    font-size: 18px;
-    height: 46px;
-    width: 46px;
+    font-size: 22px;
   }
   .inactive {
     background: #e7c985;
-    padding: 10px 0;
+    padding: 14px 18px;
     outline: none;
     border-radius: 18px;
     border: none;
-    box-shadow: -5px -5px 10px #f1d38f, 5px 5px 10px #ddbe76;
-    font-size: 18px;
+    box-shadow: -5px -5px 10px #f1d38f, 3px 3px 10px #ddbe76;
+    font-size: 22px;
     color: #372f62;
-    height: 46px;
-    width: 46px;
   }
   .lblactive {
     color: #4b418b;
@@ -88,12 +84,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 14px 10px;
     border: none;
     border-radius: 100px;
     background: #f2f2f2;
     box-shadow: inset -3px -3px 6px #fcfcfc, inset 3px 3px 6px #e2e1e1;
-    width: 60%;
+    /* width: 60%; */
   }
   .form-input2,
   .form-input3,
@@ -114,17 +110,18 @@
     outline: none;
     background: #f2f2f2;
     font-weight: bold;
-    color: 372F62;
+    color: #372f62;
   }
   .form-submit {
     background: #372f62;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     color: #e49356;
     border-radius: 100px;
     border: none;
-    padding: 14px;
+    padding: 10px 14px;
+    box-shadow: 0px 4px 10px 0px #000000;
   }
 }
 

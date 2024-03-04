@@ -16,6 +16,11 @@ import SuccessScreen from "./views/successpopup/SuccessScreen";
 import OtherPayment from "./views/otherpayment/OtherPayment";
 import FooterProfile from "./views/footerprofile/FooterProfile";
 import PaymentFooter from "./views/paymentfooter/PaymentFooter";
+import Offer from "./views/offer/Offer";
+import ChooseLocation from "./views/chooselocation/ChooseLocation";
+import ConfirmBooking from "./views/confirmbooking/ConfirmBooking";
+import OtpVerification from "./views/otpverification/OtpVerification";
+import SubmitEmail from "./views/submitemail/SubmitEmail";
 // import NotFound from './views/NotFound.js'
 function App() {
   const [showFooterProfile, setShowFooterProfile] = useState();
@@ -37,10 +42,12 @@ function App() {
           <Route path="/PaymentScreen" element={<PaymentScreen />} />
           <Route path="/PaymentSuccess" element={<SuccessScreen />} />
           <Route path="/OtherPayment" element={<OtherPayment />} />
-          {/* <Route path="/services" element={<Services />} />
-          <Route path="/specialists" element={<Specialists />} />
-          <Route path="/aboutdoctor" element={<AboutDoctor />} />
-          <Route path="/Availability" element={<Availability />} /> */}
+          <Route path="/Offer" element={<Offer />} />
+          <Route path="/ChooseLocation" element={<ChooseLocation />} />
+          <Route path="/ConfirmBooking" element={<ConfirmBooking />} />
+          <Route path="/SubmitEmail" element={<SubmitEmail />} />
+          <Route path="/OtpVerification" element={<OtpVerification />} />
+
           <Route path="/" element={<Services />} />
 
           <Route path="*" element={<NotFound />} />

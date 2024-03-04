@@ -1,131 +1,356 @@
-.MuiDialog-paper {
-    background-color: #E7C985 !important;
-    border-radius: 35px !important;
-}
-
 .tab-action-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tab-action-content {
-    padding-top: 10px;
-    font-weight: 700;
-    font-size: 0.7rem;
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 0.7rem;
 }
 
 .inactive-tab-action-buttons {
-    border-radius: 20px;
-    padding: 1rem;
-    box-shadow: -5px -5px 10px #f1d38f, 5px 5px 10px #ddbe76;
-    border-radius: 18px;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: -5px -5px 10px #f1d38f, 5px 5px 10px #ddbe76;
+  border-radius: 18px;
 }
 
 .active-tab-action-buttons {
-    padding: 1rem;
-    background: #F2F2F2;
-    box-shadow: inset -5px -5px 10px #fcfcfc, inset 5px 5px 10px #e2e1e1;
-    border-radius: 18px;
-    color: #e48e51;
+  padding: 1rem;
+  background: #f2f2f2;
+  box-shadow: inset -5px -5px 10px #fcfcfc, inset 5px 5px 10px #e2e1e1;
+  border-radius: 18px;
+  color: #e48e51;
 }
-
-.MuiInputBase-root {
-    background-color: #F2F2F2 !important;
-    border-radius: 40px !important;
-    border-color: transparent !important;
-    background: #F2F2F2;
-    box-shadow: inset -5px -5px 10px #fcfcfc, inset 5px 5px 10px #e2e1e1 !important;
-    height: 3rem !important;
+.dt-time {
+  border-radius: 30px;
+  padding: 16px;
+  width: -webkit-fill-available;
+  border: none;
 }
-
-.MuiPickersLayout-root {
-    background-color: #F2F2F2 !important;
-    border-color: transparent !important;
-    box-shadow: -3px -3px -1px 0px #FCFCFC, 3px 3px -1px 0px #E2E1E1 !important;
-}
-
-/* .MuiInputLabel-animated {
-    display: none !important;
-    border: none !important;
-} */
-/* .MuiInputBase-root .MuiOutlinedInput-root .Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color: #fff !important;
-    border-width: 2px !important;
-} */
-.legend {
-    /* display: none !important; */
-
-
+.dt-time:focus-visible {
+  outline: none;
 }
 
 .book-now-btn {
-    position: absolute;
-    font-size: 1.1rem;
-    background: -webkit-linear-gradient(#DDBE76, #E7C985);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    top: 50%;
-    left: 50%;
-    font-weight: 800;
-    transform: translate(-50%, -50%);
-    border: none;
-    /* width: -webkit-fill-available; */
+  position: absolute;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #e49356, #e7cb87);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: 50%;
+  left: 50%;
+  font-weight: 800;
+  transform: translate(-50%, -50%);
+  border: none;
 }
 
 .book-now-btn-ct {
-    position: relative;
-    padding: 1.8rem;
-    border: none;
-    border-radius: 40px;
-    font-size: 1rem;
-    width: -webkit-fill-available;
-    background-color: #372F62;
-    flex-grow: 1;
-}
-
-.MuiTextField-root {
-    /* min-width: 100% !important; */
-}
-
-.MuiSvgIcon-root {
-    /* display: none !important; */
-}
-
-.MuiPaper-root .MuiPopover-paper .MuiMenu-paper {
-    border-radius: 30px;
+  position: relative;
+  padding: 20px;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  width: -webkit-fill-available;
+  background-color: #372f62;
+  flex-grow: 1;
 }
 
 .menu-item-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .menu-item-sub1 {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .menu-item-content {
-    font-size: 0.8rem;
-    font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .menu-item-sub2 {
-    background: #E957C9;
-    color: #fff;
-    font-size: 0.6rem;
-    border-radius: 20px;
-    padding: 0.25rem 0.75rem
+  background: #e957c9;
+  color: #fff;
+  font-size: 0.6rem;
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
 }
 
-.MuiPopover-paper {
-    border-radius: 25px !important;
+.custom-select {
+  position: relative;
+  font-family: Arial;
 }
 
-.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color: #F2F2F2;
+.select-selected {
+  background-color: #372f62;
+  border-radius: 50px;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  display: none;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: red;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: 300px;
+  overflow-y: scroll;
+
+  border-radius: 10px;
+}
+.form-input4 input[type="datetime-local"] {
+  width: calc(100% - 30px);
+
+  border: none;
+  background: #f2f2f2;
+}
+.form-input4 input[type="datetime-local"]:focus-visible {
+  outline: none;
+}
+
+/* modal.css */
+
+.modal-close {
+  background: #372f62;
+  color: white;
+  font-size: 16px;
+  border-radius: 100px;
+  padding: 6px;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select-items::-webkit-scrollbar {
+  width: 10px;
+}
+.select-items::-webkit-scrollbar-track {
+  background-color: #e957c9;
+  border-radius: 100px;
+  padding: 10px;
+}
+.select-items::-webkit-scrollbar-thumb {
+  background-color: black;
+  width: 10px;
+  height: 5px;
+  border-radius: 100px;
+  padding: 10px;
+}
+.custom-radius {
+  border-radius: 30px;
+}
+
+.bk-hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bk-ttl {
+  font-size: 0.6rem;
+  border-radius: 20px;
+  background: #f2f2f2;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+.bk-subttl {
+  color: #e957c9;
+}
+.bk-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: left;
+}
+.bk-doc-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bk-doc-name-prof {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.bk-doc-name,
+.bk-doc-code,
+.bk-address {
+  font-size: 12px;
+  color: #74737a;
+}
+.bk-address {
+  border-radius: 20px;
+  background: #ffe19d;
+  padding: 6px 10px;
+  .dropdown {
+    /* Other styles */
+    height: 50px; /* Example height, adjust as needed */
+    overflow-y: auto;
+  }
+
+  .dropdown::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+
+  .dropdown::-webkit-scrollbar-thumb {
+    background-color: pink; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Radius of the scrollbar thumb */
+  }
+
+  .dropdown::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the scrollbar track */
+  }
+  text-align: center;
+}
+.bk-docname,
+.bk-code,
+.bk-add {
+  color: #372f62;
+  font-weight: bold;
+}
+.bk-whatsapp,
+.bk-phone {
+  color: white;
+  font-size: 14px;
+  border-radius: 100px;
+  background: #372f62;
+  padding: 10px;
+}
+.bk-contact {
+  display: flex;
+  gap: 10px;
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-overlay.show {
+  display: block;
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 14px;
+  width: 86%;
+  background: #e7c985;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.select-items::-webkit-scrollbar {
+  width: 10px;
+}
+.select-items::-webkit-scrollbar-track {
+  background-color: #e957c9;
+  border-radius: 100px;
+  padding: 10px;
+}
+.select-items::-webkit-scrollbar-thumb {
+  background-color: black;
+  width: 10px;
+  height: 5px;
+  border-radius: 100px;
+  padding: 10px;
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.custom-radius {
+  border-radius: 30px;
 }

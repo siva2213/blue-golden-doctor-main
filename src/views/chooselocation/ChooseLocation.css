@@ -1,0 +1,126 @@
+.choose-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  backdrop-filter: blur(5px);
+}
+.choose-top {
+  display: flex;
+}
+.choose-top {
+  background: white;
+  padding: 50px 10px 10px 10px;
+  border-radius: 50px 50px 0 0;
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+.choose-top-div {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.choose-top-title {
+  display: flex;
+  flex-direction: column;
+}
+.choose-top-ttl {
+  color: #372f62;
+  font-size: 18px;
+  font-weight: bold;
+}
+.choose-para-main {
+  font-size: 10px;
+  color: #a3a1ae;
+  margin: 0;
+}
+.app-logos {
+  width: 10%;
+  padding: 10px;
+  background: #372f62;
+  border-radius: 100px;
+}
+.choose-dnld-main {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.choose-city-img {
+  width: 52%;
+}
+.selected-option-loc {
+  background: #372f62;
+  padding: 18px 20px;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: inset -3px -3px 6px 0px #403672, inset 3px 3px 6px 3px #2d2653;
+  border: none;
+  display: flex;
+  text-align: left;
+}
+.choose-sub-page {
+  background: #372f62;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 10px 20px;
+  border-radius: 40px 40px 0 0;
+  gap: 20px;
+  height: 220px;
+}
+.choose-cnt-img {
+  display: flex;
+}
+.choose-choose {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+.select-option {
+  background: #372f62;
+  padding: 14px 20px;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: inset -3px -3px 6px 0px #403672, inset 3px 3px 6px 3px #2d2653;
+  border: none;
+}
+.select-option:focus-visible {
+  outline: none;
+  border: none;
+}
+.select-selected:after {
+  display: none;
+}
+.choose-dialog-main {
+  position: fixed;
+  bottom: 0;
+}
+
+.choose-done {
+  background-image: linear-gradient(to right, #e49457, #e7c985);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 40px;
+  width: fit-content;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}

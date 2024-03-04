@@ -1,274 +1,228 @@
-import React, { useEffect, useState } from 'react';
-import {
-    Button,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    IconButton,
-    Typography,
-    TextField,
-    MenuItem,
-    Input,
-    Select
-} from '@mui/material';
-// import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
-import HomeIcon from '../assets/home'
-import PhoneIcon from '../assets/phone'
-import VideoIcon from '../assets/video'
-import Home2Icon from '../assets/home2'
-import WhatsappIcon from '../assets/whatsapp'
-import ModalPhoneIcon from '../assets/modalPhone'
-import DropdownArrowIcon from '../assets/dropdownArrow'
-import CancelIcon from '../assets/cancelIcon'
-import DentalIcon from '../assets/dentalIcon'
-import './modal.css'
-const iconTabList = [{ icon: <HomeIcon />, content: 'Clinic Visit' }, { icon: <PhoneIcon />, content: 'Voice Call' }, { icon: <VideoIcon />, content: 'Video Call' }, { icon: <Home2Icon />, content: 'Call Home' }]
+import React, { useState } from "react";
+import "./modal.css";
+import { BiClinic } from "react-icons/bi";
+import { MdOutlinePhone } from "react-icons/md";
+import { BsCameraVideo } from "react-icons/bs";
+import { RiHome2Line } from "react-icons/ri";
+import { IoMdClose } from "react-icons/io";
+import { IoArrowDownOutline } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa";
+import { LiaToothSolid } from "react-icons/lia";
+import Dropdown from "./Dropdown";
 
+const BookAppointmentModal = ({ show, onHide, onSelect }) => {
+  const [inputs, setInputs] = useState({});
+  const [activeButton, setActiveButton] = useState(null);
+  const [selectedDateTime, setSelectedDateTime] = useState("");
 
-const BookAppointmentModal = ({ show, onHide }) => {
-    const [activeTabBtn, setActiveTabBtn] = useState(0)
-    useEffect(() => {
+  const handleDateTimeChange = (event) => {
+    setSelectedDateTime(event.target.value);
+    // If both date and time are selected, submit
+    if (event.target.value && onSelect) {
+      const dateTime = new Date(event.target.value);
+      onSelect(dateTime);
+    }
+  };
+  const handleClose = () => {
+    onHide(false);
+  };
 
-    }, [])
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInputs((prevInputs) => ({
+      ...prevInputs,
+      [name]: value,
+    }));
+  };
 
-    const handleClose = () => {
-        onHide(false);
-    };
+  const function1 = () => {
+    console.log("Clinic Visit");
+  };
 
-    return (
-        <div>
-            <Dialog open={show} onClose={handleClose} fullWidth maxWidth="sm">
-                <DialogTitle>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Typography sx={{ fontSize: '0.6rem', borderRadius: '20px', background: '#F2F2F2', padding: '3px 15px' }}>Treatments starting at as low as <span style={{ color: '#E957C9' }}>200 rs.</span> per session.</Typography>
-                        <IconButton onClick={handleClose}>
-                            <CancelIcon />
-                        </IconButton>
-                    </div>
-                    <Typography variant="h6" align="left" mt={1} sx={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Make An Appointment</Typography>
-                </DialogTitle>
-                <DialogContent>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                        {iconTabList.map((tab, i) => {
-                            if (activeTabBtn === i) {
+  const function2 = () => {
+    console.log("Voice call");
+  };
 
-                            }
-                            return (
-                                <div className='tab-action-cont'>
-                                    <div className={activeTabBtn === i ? 'active-tab-action-buttons' : 'inactive-tab-action-buttons'} onClick={(e) => {
-                                        setActiveTabBtn(i)
-                                        // e.target.style.background = '#F2F2F2'
-                                        // e.target.style.boxShadow = '-3px -3px -1px 0px #FCFCFC, 3px 3px -1px 0px #E2E1E1;'
-                                    }}>{tab.icon}</div>
-                                    <div className='tab-action-content'>{tab.content}</div>
-                                </div>
-                            )
-                        })}
-                        {/* <div className='tab-action-cont'>
-                            <div className='tab-action-buttons' onClick={(e) => {
-                                e.target.style.background = '#F2F2F2'
-                                e.target.style.boxShadow = '-3px -3px -1px 0px #FCFCFC, 3px 3px -1px 0px #E2E1E1;'
-                            }}><HomeIcon /></div>
-                            <div className='tab-action-content'>Clinic Visit</div>
-                        </div>
-                        <div className='tab-action-cont'>
-                            <div className='tab-action-buttons' onClick={(e) => {
-                                e.target.style.background = '#F2F2F2'
-                                e.target.style.boxShadow = '-3px -3px -1px 0px #FCFCFC, 3px 3px -1px 0px #E2E1E1;'
-                            }}><PhoneIcon /><div></div></div>
-                            <div className='tab-action-content'>Voice Call</div>
-                        </div>
-                        <div className='tab-action-cont'>
+  const function3 = () => {
+    console.log("Video Call");
+  };
 
-                            <div className='tab-action-buttons' onClick={(e) => {
-                                e.target.style.background = '#F2F2F2'
-                                e.target.style.boxShadow = '-3px -3px -1px 0px #FCFCFC, 3px 3px -1px 0px #E2E1E1;'
-                            }}><VideoIcon /><div></div></div>
-                            <div className='tab-action-content'>Video Call</div>
-                        </div>
-                        <div className='tab-action-cont'>
-                            <div className='tab-action-buttons' onClick={(e) => {
-                                e.target.style.background = '#F2F2F2'
-                                e.target.style.boxShadow = '-3px -3px -1px 0px #FCFCFC, 3px 3px -1px 0px #E2E1E1;'
-                            }}><Home2Icon /><div></div></div>
-                            <div className='tab-action-content'>Call Home</div>
+  const function4 = () => {
+    console.log("Home Call");
+  };
+  const options = [
+    { text: "Dental Crown", icon: <LiaToothSolid /> },
+    { text: "Dental Braces", icon: <LiaToothSolid /> },
+    { text: "Decayed Tooth", icon: <LiaToothSolid /> },
+    { text: "Carbide Finishing Bur", icon: <LiaToothSolid /> },
+    { text: "Decayed Tooth", icon: <LiaToothSolid /> },
+  ];
 
-                        </div> */}
+  const handleSelect = (option) => {
+    console.log("Selected option:", option.text);
+    // Add your logic here
+  };
+  const buttons = [
+    { name: "Clinic Visit", icon: <BiClinic />, onClick: function1 },
+    { name: "Voice call", icon: <MdOutlinePhone />, onClick: function2 },
+    { name: "Video Call", icon: <BsCameraVideo />, onClick: function3 },
+    { name: "Home Call", icon: <RiHome2Line />, onClick: function4 },
+  ];
 
-                    </div>
-                    <TextField placeholder="Date and Time" fullWidth margin="normal" />
-                    {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DemoContainer components={['DateTimePicker']} sx={{ paddingBottom: '1rem' }}>
-                            <DateTimePicker label='choose date' />
-                        </DemoContainer>
-                    </LocalizationProvider> */}
-                    <div style={{ position: 'relative' }}>
-                        <div style={{ position: 'absolute', top: '11px', right: '12px', zIndex: 1000 }}><DropdownArrowIcon /></div>
-                        <Select
-                            displayEmpty
-                            fullWidth
-                            value={[]}
-                            renderValue={(selected) => {
-                                if (selected.length === 0) {
-                                    return <span style={{ color: 'grey' }}>Placeholder</span>;
-                                }
+  const handleButtonClick = (buttonName, onClickFunction) => {
+    setActiveButton(buttonName);
+    onClickFunction();
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(JSON.stringify(inputs));
+    console.log(inputs);
+  };
 
-                                return selected.join(', ');
-                            }}
-                            inputProps={{ 'aria-label': 'Without label' }}
-                            sx={{ marginBottom: '0.5rem' }}
-                        // onChange={handleChange}
-                        >
-                            <MenuItem value={10}>
-                                <div className='menu-item-container'>
-                                    <div className='menu-item-sub1'>
-                                        <div><DentalIcon /></div>
-                                        <div className='menu-item-content'>Dental Crown</div>
-                                    </div>
-                                    <div className='menu-item-sub2'>200 rs.</div>
-                                </div>
-                            </MenuItem>
-                            <MenuItem value={20}><div className='menu-item-container'>
-                                <div className='menu-item-sub1'>
-                                    <div><DentalIcon /></div>
-                                    <div className='menu-item-content'>Dental Crown</div>
-                                </div>
-                                <div className='menu-item-sub2'>200 rs.</div>
-                            </div></MenuItem>
-                            <MenuItem value={30}><div className='menu-item-container'>
-                                <div className='menu-item-sub1'>
-                                    <div><DentalIcon /></div>
-                                    <div className='menu-item-content'>Dental Crown</div>
-                                </div>
-                                <div className='menu-item-sub2'>200 rs.</div>
-                            </div></MenuItem>
-                        </Select>
-                    </div>
-                    <div style={{ position: 'relative' }}>
-
-                        <div style={{ position: 'absolute', top: '11px', right: '12px', zIndex: 1000 }}><DropdownArrowIcon /></div>
-                        <Select
-                            displayEmpty
-                            fullWidth
-                            value={[]}
-                            renderValue={(selected) => {
-                                if (selected.length === 0) {
-                                    return <span style={{ color: 'grey' }}>Placeholder</span>;
-                                }
-
-                                return selected.join(', ');
-                            }}
-                            inputProps={{ 'aria-label': 'Without label' }}
-                            sx={{ marginBottom: '0.5rem' }}
-                        // onChange={handleChange}
-                        >
-
-                            <MenuItem value={10}>
-                                <div className='menu-item-container'>
-                                    <div className='menu-item-sub1'>
-                                        <div><DentalIcon /></div>
-                                        <div className='menu-item-content'>Dental Crown</div>
-                                    </div>
-                                    <div className='menu-item-sub2'>200 rs.</div>
-                                </div>
-                            </MenuItem>
-                            <MenuItem value={20}><div className='menu-item-container'>
-                                <div className='menu-item-sub1'>
-                                    <div><DentalIcon /></div>
-                                    <div className='menu-item-content'>Dental Crown</div>
-                                </div>
-                                <div className='menu-item-sub2'>200 rs.</div>
-                            </div></MenuItem>
-                            <MenuItem value={30}><div className='menu-item-container'>
-                                <div className='menu-item-sub1'>
-                                    <div><DentalIcon /></div>
-                                    <div className='menu-item-content'>Dental Crown</div>
-                                </div>
-                                <div className='menu-item-sub2'>200 rs.</div>
-                            </div></MenuItem>
-                        </Select>
-                    </div>
-                    <div style={{ position: 'relative' }}>
-
-                        <div style={{ position: 'absolute', top: '11px', right: '12px', zIndex: 1000 }}><DropdownArrowIcon /></div>
-                        <Select
-                            displayEmpty
-                            fullWidth
-                            value={[]}
-                            renderValue={(selected) => {
-                                if (selected.length === 0) {
-                                    return <span style={{ color: 'grey' }}>Placeholder</span>;
-                                }
-
-                                return selected.join(', ');
-                            }}
-                            inputProps={{ 'aria-label': 'Without label' }}
-                            sx={{ marginBottom: '1rem' }}
-                        // onChange={handleChange}
-                        >
-                            <MenuItem value={10}><div className='menu-item-container'>
-                                <div className='menu-item-sub1'>
-                                    <div><DentalIcon /></div>
-                                    <div className='menu-item-content'>Dental Crown</div>
-                                </div>
-                                <div className='menu-item-sub2'>200 rs.</div>
-                            </div></MenuItem>
-                            <MenuItem value={20}><div className='menu-item-container'>
-                                <div className='menu-item-sub1'>
-                                    <div><DentalIcon /></div>
-                                    <div className='menu-item-content'>Dental Crown</div>
-                                </div>
-                                <div className='menu-item-sub2'>200 rs.</div>
-                            </div></MenuItem>
-                            <MenuItem value={30}><div className='menu-item-container'>
-                                <div className='menu-item-sub1'>
-                                    <div><DentalIcon /></div>
-                                    <div className='menu-item-content'>Dental Crown</div>
-                                </div>
-                                <div className='menu-item-sub2'>200 rs.</div>
-                            </div></MenuItem>
-                        </Select>
-                    </div>
-                    <div className='book-now-btn-ct'>
-                        <button className='book-now-btn'>
-                            BOOK NOW
-                        </button>
-                    </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '1rem', paddingBottom: '0.5rem' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', fontSize: '0.6rem', color: '#372F62', justifyContent: 'center' }}>
-
-                            <div>
-                                <span>Doctor : </span>
-                                <span style={{
-                                    fontWeight: 800
-                                }}>Dr. Karen Lane</span>
-                            </div>
-                            <div style={{ paddingTop: '0.5rem' }}>
-                                <span>Code : </span>
-                                <span style={{
-                                    fontWeight: 800
-                                }}>87563</span>
-                            </div>
-                        </div>
-                        <div style={{ display: 'flex', gap: '5px' }}>
-                            <div><WhatsappIcon /></div>
-                            <div><ModalPhoneIcon /></div>
-
-                        </div>
-                    </div>
-                    <div style={{ fontSize: '0.6rem', color: '#372F62', borderRadius: '20px', background: '#FFE19D', padding: '5px 10px' }}>
-                        <span >Clinic Address : </span>
-                        <span style={{ fontWeight: 800 }}>#31, Diamond Plaza, 3rd Floor, Boltz street, Delhi</span>
-                    </div>
-                </DialogContent>
-            </Dialog>
+  return (
+    <div className={`modal-overlay ${show ? "show" : ""}`}>
+      <div className="modal-container">
+        <div className="bk-hd">
+          <span className="bk-ttl">
+            Treatments starting at as low as
+            <span className="bk-subttl">200 rs.</span>
+            per session.
+          </span>
+          <IoMdClose className="modal-close" onClick={handleClose} />
         </div>
-    );
+        <span className="bk-title">Make An Appointment</span>
+
+        <div className="book-btn">
+          {buttons.map((button, i) => (
+            <div className="book-item" key={button.name + i}>
+              <button
+                className={activeButton === button.name ? "active" : "inactive"}
+                onClick={() => handleButtonClick(button.name, button.onClick)}
+              >
+                {button.icon}
+              </button>
+              <label
+                className={
+                  activeButton === button.name ? "lblactive" : "lblinactive"
+                }
+              >
+                {button.name}
+              </label>
+            </div>
+          ))}
+        </div>
+        <form onSubmit={handleSubmit} className="book-form">
+          <div className="form-input1">
+            <input
+              type="text"
+              name="username"
+              value={inputs.username || ""}
+              onChange={handleChange}
+              placeholder="Enter Name"
+              className="input-val"
+            />
+          </div>
+          <div className="form-input4">
+            <input
+              type="datetime-local"
+              id="dateTimeInput"
+              value={selectedDateTime}
+              onChange={handleDateTimeChange}
+              placeholder="Choose Date & Time"
+            />
+            <IoArrowDownOutline
+              style={{
+                fontSize: "12px",
+                color: "white",
+                padding: "6px",
+                borderRadius: "100px",
+                background: "#372f62",
+              }}
+            />
+          </div>
+          {/* <div className="time-grid">
+            {generateTimeSlots().map((time, index) => (
+              <div
+                key={index}
+                className="time-cell"
+                onClick={() => handleTimeSelect(time)}
+              >
+                {time}
+              </div>
+            ))}
+          </div> */}
+
+          <div className="form-input2">
+            <Dropdown
+              options={options}
+              onSelect={handleSelect}
+              defaultText="Choose Service"
+            />
+          </div>
+
+          <div className="form-input4">
+            <input
+              type="text"
+              name="ChooseDoctor"
+              value={inputs.testAndMedicine || ""}
+              onChange={handleChange}
+              placeholder="Choose Doctor"
+              className="input-val"
+            />
+            <IoArrowDownOutline
+              style={{
+                fontSize: "12px",
+                color: "white",
+                padding: "6px",
+                borderRadius: "100px",
+                background: "#372f62",
+              }}
+            />
+          </div>
+          <div className="form-input4">
+            <input
+              type="text"
+              name="testAndMedicine"
+              value={inputs.testAndMedicine || ""}
+              onChange={handleChange}
+              placeholder="Choose Test & Medicine"
+              className="input-val"
+            />
+            <IoArrowDownOutline
+              style={{
+                fontSize: "12px",
+                color: "white",
+                padding: "6px",
+                borderRadius: "100px",
+                background: "#372f62",
+              }}
+            />
+          </div>
+          <input type="submit" value="BOOK NOW" className="form-submit" />
+        </form>
+        <div className="bk-doc-details">
+          <div className="bk-doc-name-prof">
+            <span className="bk-doc-name">
+              Doctor : <span className="bk-docname">Dr. Karen Lane</span>
+            </span>
+            <span className="bk-doc-code">
+              Code : <span className="bk-code">87563</span>
+            </span>
+          </div>
+          <div className="bk-contact">
+            <FaWhatsapp className="bk-whatsapp" />
+            <MdOutlinePhone className="bk-phone" />
+          </div>
+        </div>
+        <span className="bk-address">
+          Clinic Address :
+          <span className="bk-add">
+            #31, Diamond Plaza, 3rd Floor, Boltz street, Delhi
+          </span>
+        </span>
+      </div>
+    </div>
+  );
 };
 
 export default BookAppointmentModal;

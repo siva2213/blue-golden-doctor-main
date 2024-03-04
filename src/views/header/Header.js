@@ -7,8 +7,15 @@ import { CgClose } from "react-icons/cg";
 import { CgMenuLeft } from "react-icons/cg";
 import city from "../../assets/city.svg";
 import Pagination from "../../components/Pagination";
-
 import { Link } from "react-router-dom";
+import { FaUser, FaUserDoctor } from "react-icons/fa6";
+import { FaCalendarAlt, FaCalendar } from "react-icons/fa";
+import { IoIosLock } from "react-icons/io";
+import { MdInsertDriveFile } from "react-icons/md";
+import download from "../../assets/hdr_download.png";
+import applestore from "../../assets/applestore.png";
+import playstore from "../../assets/playstore.png";
+import { SiSpringsecurity } from "react-icons/si";
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +23,14 @@ const Header = (props) => {
   const [totalPages, setTotalPages] = useState(3);
   const [cityList, setCityList] = useState([]);
   const [activeMenu, setActiveMenu] = useState("Home");
+
   const cityListRef = useRef(null);
+
+  const handleButtonClick = (menuTitle) => {
+    setActiveMenu(menuTitle);
+    setIsOpen(false);
+  };
+
   const toggleMenu = () => {
     setIsOpen((prevState) => !prevState);
   };
@@ -71,32 +85,235 @@ const Header = (props) => {
       <img src={header} alt="greoilc" className="hd-header" />
 
       <div className={`hd-menu ${isOpen ? "hd-open" : "hd-close"}`}>
-        <Link to="/blue-golden-doctor-main">
-          <button className="hd-btn1" onClick={closeMenuAndDoSomething}>
-            Home
-          </button>
-        </Link>
+        <div
+          className={`hdractive ${
+            activeMenu === "Home" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("Home")}
+        >
+          <Link to="/blue-golden-doctor-main">
+            <button className="hd-btn1">
+              <FaUser
+                className={`hdr-icon-user ${
+                  activeMenu === "Home" ? "active-hdricon" : "inactive-hdricon"
+                }`}
+              />{" "}
+              Home
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Upcoming Appointments" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("Upcoming Appointments")}
+        >
+          <Link to="/Invoice">
+            <button className="hd-btn2">
+              <FaCalendarAlt
+                className={`hdr-icon-cal ${
+                  activeMenu === "Upcoming Appointments"
+                    ? "active-hdricon"
+                    : "inactive-hdricon"
+                }`}
+              />{" "}
+              Upcoming Appointments
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Previous Appointments" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("Previous Appointments")}
+        >
+          <Link to="/PaymentScreen">
+            <button className="hd-btn3">
+              <FaCalendar
+                className={`hdr-icon-cale ${
+                  activeMenu === "Previous Appointments"
+                    ? "active-hdricon"
+                    : "inactive-hdricon"
+                }`}
+              />{" "}
+              Previous Appointments
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Our Doctors" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("Our Doctors")}
+        >
+          <Link to="/PaymentSuccess">
+            <button className="hd-btn4">
+              <FaUserDoctor
+                className={`hdr-icon-doc ${
+                  activeMenu === "Our Doctors"
+                    ? "active-hdricon"
+                    : "inactive-hdricon"
+                }`}
+              />{" "}
+              Our Doctors
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Insurance" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("Insurance")}
+        >
+          <Link to="/OtherPayment">
+            <button className="hd-btn5">
+              <SiSpringsecurity
+                className={`hdr-icon-ins ${
+                  activeMenu === "Insurance"
+                    ? "active-hdricon"
+                    : "inactive-hdricon"
+                }`}
+              />
+              Insurance
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Privacy Policy" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("Privacy Policy")}
+        >
+          <Link to="/ChooseLocation">
+            <button className="hd-btn5">
+              <IoIosLock
+                className={`hdr-icon-pri ${
+                  activeMenu === "Privacy Policy"
+                    ? "active-hdricon"
+                    : "inactive-hdricon"
+                }`}
+              />
+              Privacy Policy
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("Terms & Conditions")}
+        >
+          <Link to="">
+            <button className="hd-btn5">
+              <span className="hdr-icon-wrapper">
+                <MdInsertDriveFile
+                  className={`hdr-icon-term ${
+                    activeMenu === "Terms & Conditions"
+                      ? "active-hdricon"
+                      : "inactive-hdricon"
+                  }`}
+                />
+              </span>
+              Terms & Conditions
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("ConfirmBooking")}
+        >
+          <Link to="/Offer">
+            <button className="hd-btn5">
+              <span className="hdr-icon-wrapper">
+                <MdInsertDriveFile className="hdr-icon-term" />
+              </span>
+              Offers
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("ConfirmBooking")}
+        >
+          <Link to="/ChooseLocation">
+            <button className="hd-btn5">
+              <span className="hdr-icon-wrapper">
+                <MdInsertDriveFile className="hdr-icon-term" />
+              </span>
+              ChooseLocation
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("ConfirmBooking")}
+        >
+          <Link to="/ConfirmBooking">
+            <button className="hd-btn5">
+              <span className="hdr-icon-wrapper">
+                <MdInsertDriveFile className="hdr-icon-term" />
+              </span>
+              confirmbooking
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("ConfirmBooking")}
+        >
+          <Link to="/SubmitEmail">
+            <button className="hd-btn5">
+              <span className="hdr-icon-wrapper">
+                <MdInsertDriveFile className="hdr-icon-term" />
+              </span>
+              submitemail
+            </button>
+          </Link>
+        </div>
+        <div
+          className={`hdractive ${
+            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
+          }`}
+          onClick={() => handleButtonClick("ConfirmBooking")}
+        >
+          <Link to="/OtpVerification">
+            <button className="hd-btn5">
+              <span className="hdr-icon-wrapper">
+                <MdInsertDriveFile className="hdr-icon-term" />
+              </span>
+              otp
+            </button>
+          </Link>
+        </div>
 
-        <Link to="/Invoice">
-          <button className="hd-btn2" onClick={closeMenuAndDoSomething}>
-            Invoice
-          </button>
-        </Link>
-        <Link to="/PaymentScreen">
-          <button className="hd-btn3" onClick={closeMenuAndDoSomething}>
-            Payment Screen
-          </button>
-        </Link>
-        <Link to="/PaymentSuccess">
-          <button className="hd-btn4" onClick={closeMenuAndDoSomething}>
-            Payment Success
-          </button>
-        </Link>
-        <Link to="/OtherPayment">
-          <button className="hd-btn5" onClick={closeMenuAndDoSomething}>
-            Other Payment
-          </button>
-        </Link>
+        <div className="hdr-download-app">
+          <img src={download} alt="download the app" className="hdr-app-dnld" />
+          <div className="hdr-dnld-ttls">
+            <div className="hdr-titles">
+              <span className="hdr-dnld-ttl1">Download Precilo</span>
+              <span className="hdr-dnld-ttl2"> App Now!!</span>
+              <span className="hdr-dnld-ttl3">
+                Enjoy hassle free consultations.
+              </span>
+            </div>
+            <div className="hdr-dnld-icons">
+              <img src={playstore} alt="playstore" className="hdr-dnld-play" />
+              <img
+                src={applestore}
+                alt="applestore"
+                className="hdr-dnld-apple"
+              />
+            </div>
+          </div>
+        </div>
       </div>
       <div className="hd-citymain">
         <div ref={cityListRef} className="citylist">
