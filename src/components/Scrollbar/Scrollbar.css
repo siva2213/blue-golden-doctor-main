@@ -1,0 +1,26 @@
+.scrollbar-container {
+  position: relative;
+  /* overflow-y: auto; */
+}
+.scrollbar-track {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  width: 6px;
+  background-color: #ccc;
+}
+.scrollbar-thumb {
+  position: absolute;
+  right: 30px;
+  /* top: var(--thumb-top, 0); */
+  width: 100%;
+  background-color: #e957c9;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.scrollbar-thumb:hover {
+  background-color: #d440ab;
+  height: 30px;
+}

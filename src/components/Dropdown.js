@@ -1,7 +1,8 @@
-// Dropdown.js
+/* Dropdown.js */
 import React, { useState } from "react";
 import "./Dropdown.css";
 import { IoArrowDownOutline } from "react-icons/io5";
+import Scrollbar from "./Scrollbar/Scrollbar";
 
 const Dropdown = ({
   options,
@@ -25,8 +26,12 @@ const Dropdown = ({
   };
 
   return (
-    <div className="dropdown">
-      <div className="selected-option" onClick={toggleDropdown}>
+    <div className="dropdown" style={{ background: dropdownBackground }}>
+      <div
+        className="selected-option"
+        onClick={toggleDropdown}
+        // style={{ color: arrowColor }}
+      >
         {selectedOption ? selectedOption.text : defaultText}
         <IoArrowDownOutline
           style={{
@@ -40,27 +45,24 @@ const Dropdown = ({
       </div>
       <div className="dropmain">
         {isOpen && (
-          <ul className="drop-options">
-            {options.map((option, index) => (
-              <React.Fragment key={index}>
+          <Scrollbar style={{ maxHeight: "160px" }}>
+            {/* <div className="scrollbar-container"> */}
+            <ul
+              className="drop-options"
+              style={{
+                backgroundColor: dropdownBackground,
+                color: optionDividerColor,
+              }}
+            >
+              {options.map((option, index) => (
                 <li key={index} onClick={() => handleOptionClick(option)}>
                   <span className="option-icon">{option.icon}</span>
                   <span className="option-text">{option.text}</span>
                 </li>
-                {index !== options.length - 1 && (
-                  <hr
-                    className="option-divider"
-                    style={{
-                      margin: "0",
-                      border: "none",
-                      height: "1px",
-                      backgroundColor: optionDividerColor || "#e0e0e0",
-                    }}
-                  />
-                )}
-              </React.Fragment>
-            ))}
-          </ul>
+              ))}
+            </ul>
+            {/* </div> */}
+          </Scrollbar>
         )}
       </div>
     </div>

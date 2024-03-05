@@ -100,6 +100,7 @@ const OtpVerification = () => {
                         maxLength={1}
                         value={value}
                         onChange={(e) => handleChange(index, e.target.value)}
+                        type="number"
                       />
                     ))}
                   </div>

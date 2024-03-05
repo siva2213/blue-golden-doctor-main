@@ -205,6 +205,7 @@
     height: fit-content;
     padding-bottom: 20px;
     border-radius: 0 0 0 40px;
+    text-decoration: none;
   }
   .hdr-icon-user,
   .hdr-icon-cal,
@@ -233,11 +234,11 @@
   }
   .active-hdricon {
     color: white;
-}
+  }
 
-.inactive-hdricon {
-  color: #e4ac6e;
-}
+  .inactive-hdricon {
+    color: #e4ac6e;
+  }
   .hdractive {
     width: 100%;
     padding: 16px;

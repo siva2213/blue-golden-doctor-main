@@ -3,11 +3,12 @@ import "./ChooseLocation.css";
 import playstore from "../../assets/Playstorelogo.svg";
 import apple from "../../assets/Applelogo.svg";
 import choosecity from "../../assets/choosecity.png";
+import Scrollbar from "../../components/Scrollbar/Scrollbar";
 
 const ChooseLocation = () => {
   const [open, setOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
-  const [isOpen, setIsOpen] = useState(false); // Ensure dropdown is initially closed
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(!open);
@@ -78,27 +79,30 @@ const ChooseLocation = () => {
               </div>
               <div className="choose-sub-page">
                 <span className="choose-choose">Choose City</span>
-                <div className="dropdown">
+
+                <div className="loc-dropdown-select">
                   <div className="selected-option-loc" onClick={toggleDropdown}>
                     {selectedCity ? selectedCity : "Select City"}
                   </div>
-                  <div className="dropmain">
-                    {isOpen && (
-                      <ul className="drop-options">
-                        {options.map((option, index) => (
-                          <React.Fragment key={index}>
+
+                  {isOpen && (
+                    <div className="loc-dropmain-menu">
+                      <Scrollbar style={{ maxHeight: "200px" }}>
+                        <ul className="drop-options">
+                          {options.map((option, index) => (
                             <li
                               key={index}
                               onClick={() => handleOptionClick(option)}
                             >
                               <span className="option-text">{option.text}</span>
                             </li>
-                          </React.Fragment>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                          ))}
+                        </ul>
+                      </Scrollbar>
+                    </div>
+                  )}
                 </div>
+
                 <div>
                   <button className="choose-done" onClick={handleClose}>
                     DONE
