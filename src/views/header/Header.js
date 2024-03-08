@@ -92,7 +92,7 @@ const Header = (props) => {
           onClick={() => handleButtonClick("Home")}
         >
           <Link
-            to="/#/blue-golden-doctor-main"
+            to="/blue-golden-doctor-main"
             style={{ textDecoration: "none" }}
           >
             <button className="hd-btn1">
@@ -111,7 +111,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("Upcoming Appointments")}
         >
-          <Link to="/#/Invoice" style={{ textDecoration: "none" }}>
+          <Link to="/Invoice" style={{ textDecoration: "none" }}>
             <button className="hd-btn2">
               <FaCalendarAlt
                 className={`hdr-icon-cal ${
@@ -130,7 +130,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("Previous Appointments")}
         >
-          <Link to="/#/PaymentScreen" style={{ textDecoration: "none" }}>
+          <Link to="/PaymentScreen" style={{ textDecoration: "none" }}>
             <button className="hd-btn3">
               <FaCalendar
                 className={`hdr-icon-cale ${
