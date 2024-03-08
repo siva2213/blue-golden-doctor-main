@@ -151,6 +151,7 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
                   borderRadius: "100px",
                   background: "#372f62",
                 }}
+                onClick={() => setShowCalendar(true)}
               />
             </div>
             {showCalendar && (
