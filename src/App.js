@@ -37,9 +37,9 @@ function App() {
         <TopAdvertisement />
         <Header />
         <Routes>
-          <Route path="/blue-golden-doctor-main" element={<Services />} />
-          <Route path="/invoice" element={<Invoice />} />
-          <Route path="/PaymentScreen" element={<PaymentScreen />} />
+          <Route path="/#/blue-golden-doctor-main" element={<Services />} />
+          <Route path="/#/invoice" element={<Invoice />} />
+          <Route path="/#/PaymentScreen" element={<PaymentScreen />} />
           <Route path="/PaymentSuccess" element={<SuccessScreen />} />
           <Route path="/OtherPayment" element={<OtherPayment />} />
           <Route path="/Offer" element={<Offer />} />
