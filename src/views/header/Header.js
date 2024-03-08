@@ -29,8 +29,14 @@ const Header = () => {
   const handleButtonClick = (menuTitle) => {
     setActiveMenu(menuTitle);
     setIsOpen(false);
+    sessionStorage.setItem("activeMenu", menuTitle);
   };
-
+  useEffect(() => {
+    const savedActiveMenu = sessionStorage.getItem("activeMenu");
+    if (savedActiveMenu) {
+      setActiveMenu(savedActiveMenu);
+    }
+  }, []);
   const toggleMenu = () => {
     setIsOpen((prevState) => !prevState);
   };
