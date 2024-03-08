@@ -45,11 +45,12 @@ const DateTimePicker = ({ onClose }) => {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
+  const day = currentDate.getDate();
   const numDays = new Date(year, month + 1, 0).getDate();
   const dates = Array.from({ length: numDays }, (_, index) => {
     const date = new Date(year, month, index + 1);
     return date;
-  });
+  }).filter((date) => date >= currentDate);
 
   // Generate time options
   const times = [];
