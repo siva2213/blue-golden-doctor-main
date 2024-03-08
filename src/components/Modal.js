@@ -154,7 +154,7 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
                 onClick={() => setShowCalendar(true)}
               />
             </div>
-            {/* {showCalendar && (
+            {showCalendar && (
               <div className="calendar-container">
                 <DateTimePicker
                   onDateSelect={handleDateSelection}
@@ -162,7 +162,7 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
                   onClose={() => setShowCalendar(false)}
                 />
               </div>
-            )} */}
+            )}
           </div>
           <div className="">
             {/* <Dropdown
