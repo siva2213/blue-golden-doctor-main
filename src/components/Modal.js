@@ -230,7 +230,7 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
               }}
             />
           </div>
-          <input type="submit" value="BOOK NOW" className="form-submit" />
+          <div className="submit-button"><input type="submit" value="BOOK NOW" className="form-submit" /></div>
         </form>
         <div className="bk-doc-details">
           <div className="bk-doc-name-prof">

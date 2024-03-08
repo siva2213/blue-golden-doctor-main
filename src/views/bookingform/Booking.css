@@ -113,15 +113,14 @@
     color: #372f62;
   }
   .form-submit {
-    background: #372f62;
-    font-size: 16px;
+    background: linear-gradient(to right, #e49356, #e7cb87);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    color: #e49356;
-    border-radius: 100px;
     border: none;
-    padding: 10px 14px;
-    box-shadow: 0px 4px 10px 0px #000000;
   }
 }
 
