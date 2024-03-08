@@ -154,7 +154,7 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
                 onClick={() => setShowCalendar(true)}
               />
             </div>
-            {showCalendar && (
+            {/* {showCalendar && (
               <div className="calendar-container">
                 <DateTimePicker
                   onDateSelect={handleDateSelection}
@@ -162,15 +162,15 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
                   onClose={() => setShowCalendar(false)}
                 />
               </div>
-            )}
+            )} */}
           </div>
-          {/* <div className=""> */}
+          <div className="">
             {/* <Dropdown
               options={options}
               onSelect={handleSelect}
               defaultText="Choose Service"
             /> */}
-            {/* <Dropdown
+            <Dropdown
               options={options}
               onSelect={handleSelect}
               defaultText={service ? service : "Choose Service"}
@@ -190,8 +190,8 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
                 color: "#372F62",
                 width: "50vw",
               }}
-            /> */}
-          {/* </div> */}
+            />
+          </div>
 
           <div className="form-input4">
             <input
