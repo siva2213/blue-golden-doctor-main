@@ -3,24 +3,24 @@ import "./ChooseLocation.css";
 import playstore from "../../assets/Playstorelogo.svg";
 import apple from "../../assets/Applelogo.svg";
 import choosecity from "../../assets/choosecity.png";
+import Dropdown from "../../components/Dropdown";
 import Scrollbar from "../../components/Scrollbar/Scrollbar";
 
 const ChooseLocation = () => {
-  const [open, setOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(!open);
-  };
+  // const handleClickisOpen = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const handleClose = () => {
+  //   setIsOpen(false);
+  // };
 
   const handleOptionClick = (option) => {
     setSelectedCity(option.text);
-    setOpen(false);
+    setIsOpen(false);
   };
 
   const options = [
@@ -29,7 +29,7 @@ const ChooseLocation = () => {
     { text: "Trichi" },
     { text: "Delhi" },
     { text: "Delhi" },
-    { text: "Delhi" },
+    { text: "Mumbai" },
   ];
 
   const toggleDropdown = () => {
@@ -38,10 +38,10 @@ const ChooseLocation = () => {
 
   return (
     <div className="choose-main">
-      <button className="open-offers-button" onClick={handleClickOpen}>
-        choosebooking
+      <button className="Open-offers-button" onClick={toggleDropdown}>
+        Choose Location
       </button>
-      {open && (
+      {isOpen && (
         <div className="choose-dialog">
           <div className="choose-dialog-main">
             <div className="choose-top">
@@ -80,31 +80,31 @@ const ChooseLocation = () => {
               <div className="choose-sub-page">
                 <span className="choose-choose">Choose City</span>
 
-                <div className="loc-dropdown-select">
-                  <div className="selected-option-loc" onClick={toggleDropdown}>
-                    {selectedCity ? selectedCity : "Select City"}
-                  </div>
-
-                  {isOpen && (
-                    <div className="loc-dropmain-menu">
-                      <Scrollbar style={{ maxHeight: "200px" }}>
-                        <ul className="drop-options">
-                          {options.map((option, index) => (
-                            <li
-                              key={index}
-                              onClick={() => handleOptionClick(option)}
-                            >
-                              <span className="option-text">{option.text}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </Scrollbar>
-                    </div>
-                  )}
-                </div>
-
+                <Dropdown
+                  options={options}
+                  onSelect={handleOptionClick}
+                  defaultText={selectedCity ? selectedCity : "Select City"}
+                  dropdownBackground="#2E2756" // Customize the dropdown background color if needed
+                  optionDividerColor="#000000" // Customize the option divider color if needed
+                  isOpen={isOpen} // Pass the isOpen state to the Dropdown component
+                  toggleDropdown={toggleDropdown} // Pass the toggleDropdown function to the Dropdown component
+                  showArrow={false}
+                  selectFontSize="14px" // Customize arrow font size
+                  selectPadding="14px 20px"
+                  selectborderRadius="40px"
+                  selectboxShadow="rgb(64, 54, 114) -3px -3px 6px 0px inset, rgb(45, 38, 83) 3px 3px 6px 3px inset"
+                  scrollbarBackground="#2e2756"
+                  scrollbarHeight="180px"
+                  optionTextStyle={{
+                    background: "#372F62",
+                    fontSize: "14px",
+                    fontWeight: "bold",
+                    color: "white",
+                    width: "50vw",
+                  }}
+                />
                 <div>
-                  <button className="choose-done" onClick={handleClose}>
+                  <button className="choose-done" onClick={toggleDropdown}>
                     DONE
                   </button>
                 </div>

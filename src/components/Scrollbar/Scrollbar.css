@@ -1,26 +1,47 @@
-.scrollbar-container {
-  position: relative;
-  /* overflow-y: auto; */
-}
-.scrollbar-track {
-  position: absolute;
-  right: 30px;
-  top: 0;
-  width: 6px;
-  background-color: #ccc;
-}
-.scrollbar-thumb {
-  position: absolute;
-  right: 30px;
-  /* top: var(--thumb-top, 0); */
-  width: 100%;
-  background-color: #e957c9;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+
+.custom-scrollbars__content {
+  height: 24vh;
+  -ms-overflow-style: none;
+  overflow: auto;
+  padding: 0 1rem;
+  scrollbar-width: none;
 }
 
-.scrollbar-thumb:hover {
-  background-color: #d440ab;
-  height: 30px;
+.custom-scrollbars__content::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbars__scrollbar {
+  display: grid;
+  /* gap: 1rem; */
+  grid-auto-flow: row;
+  grid-template: auto 1fr auto / 1fr;
+  place-items: center;
+  padding: 0 4px 0 4px;
+}
+.custom-scrollbars__button {
+  visibility: hidden;
+}
+.custom-scrollbars__track-and-thumb {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 16px;
+}
+
+.custom-scrollbars__track {
+  background-color: #ccc;
+  border-radius: 12px;
+  bottom: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 8px;
+}
+
+.custom-scrollbars__thumb {
+  border-radius: 12px;
+  background-color: #e957c9;
+  position: absolute;
+  width: 8px;
 }

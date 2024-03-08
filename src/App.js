@@ -49,7 +49,6 @@ function App() {
           <Route path="/OtpVerification" element={<OtpVerification />} />
 
           <Route path="/" element={<Services />} />
-
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

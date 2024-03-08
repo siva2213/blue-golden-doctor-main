@@ -1,0 +1,153 @@
+.-time-selector {
+  display: flex;
+  flex-direction: column;
+  max-width: 403px;
+  padding: 20px;
+}
+
+.calendar-title {
+  display: flex;
+  color: #372f62;
+  margin: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: League Spartan, -apple-system, Roboto, Helvetica, sans-serif;
+}
+.date-time-selector {
+  background: white;
+  border-radius: 30px;
+  width: 86vw;
+}
+.date-selector-container,
+.time-selector-container {
+  border-radius: 25px;
+  padding: 20px;
+}
+.calendar-selector {
+  position: relative;
+}
+.calendar-container {
+  position: absolute;
+  display: flex;
+  z-index: 1000;
+  top: 50px;
+}
+.date-selector {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 18px 26px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+  gap: 10px;
+}
+.time-selector {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 20px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.selected,
+.date-selector.selected,
+.time-selector.selected {
+  background-color: #372f62;
+  color: #fff;
+}
+
+.selected .day {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #e48e51, #e8d48f);
+}
+.selected .month {
+  color: white;
+}
+
+.selected .weekday {
+  color: #e957c9;
+}
+.month,
+.weekday {
+  font-size: 12px;
+  color: #2d2653;
+  text-align: right;
+}
+.weekday {
+  font-weight: bold;
+}
+.period {
+  font-family: League Spartan, -apple-system, Roboto, Helvetica, sans-serif;
+  text-align: right;
+  color: #6d6b78;
+  font-size: 12px;
+  font-weight: bold;
+}
+.calendar-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close-calendar {
+  font-size: 12px;
+  padding: 4px;
+  background: #6d6b78;
+  color: white;
+  border-radius: 100px;
+}
+.day {
+  font-size: 30px;
+  font-weight: bold;
+  color: #2d2653;
+}
+.time {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d2653;
+}
+
+.timeselected .time {
+  color: #e957c9; /* Change to your desired text color */
+}
+.timeselected .period {
+  color: #fff; /* Change to your desired text color */
+}
+
+.dates {
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  overflow-x: scroll;
+  padding-top: 10px;
+}
+.times {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  justify-content: space-between;
+  padding-top: 10px;
+  height: 200px;
+  /* overflow-y: scroll; */
+}
+
+.selected-datetime {
+  margin-top: 45px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  text-align: center;
+}
+.selected {
+  background-color: #372f62;
+  color: #fff;
+}
+
+.timeselected {
+  background-color: #372f62;
+  color: #fff;
+}

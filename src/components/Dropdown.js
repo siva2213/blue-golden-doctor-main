@@ -1,4 +1,3 @@
-/* Dropdown.js */
 import React, { useState } from "react";
 import "./Dropdown.css";
 import { IoArrowDownOutline } from "react-icons/io5";
@@ -11,6 +10,14 @@ const Dropdown = ({
   arrowColor,
   dropdownBackground,
   optionDividerColor,
+  showArrow,
+  selectFontSize,
+  selectPadding,
+  selectBackground,
+  selectborderRadius,
+  selectboxShadow,
+  scrollbarBackground,
+  optionTextStyle,
 }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -26,45 +33,81 @@ const Dropdown = ({
   };
 
   return (
-    <div className="dropdown" style={{ background: dropdownBackground }}>
+    <div
+      className="dropdown"
+      style={
+        {
+          // background: dropdownBackground,
+          // borderRadius: selectborderRadius,
+          // boxShadow: selectboxShadow,
+        }
+      }
+    >
       <div
         className="selected-option"
         onClick={toggleDropdown}
-        // style={{ color: arrowColor }}
+        style={{
+          fontSize: selectFontSize,
+          padding: selectPadding,
+          background: selectBackground,
+          boxShadow: selectboxShadow,
+        }}
       >
-        {selectedOption ? selectedOption.text : defaultText}
-        <IoArrowDownOutline
-          style={{
-            fontSize: "12px",
-            color: "white",
-            padding: "6px",
-            borderRadius: "100px",
-            background: "#372f62",
-          }}
-        />
+        <div>{selectedOption ? selectedOption.text : defaultText}</div>
+        {showArrow && (
+          <IoArrowDownOutline
+            style={{
+              fontSize: "12px",
+              color: arrowColor,
+              padding: "6px",
+              borderRadius: "100px",
+              background: "#372f62",
+            }}
+          />
+        )}
       </div>
-      <div className="dropmain">
-        {isOpen && (
-          <Scrollbar style={{ maxHeight: "160px" }}>
-            {/* <div className="scrollbar-container"> */}
+      {isOpen && (
+        <div className="dropmain">
+          <Scrollbar
+            thumbcolor="#E957C9"
+            trackcolor="#372F62"
+            scrollbarBackground={scrollbarBackground}
+          >
             <ul
               className="drop-options"
               style={{
-                backgroundColor: dropdownBackground,
+                // backgroundColor: dropdownBackground,
                 color: optionDividerColor,
               }}
             >
               {options.map((option, index) => (
                 <li key={index} onClick={() => handleOptionClick(option)}>
-                  <span className="option-icon">{option.icon}</span>
-                  <span className="option-text">{option.text}</span>
+                  {option.icon && (
+                    <span className="option-icon">{option.icon}</span>
+                  )}
+                  <span className="option-text" style={optionTextStyle}>
+                    {option.text}
+                  </span>
                 </li>
               ))}
             </ul>
-            {/* </div> */}
+            {/* <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              malesuada ligula et faucibus rhoncus. Nulla consequat risus et
+              luctus ullamcorper. Nam facilisis at elit id condimentum. Nulla
+              luctus tortor at nisl consectetur, in consequat nulla rutrum. Sed
+              condimentum ligula non sapien elementum, sed placerat metus
+              consequat. Sed sollicitudin sem sit amet venenatis tincidunt. In
+              efficitur sed dolor vel consectetur. Mauris convallis pharetra
+              risus. Donec pretium erat vel augue consectetur lacinia. Nunc eu
+              lobortis risus. Quisque varius erat eget est dignissim vestibulum.
+              Suspendisse sagittis dui lorem, sodales mollis mi auctor at. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Nam ut commodo
+              massa.
+            </p> */}
           </Scrollbar>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

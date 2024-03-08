@@ -9,20 +9,16 @@ import { IoArrowDownOutline } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
 import { LiaToothSolid } from "react-icons/lia";
 import Dropdown from "./Dropdown";
+import DateTimePicker from "../views/DateTimePicker/DateTimePicker";
 
 const BookAppointmentModal = ({ show, onHide, onSelect }) => {
   const [inputs, setInputs] = useState({});
   const [activeButton, setActiveButton] = useState(null);
-  const [selectedDateTime, setSelectedDateTime] = useState("");
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+  const [service, setService] = useState(null);
 
-  const handleDateTimeChange = (event) => {
-    setSelectedDateTime(event.target.value);
-    // If both date and time are selected, submit
-    if (event.target.value && onSelect) {
-      const dateTime = new Date(event.target.value);
-      onSelect(dateTime);
-    }
-  };
   const handleClose = () => {
     onHide(false);
   };
@@ -78,7 +74,23 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
     alert(JSON.stringify(inputs));
     console.log(inputs);
   };
+  const handleInputFocus = () => {
+    setShowCalendar(true);
+  };
 
+  const handleDateSelection = (date) => {
+    setSelectedDate(date);
+    if (selectedTime) {
+      setShowCalendar(false); // Close the calendar if both date and time are selected
+    }
+  };
+
+  const handleTimeSelection = (time) => {
+    setSelectedTime(time);
+    if (selectedDate) {
+      setShowCalendar(false); // Close the calendar if both date and time are selected
+    }
+  };
   return (
     <div className={`modal-overlay ${show ? "show" : ""}`}>
       <div className="modal-container">
@@ -91,7 +103,6 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
           <IoMdClose className="modal-close" onClick={handleClose} />
         </div>
         <span className="bk-title">Make An Appointment</span>
-
         <div className="book-btn">
           {buttons.map((button, i) => (
             <div className="book-item" key={button.name + i}>
@@ -122,41 +133,62 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
               className="input-val"
             />
           </div>
-          <div className="form-input4">
-            <input
-              type="datetime-local"
-              id="dateTimeInput"
-              value={selectedDateTime}
-              onChange={handleDateTimeChange}
-              placeholder="Choose Date & Time"
-            />
-            <IoArrowDownOutline
-              style={{
-                fontSize: "12px",
-                color: "white",
-                padding: "6px",
-                borderRadius: "100px",
-                background: "#372f62",
-              }}
-            />
-          </div>
-          {/* <div className="time-grid">
-            {generateTimeSlots().map((time, index) => (
-              <div
-                key={index}
-                className="time-cell"
-                onClick={() => handleTimeSelect(time)}
-              >
-                {time}
+          <div className="calendar-selector">
+            <div className="form-input4">
+              <input
+                type="datetime"
+                id="dateTimeInput"
+                placeholder="Choose Date & Time"
+                // onFocus={handleInputFocus}
+                onClick={() => setShowCalendar(true)}
+                className="input-val"
+              />
+              <IoArrowDownOutline
+                style={{
+                  fontSize: "12px",
+                  color: "white",
+                  padding: "6px",
+                  borderRadius: "100px",
+                  background: "#372f62",
+                }}
+              />
+            </div>
+            {showCalendar && (
+              <div className="calendar-container">
+                <DateTimePicker
+                  onDateSelect={handleDateSelection}
+                  onTimeSelect={handleTimeSelection}
+                  onClose={() => setShowCalendar(false)}
+                />
               </div>
-            ))}
-          </div> */}
-
-          <div className="form-input2">
-            <Dropdown
+            )}
+          </div>
+          <div className="">
+            {/* <Dropdown
               options={options}
               onSelect={handleSelect}
               defaultText="Choose Service"
+            /> */}
+            <Dropdown
+              options={options}
+              onSelect={handleSelect}
+              defaultText={service ? service : "Choose Service"}
+              dropdownBackground="#2E2756"
+              optionDividerColor="#000000"
+              showArrow={true}
+              selectFontSize="14px"
+              selectPadding="10px 10px"
+              selectborderRadius="40px"
+              selectboxShadow="inset -3px -3px 6px #fcfcfc, inset 3px 3px 6px #e2e1e1"
+              selectBackground="#f2f2f2"
+              scrollbarBackground="white"
+              optionTextStyle={{
+                background: "none",
+                fontSize: "14px",
+                fontWeight: "bold",
+                color: "#372F62",
+                width: "50vw",
+              }}
             />
           </div>
 

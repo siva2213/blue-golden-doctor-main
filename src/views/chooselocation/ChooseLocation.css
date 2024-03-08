@@ -23,7 +23,7 @@
 }
 .choose-top {
   background: white;
-  padding: 50px 10px 10px 10px;
+  padding: 50px 10px 0px 10px;
   border-radius: 50px 50px 0 0;
   width: -webkit-fill-available;
   display: flex;
@@ -83,7 +83,7 @@
   padding: 30px 20px 10px 20px;
   border-radius: 40px 40px 0 0;
   gap: 20px;
-  /* height: 220px; */
+  height: 220px;
 }
 .choose-cnt-img {
   display: flex;
@@ -129,4 +129,5 @@
   z-index: 2;
   left: 50%;
   transform: translateX(-50%);
+  bottom: 20px;
 }

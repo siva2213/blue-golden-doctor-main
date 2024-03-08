@@ -129,6 +129,7 @@
 
   border-radius: 10px;
 }
+
 .form-input4 input[type="datetime-local"] {
   width: calc(100% - 30px);
 
@@ -154,7 +155,7 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.select-items::-webkit-scrollbar {
+/* .select-items::-webkit-scrollbar {
   width: 10px;
 }
 .select-items::-webkit-scrollbar-track {
@@ -168,7 +169,7 @@
   height: 5px;
   border-radius: 100px;
   padding: 10px;
-}
+} */
 .custom-radius {
   border-radius: 30px;
 }
@@ -265,7 +266,14 @@
 .modal-overlay.show {
   display: block;
 }
-
+.dateandtime:focus-visible {
+  outline: none;
+  border: none;
+}
+.dateandtime {
+  border: none;
+  background: #f2f2f2;
+}
 .modal-container {
   position: fixed;
   top: 50%;
