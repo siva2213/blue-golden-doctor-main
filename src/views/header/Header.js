@@ -17,7 +17,7 @@ import applestore from "../../assets/applestore.png";
 import playstore from "../../assets/playstore.png";
 import { SiSpringsecurity } from "react-icons/si";
 
-const Header = (props) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(3);
@@ -111,7 +111,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("Upcoming Appointments")}
         >
-          <Link to="/Invoice" style={{ textDecoration: "none" }}>
+          <Link to="/invoice" style={{ textDecoration: "none" }}>
             <button className="hd-btn2">
               <FaCalendarAlt
                 className={`hdr-icon-cal ${
@@ -130,7 +130,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("Previous Appointments")}
         >
-          <Link to="/PaymentScreen" style={{ textDecoration: "none" }}>
+          <Link to="/paymentScreen" style={{ textDecoration: "none" }}>
             <button className="hd-btn3">
               <FaCalendar
                 className={`hdr-icon-cale ${
@@ -149,7 +149,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("Our Doctors")}
         >
-          <Link to="/PaymentSuccess" style={{ textDecoration: "none" }}>
+          <Link to="/paymentSuccess" style={{ textDecoration: "none" }}>
             <button className="hd-btn4">
               <FaUserDoctor
                 className={`hdr-icon-doc ${
@@ -168,7 +168,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("Insurance")}
         >
-          <Link to="/OtherPayment" style={{ textDecoration: "none" }}>
+          <Link to="/otherPayment" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <SiSpringsecurity
                 className={`hdr-icon-ins ${
@@ -187,7 +187,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("Privacy Policy")}
         >
-          <Link to="/ChooseLocation" style={{ textDecoration: "none" }}>
+          <Link to="/chooseLocation" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <IoIosLock
                 className={`hdr-icon-pri ${
@@ -227,7 +227,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("ConfirmBooking")}
         >
-          <Link to="/Offer" style={{ textDecoration: "none" }}>
+          <Link to="/offer" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <span className="hdr-icon-wrapper">
                 <MdInsertDriveFile className="hdr-icon-term" />
@@ -242,7 +242,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("ConfirmBooking")}
         >
-          <Link to="/ChooseLocation" style={{ textDecoration: "none" }}>
+          <Link to="/chooseLocation" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <span className="hdr-icon-wrapper">
                 <MdInsertDriveFile className="hdr-icon-term" />
@@ -257,7 +257,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("ConfirmBooking")}
         >
-          <Link to="/ConfirmBooking" style={{ textDecoration: "none" }}>
+          <Link to="/confirmBooking" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <span className="hdr-icon-wrapper">
                 <MdInsertDriveFile className="hdr-icon-term" />
@@ -272,7 +272,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("ConfirmBooking")}
         >
-          <Link to="/SubmitEmail" style={{ textDecoration: "none" }}>
+          <Link to="/submitEmail" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <span className="hdr-icon-wrapper">
                 <MdInsertDriveFile className="hdr-icon-term" />
@@ -287,7 +287,7 @@ const Header = (props) => {
           }`}
           onClick={() => handleButtonClick("ConfirmBooking")}
         >
-          <Link to="/OtpVerification" style={{ textDecoration: "none" }}>
+          <Link to="/otpVerification" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <span className="hdr-icon-wrapper">
                 <MdInsertDriveFile className="hdr-icon-term" />

@@ -23,37 +23,26 @@ import OtpVerification from "./views/otpverification/OtpVerification";
 import SubmitEmail from "./views/submitemail/SubmitEmail";
 // import NotFound from './views/NotFound.js'
 function App() {
-  const [showFooterProfile, setShowFooterProfile] = useState();
-  const [showPaymentFooter, setShowPaymentFooter] = useState();
-
-  // useEffect(() => {
-  //   setShowFooterProfile(sessionStorage.getItem("setShowFooterProfile"));
-  //   setShowPaymentFooter(sessionStorage.getItem("setShowPaymentFooter"));
-  //   console.log(showFooterProfile, showPaymentFooter);
-  // },[])
   return (
     <BrowserRouter>
       <div className="App">
-        <TopAdvertisement />
         <Header />
         <Routes>
           <Route path="/blue-golden-doctor-main" element={<Services />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/invoice" element={<Invoice />} />
-          <Route path="/PaymentScreen" element={<PaymentScreen />} />
-          <Route path="/PaymentSuccess" element={<SuccessScreen />} />
-          <Route path="/OtherPayment" element={<OtherPayment />} />
-          <Route path="/Offer" element={<Offer />} />
-          <Route path="/ChooseLocation" element={<ChooseLocation />} />
-          <Route path="/ConfirmBooking" element={<ConfirmBooking />} />
-          <Route path="/SubmitEmail" element={<SubmitEmail />} />
-          <Route path="/OtpVerification" element={<OtpVerification />} />
-
+          <Route path="/paymentScreen" element={<PaymentScreen />} />
+          <Route path="/paymentSuccess" element={<SuccessScreen />} />
+          <Route path="/otherPayment" element={<OtherPayment />} />
+          <Route path="/offer" element={<Offer />} />
+          <Route path="/chooseLocation" element={<ChooseLocation />} />
+          <Route path="/confirmBooking" element={<ConfirmBooking />} />
+          <Route path="/submitEmail" element={<SubmitEmail />} />
+          <Route path="/otpVerification" element={<OtpVerification />} />
           <Route path="/" element={<Services />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-        {/* {showFooterProfile && <FooterProfile />}
-        {showPaymentFooter && <PaymentFooter />} */}
       </div>
     </BrowserRouter>
   );
