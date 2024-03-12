@@ -45,7 +45,7 @@ const Timer = ({ expiryTimestamp, onTimerExpire }) => {
     >
       {({ remainingTime }) => (
         <div className="timer-otp">
-          <div className="time">{`${Math.floor(remainingTime / 60)}:${(
+          <div className="timeotp">{`${Math.floor(remainingTime / 60)}:${(
             remainingTime % 60
           )
             .toString()

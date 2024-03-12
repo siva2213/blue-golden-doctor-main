@@ -9,14 +9,15 @@ import Scrollbar from "../../components/Scrollbar/Scrollbar";
 const ChooseLocation = () => {
   const [selectedCity, setSelectedCity] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  
+  const handleClickisOpen = () => {
+    setIsOpen(!isOpen);
+    
+  };
 
-  // const handleClickisOpen = () => {
-  //   setIsOpen(!isOpen);
-  // };
-
-  // const handleClose = () => {
-  //   setIsOpen(false);
-  // };
+  const handleClose = () => {
+    setIsOpen(false);
+  };
 
   const handleOptionClick = (option) => {
     setSelectedCity(option.text);
@@ -38,7 +39,7 @@ const ChooseLocation = () => {
 
   return (
     <div className="choose-main">
-      <button className="Open-offers-button" onClick={toggleDropdown}>
+      <button className="Open-offers-button" onClick={handleClickisOpen}>
         Choose Location
       </button>
       {isOpen && (
@@ -104,7 +105,7 @@ const ChooseLocation = () => {
                   }}
                 />
                 <div>
-                  <button className="choose-done" onClick={toggleDropdown}>
+                  <button className="choose-done" onClick={handleClose}>
                     DONE
                   </button>
                 </div>
