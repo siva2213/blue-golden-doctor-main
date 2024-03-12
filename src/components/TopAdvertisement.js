@@ -1,9 +1,9 @@
 import React from "react";
 import pinkStar from "../../src/assets/pinkstar.svg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css"; // Optional, for blur-up effect
-import "../views/TopAdvertisement.css";
+import "react-lazy-load-image-component/src/effects/blur.css"; 
 export default function TopAdvertisement() {
+
   return (
     <div className="advertisement-container">
       <div className="advertisement-content">
