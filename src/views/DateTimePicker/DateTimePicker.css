@@ -109,10 +109,10 @@
   font-size: 16px;
   font-weight: bold;
   color: #2d2653;
-  background-image: linear-gradient(to right, #e48e51, #e8d48f);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  /* background-image: linear-gradient(to right, #e48e51, #e8d48f); */
+  /* -webkit-background-clip: text; */
+  /* background-clip: text; */
+  /* color: transparent; */
 }
 
 .timeselected .time {

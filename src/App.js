@@ -26,6 +26,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <TopAdvertisement />
         <Header />
         <Routes>
           <Route path="/blue-golden-doctor-main" element={<Services />} />
