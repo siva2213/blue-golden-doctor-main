@@ -24,9 +24,9 @@ import SubmitEmail from "./views/submitemail/SubmitEmail";
 // import NotFound from './views/NotFound.js'
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Developers1418">
       <div className="App">
-        <TopAdvertisement/>
+        <TopAdvertisement />
         <Header />
         <Routes>
           <Route path="/blue-golden-doctor-main" element={<Services />} />
