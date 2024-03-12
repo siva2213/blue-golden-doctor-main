@@ -24,7 +24,7 @@ import SubmitEmail from "./views/submitemail/SubmitEmail";
 // import NotFound from './views/NotFound.js'
 function App() {
   return (
-    <BrowserRouter basename="/Developers1418">
+    <BrowserRouter>
       <div className="App">
         <TopAdvertisement />
         <Header />
