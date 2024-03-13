@@ -3,16 +3,55 @@ import "./ConfirmBooking.css";
 import playstore from "../../assets/Playstorelogo.svg";
 import apple from "../../assets/Applelogo.svg";
 import Confirm from "../../assets/confirmbooking.png";
-
+import { PiWarningCircleBold } from "react-icons/pi";
 const ConfirmBooking = () => {
   const [open, setOpen] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [error, setError] = useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
+    setInputValue("");
   };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
+
   const handleClose = () => {
+    if (!validateInput(inputValue)) {
+      if (!inputValue.trim()) {
+        setError(
+          <div className="confirm-error">
+            <PiWarningCircleBold className="confirm-error-icon" />
+            Please enter Phone Number or a valid Email ID
+          </div>
+        );
+      } else {
+        setError(
+          <div className="confirm-error">
+            <PiWarningCircleBold className="confirm-error-icon" />
+            Please enter a 10-digit Phone Number
+          </div>
+        );
+      }
+      return;
+    }
+    setError("");
     setOpen(false);
   };
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const validateInput = (value) => {
+    // Basic validation for Phone No. or Email ID
+    return (
+      /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value) ||
+      /^[0-9]{10}$/.test(value)
+    );
+  };
+
   return (
     <div className="confirm-main">
       <button className="open-offers-button" onClick={handleClickOpen}>
@@ -58,10 +97,15 @@ const ConfirmBooking = () => {
               </div>
               <div className="confirm-sub-page">
                 <span className="confirm-title">Confirm Booking</span>
-                <input
-                  placeholder="Phone No. or Email ID"
-                  className="confirm-phone-email"
-                />
+                <div className="booking-ph-email">
+                  <input
+                    placeholder="Phone No. or Email ID"
+                    className="confirm-phone-email"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                  />
+                  {error && error}
+                </div>
                 <div className="confirm-address-main">
                   <div className="confirm-address-doc">
                     <span className="confirm-doc-time">14 Nov, 10:00 am</span>

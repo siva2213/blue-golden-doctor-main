@@ -80,6 +80,22 @@
   position: fixed;
   bottom: 0;
 }
+.booking-ph-email {
+  display: flex;
+  flex-direction: column;
+}
+.confirm-error {
+  color: white;
+  background: #9a1832;
+  padding: 10px;
+  border-radius: 50px 0 50px 50px;
+  width: fit-content;
+  font-size: 12px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 .confirm-phone-email {
   background: #372f62;
   padding: 18px 20px;

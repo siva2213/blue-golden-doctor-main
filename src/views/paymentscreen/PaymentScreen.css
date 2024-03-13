@@ -4,7 +4,7 @@
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 70px;
 }
 .payment-cardnamelogo {
   display: flex;

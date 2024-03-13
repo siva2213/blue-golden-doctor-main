@@ -4,21 +4,22 @@ import playstore from "../../assets/Playstorelogo.svg";
 import apple from "../../assets/Applelogo.svg";
 import otpimage from "../../assets/otpimage.png";
 import Timer from "../../components/Timer";
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { PiWarningCircleBold } from "react-icons/pi";
 
 const OtpVerification = () => {
   const [open, setOpen] = useState(false);
   const [otpInputs, setOtpInputs] = useState(["", "", "", ""]);
   const [otpError, setOtpError] = useState("");
   const [expiryTimestamp, setExpiryTimestamp] = useState(
-    new Date().getTime() + 5 * 60 * 1000 // 5 minutes in milliseconds
+    new Date().getTime() + 5 * 60 * 1000
   );
-  const [timer, setTimer] = React.useState(0);
+
   const handleClickOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
+    setOtpInputs(["", "", "", ""]);
   };
   const handleChange = (index, value) => {
     const newOtpInputs = [...otpInputs];
@@ -27,13 +28,18 @@ const OtpVerification = () => {
   };
 
   const handleVerify = () => {
-    const otp = otpInputs.join(""); // Concatenate OTP inputs into a single string
+    const otp = otpInputs.join("");
     if (otp.length !== 4 || !/^\d+$/.test(otp)) {
-      setOtpError("Please enter a valid 4-digit OTP");
+      setOtpError(
+        <div className="otp-error">
+          <PiWarningCircleBold className="otp-error-icon" />
+          Please enter a valid 4-digit OTP
+        </div>
+      );
     } else {
       setOtpError("");
+      handleClose();
     }
-    handleClose();
   };
   const handleTimerExpire = () => {
     console.log("Timer expired!");
@@ -104,10 +110,10 @@ const OtpVerification = () => {
                       />
                     ))}
                   </div>
-                  {/* {otpError && <div className="otp-error">{otpError}</div>} */}
-                  <div className="otp-error-main">
+                  {otpError && otpError}
+                  {/* <div className="otp-error-main">
                     <span className="otp-error">Wrong otp</span>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="otp-btns">
                   <span className="otp-resend">Resend code</span>
