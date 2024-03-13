@@ -4,7 +4,6 @@ import playstore from "../../assets/Playstorelogo.svg";
 import apple from "../../assets/Applelogo.svg";
 import choosecity from "../../assets/choosecity.png";
 import Dropdown from "../../components/Dropdown";
-import Scrollbar from "../../components/Scrollbar/Scrollbar";
 
 const ChooseLocation = () => {
   const [selectedCity, setSelectedCity] = useState(null);
@@ -85,17 +84,19 @@ const ChooseLocation = () => {
                   options={options}
                   onSelect={handleOptionClick}
                   defaultText={selectedCity ? selectedCity : "Select City"}
-                  dropdownBackground="#2E2756" // Customize the dropdown background color if needed
-                  optionDividerColor="#000000" // Customize the option divider color if needed
+                  dropdownBackground="#2E2756"
+                  optionDividerColor="#000000"
                   isOpen={isOpen} // Pass the isOpen state to the Dropdown component
                   toggleDropdown={toggleDropdown} // Pass the toggleDropdown function to the Dropdown component
                   showArrow={false}
-                  selectFontSize="14px" // Customize arrow font size
+                  selectFontSize="14px"
                   selectPadding="14px 20px"
                   selectborderRadius="40px"
                   selectboxShadow="rgb(64, 54, 114) -3px -3px 6px 0px inset, rgb(45, 38, 83) 3px 3px 6px 3px inset"
                   scrollbarBackground="#2e2756"
-                  scrollbarHeight="180px"
+                  scrollbarHeight="160px"
+                  scrollWidth="84vw"
+                  scrollcontentHeight="70%"
                   optionTextStyle={{
                     background: "#372F62",
                     fontSize: "14px",

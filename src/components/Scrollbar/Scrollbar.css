@@ -1,6 +1,5 @@
-
 .custom-scrollbars__content {
-  height: 24vh;
+  height: 20vh;
   -ms-overflow-style: none;
   overflow: auto;
   padding: 0 1rem;

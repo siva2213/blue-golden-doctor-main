@@ -155,7 +155,7 @@ const Header = () => {
           }`}
           onClick={() => handleButtonClick("Our Doctors")}
         >
-          <Link to="/paymentSuccess" style={{ textDecoration: "none" }}>
+          <Link to="" style={{ textDecoration: "none" }}>
             <button className="hd-btn4">
               <FaUserDoctor
                 className={`hdr-icon-doc ${
@@ -174,7 +174,7 @@ const Header = () => {
           }`}
           onClick={() => handleButtonClick("Insurance")}
         >
-          <Link to="/otherPayment" style={{ textDecoration: "none" }}>
+          <Link to="" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <SiSpringsecurity
                 className={`hdr-icon-ins ${
@@ -193,7 +193,7 @@ const Header = () => {
           }`}
           onClick={() => handleButtonClick("Privacy Policy")}
         >
-          <Link to="/chooseLocation" style={{ textDecoration: "none" }}>
+          <Link to="" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <IoIosLock
                 className={`hdr-icon-pri ${
@@ -229,76 +229,22 @@ const Header = () => {
         </div>
         <div
           className={`hdractive ${
-            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
+            activeMenu === "ViewModals" ? "divactive" : "divinactive"
           }`}
-          onClick={() => handleButtonClick("ConfirmBooking")}
+          onClick={() => handleButtonClick("ViewModals")}
         >
-          <Link to="/offer" style={{ textDecoration: "none" }}>
+          <Link to="/ViewModals" style={{ textDecoration: "none" }}>
             <button className="hd-btn5">
               <span className="hdr-icon-wrapper">
-                <MdInsertDriveFile className="hdr-icon-term" />
+                <MdInsertDriveFile
+                  className={`hdr-icon-term ${
+                    activeMenu === "ViewModals"
+                      ? "active-hdricon"
+                      : "inactive-hdricon"
+                  }`}
+                />
               </span>
-              Offers
-            </button>
-          </Link>
-        </div>
-        <div
-          className={`hdractive ${
-            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
-          }`}
-          onClick={() => handleButtonClick("ConfirmBooking")}
-        >
-          <Link to="/chooseLocation" style={{ textDecoration: "none" }}>
-            <button className="hd-btn5">
-              <span className="hdr-icon-wrapper">
-                <MdInsertDriveFile className="hdr-icon-term" />
-              </span>
-              ChooseLocation
-            </button>
-          </Link>
-        </div>
-        <div
-          className={`hdractive ${
-            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
-          }`}
-          onClick={() => handleButtonClick("ConfirmBooking")}
-        >
-          <Link to="/confirmBooking" style={{ textDecoration: "none" }}>
-            <button className="hd-btn5">
-              <span className="hdr-icon-wrapper">
-                <MdInsertDriveFile className="hdr-icon-term" />
-              </span>
-              confirmbooking
-            </button>
-          </Link>
-        </div>
-        <div
-          className={`hdractive ${
-            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
-          }`}
-          onClick={() => handleButtonClick("ConfirmBooking")}
-        >
-          <Link to="/submitEmail" style={{ textDecoration: "none" }}>
-            <button className="hd-btn5">
-              <span className="hdr-icon-wrapper">
-                <MdInsertDriveFile className="hdr-icon-term" />
-              </span>
-              submitemail
-            </button>
-          </Link>
-        </div>
-        <div
-          className={`hdractive ${
-            activeMenu === "Terms & Conditions" ? "divactive" : "divinactive"
-          }`}
-          onClick={() => handleButtonClick("ConfirmBooking")}
-        >
-          <Link to="/otpVerification" style={{ textDecoration: "none" }}>
-            <button className="hd-btn5">
-              <span className="hdr-icon-wrapper">
-                <MdInsertDriveFile className="hdr-icon-term" />
-              </span>
-              otp
+              Modal Popups
             </button>
           </Link>
         </div>

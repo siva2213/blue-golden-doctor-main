@@ -9,6 +9,7 @@ const Scrollbar = ({
   scrollTopposition,
   scrollcontentPadding,
   scrollbarHeight,
+  scrollcontentHeight,
   ...props
 }) => {
   const contentRef = useRef(null);
@@ -41,6 +42,7 @@ const Scrollbar = ({
   };
   const scrollcontentStyle = {
     padding: scrollcontentPadding || "20px",
+    height: scrollcontentHeight || "20vh",
   };
   const handleResize = useCallback((ref, trackSize) => {
     const { clientHeight, scrollHeight } = ref;

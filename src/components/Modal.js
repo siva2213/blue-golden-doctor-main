@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./modal.css";
+import "../views/bookingform/Booking.css";
 import { BiClinic } from "react-icons/bi";
 import { MdOutlinePhone } from "react-icons/md";
 import { BsCameraVideo } from "react-icons/bs";
@@ -183,6 +184,8 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
               selectboxShadow="inset -3px -3px 6px #fcfcfc, inset 3px 3px 6px #e2e1e1"
               selectBackground="#f2f2f2"
               scrollbarBackground="white"
+              scrollWidth="86vw"
+              scrollcontentHeight="80%"
               optionTextStyle={{
                 background: "none",
                 fontSize: "14px",

@@ -16,7 +16,10 @@ const Dropdown = ({
   selectBackground,
   selectborderRadius,
   selectboxShadow,
+  scrollbarHeight,
   scrollbarBackground,
+  scrollcontentHeight,
+  scrollWidth,
   optionTextStyle,
 }) => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -72,6 +75,9 @@ const Dropdown = ({
             thumbcolor="#E957C9"
             trackcolor="#372F62"
             scrollbarBackground={scrollbarBackground}
+            scrollWidth={scrollWidth}
+            scrollbarHeight={scrollbarHeight}
+            scrollcontentHeight={scrollcontentHeight}
           >
             <ul
               className="drop-options"
@@ -91,20 +97,6 @@ const Dropdown = ({
                 </li>
               ))}
             </ul>
-            {/* <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              malesuada ligula et faucibus rhoncus. Nulla consequat risus et
-              luctus ullamcorper. Nam facilisis at elit id condimentum. Nulla
-              luctus tortor at nisl consectetur, in consequat nulla rutrum. Sed
-              condimentum ligula non sapien elementum, sed placerat metus
-              consequat. Sed sollicitudin sem sit amet venenatis tincidunt. In
-              efficitur sed dolor vel consectetur. Mauris convallis pharetra
-              risus. Donec pretium erat vel augue consectetur lacinia. Nunc eu
-              lobortis risus. Quisque varius erat eget est dignissim vestibulum.
-              Suspendisse sagittis dui lorem, sodales mollis mi auctor at. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Nam ut commodo
-              massa.
-            </p> */}
           </Scrollbar>
         </div>
       )}

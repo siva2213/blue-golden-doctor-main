@@ -8,7 +8,7 @@ import OtherPayment from "./otherpayment/OtherPayment";
 import ConfirmBooking from "./confirmbooking/ConfirmBooking";
 const ViewModals = () => {
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "auto auto auto" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "auto auto auto",rowGap:"20px", padding:"20px" }}>
       <SuccessScreen />
       <OtherPayment />
       <Offers />
