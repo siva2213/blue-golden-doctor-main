@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./OtpVerification.css";
 import playstore from "../../assets/Playstorelogo.svg";
 import apple from "../../assets/Applelogo.svg";
@@ -13,7 +13,7 @@ const OtpVerification = () => {
   const [expiryTimestamp, setExpiryTimestamp] = useState(
     new Date().getTime() + 5 * 60 * 1000
   );
-
+  const inputRefs = useRef([]);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -21,10 +21,21 @@ const OtpVerification = () => {
     setOpen(false);
     setOtpInputs(["", "", "", ""]);
   };
+  // const handleChange = (index, value) => {
+  //   const newOtpInputs = [...otpInputs];
+  //   newOtpInputs[index] = value;
+  //   setOtpInputs(newOtpInputs);
+  // };
+
   const handleChange = (index, value) => {
+    if (value.length > 1) return; // Limit input to single digit
     const newOtpInputs = [...otpInputs];
     newOtpInputs[index] = value;
     setOtpInputs(newOtpInputs);
+    // Move focus to next input if available
+    if (value && index < otpInputs.length - 1) {
+      inputRefs.current[index + 1].focus();
+    }
   };
 
   const handleVerify = () => {
@@ -106,6 +117,7 @@ const OtpVerification = () => {
                         maxLength={1}
                         value={value}
                         onChange={(e) => handleChange(index, e.target.value)}
+                        ref={(ref) => (inputRefs.current[index] = ref)}
                         type="number"
                       />
                     ))}
