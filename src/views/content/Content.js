@@ -16,7 +16,7 @@ const Content = () => {
     <>
       <div className="cnt-main">
         <div className="cnt-left">
-          <div class="search-container">
+          <div className="search-container">
             <input
               type="text"
               placeholder="Search doctor"
@@ -81,9 +81,9 @@ const Content = () => {
                 style={{ color: "E4C17F", fontSize: "20px" }}
               />
               <h4 style={{ color: "#ffff", margin: "0px" }}>Delhi</h4>
-              <i class="arrow down"></i>
+              <i className="arrow down"></i>
             </div>
-            <div class="search-container-res">
+            <div className="search-container-res">
               <input
                 type="text"
                 placeholder="Search doctor"
