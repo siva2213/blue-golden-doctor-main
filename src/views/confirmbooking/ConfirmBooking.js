@@ -16,6 +16,36 @@ const ConfirmBooking = () => {
   // const handleClose = () => {
   //   setOpen(false);
   // };
+  // const handleClose = () => {
+  //   const trimmedValue = inputValue.trim();
+  //   if (!trimmedValue) {
+  //     setError(
+  //       <div className="confirm-error">
+  //         <PiWarningCircleBold className="confirm-error-icon" />
+  //         Please enter Phone Number or a valid Email ID
+  //       </div>
+  //     );
+  //   } else if (!/^\d+$/.test(trimmedValue) || trimmedValue.length !== 10) {
+  //     setError(
+  //       <div className="confirm-error">
+  //         <PiWarningCircleBold className="confirm-error-icon" />
+  //         Please enter a valid 10-digit Phone Number
+  //       </div>
+  //     );
+  //   } else if (
+  //     !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(trimmedValue)
+  //   ) {
+  //     setError(
+  //       <div className="confirm-error">
+  //         <PiWarningCircleBold className="confirm-error-icon" />
+  //         Please enter a valid Email ID
+  //       </div>
+  //     );
+  //   } else {
+  //     setError("");
+  //     setOpen(false);
+  //   }
+  // };
 
   const handleClose = () => {
     if (!validateInput(inputValue)) {
@@ -26,7 +56,16 @@ const ConfirmBooking = () => {
             Please enter Phone Number or a valid Email ID
           </div>
         );
-      } else {
+      } else if (
+        !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(inputValue)
+      ) {
+        setError(
+          <div className="confirm-error">
+            <PiWarningCircleBold className="confirm-error-icon" />
+            Please enter a valid Email ID
+          </div>
+        );
+      } else if (!/^\d{10}$/.test(inputValue)) {
         setError(
           <div className="confirm-error">
             <PiWarningCircleBold className="confirm-error-icon" />
@@ -34,10 +73,10 @@ const ConfirmBooking = () => {
           </div>
         );
       }
-      return;
+    } else {
+      setError("");
+      setOpen(false);
     }
-    setError("");
-    setOpen(false);
   };
 
   const handleInputChange = (e) => {
@@ -45,11 +84,15 @@ const ConfirmBooking = () => {
   };
 
   const validateInput = (value) => {
-    // Basic validation for Phone No. or Email ID
-    return (
-      /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value) ||
-      /^[0-9]{10}$/.test(value)
-    );
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const phoneRegex = /^\d{10}$/;
+    if (emailRegex.test(value)) {
+      return true;
+    }
+    if (phoneRegex.test(value)) {
+      return true;
+    }
+    return false;
   };
 
   return (

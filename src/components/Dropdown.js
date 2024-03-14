@@ -94,6 +94,11 @@ const Dropdown = ({
                   <span className="option-text" style={optionTextStyle}>
                     {option.text}
                   </span>
+                  {option.fee && (
+                    <span className="option-fee" >
+                      {option.fee}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

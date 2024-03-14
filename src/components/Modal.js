@@ -48,11 +48,11 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
     console.log("Home Call");
   };
   const options = [
-    { text: "Dental Crown", icon: <LiaToothSolid /> },
-    { text: "Dental Braces", icon: <LiaToothSolid /> },
-    { text: "Decayed Tooth", icon: <LiaToothSolid /> },
-    { text: "Carbide Finishing Bur", icon: <LiaToothSolid /> },
-    { text: "Decayed Tooth", icon: <LiaToothSolid /> },
+    { text: "Dental Crown", icon: <LiaToothSolid />, fee: "200 rs." },
+    { text: "Dental Braces", icon: <LiaToothSolid />, fee: "200 rs." },
+    { text: "Decayed Tooth", icon: <LiaToothSolid />, fee: "200 rs." },
+    { text: "Carbide Finishing Bur", icon: <LiaToothSolid />, fee: "200 rs." },
+    { text: "Decayed Tooth", icon: <LiaToothSolid />, fee: "200 rs." },
   ];
 
   const handleSelect = (option) => {
