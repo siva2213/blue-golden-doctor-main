@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Dropdown.css";
 import { IoArrowDownOutline } from "react-icons/io5";
 import Scrollbar from "./Scrollbar/Scrollbar";
@@ -21,31 +21,46 @@ const Dropdown = ({
   scrollcontentHeight,
   scrollWidth,
   optionTextStyle,
+  onToggle,
 }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+        if (onToggle) {
+          onToggle(false);
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onToggle]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+    if (onToggle) {
+      onToggle(!isOpen);
+    }
   };
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     onSelect(option);
     setIsOpen(false);
+    if (onToggle) {
+      onToggle(false);
+    }
   };
 
   return (
-    <div
-      className="dropdown"
-      style={
-        {
-          // background: dropdownBackground,
-          // borderRadius: selectborderRadius,
-          // boxShadow: selectboxShadow,
-        }
-      }
-    >
+    <div className="dropdown" ref={dropdownRef}>
       <div
         className="selected-option"
         onClick={toggleDropdown}
@@ -53,6 +68,7 @@ const Dropdown = ({
           fontSize: selectFontSize,
           padding: selectPadding,
           background: selectBackground,
+          borderRadius: selectborderRadius,
           boxShadow: selectboxShadow,
         }}
       >
@@ -88,17 +104,11 @@ const Dropdown = ({
             >
               {options.map((option, index) => (
                 <li key={index} onClick={() => handleOptionClick(option)}>
-                  {option.icon && (
-                    <span className="option-icon">{option.icon}</span>
-                  )}
+                  {option.icon && <span className="option-icon">{option.icon}</span>}
                   <span className="option-text" style={optionTextStyle}>
                     {option.text}
                   </span>
-                  {option.fee && (
-                    <span className="option-fee" >
-                      {option.fee}
-                    </span>
-                  )}
+                  {option.fee && <span className="option-fee">{option.fee}</span>}
                 </li>
               ))}
             </ul>

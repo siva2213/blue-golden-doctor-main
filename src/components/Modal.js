@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./modal.css";
 import "../views/bookingform/Booking.css";
 import { BiClinic } from "react-icons/bi";
@@ -12,13 +12,16 @@ import { LiaToothSolid } from "react-icons/lia";
 import Dropdown from "./Dropdown";
 import DateTimePicker from "../views/DateTimePicker/DateTimePicker";
 
-const BookAppointmentModal = ({ show, onHide, onSelect }) => {
+const BookAppointmentModal = ({ show, onHide }) => {
   const [inputs, setInputs] = useState({});
   const [activeButton, setActiveButton] = useState(null);
   const [showCalendar, setShowCalendar] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [service, setService] = useState(null);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const calendarRef = useRef(null);
+  const dropdownRef = useRef(null);
 
   const handleClose = () => {
     onHide(false);
@@ -32,21 +35,50 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
     }));
   };
 
-  const function1 = () => {
-    console.log("Clinic Visit");
+  const handleButtonClick = (buttonName, onClickFunction) => {
+    setActiveButton(buttonName);
+    onClickFunction();
   };
 
-  const function2 = () => {
-    console.log("Voice call");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(JSON.stringify(inputs));
+    console.log(inputs);
   };
 
-  const function3 = () => {
-    console.log("Video Call");
+  const handleDateSelection = (date) => {
+    setSelectedDate(date);
+    if (selectedTime) {
+      setShowCalendar(false);
+    }
   };
 
-  const function4 = () => {
-    console.log("Home Call");
+  const handleTimeSelection = (time) => {
+    setSelectedTime(time);
+    if (selectedDate) {
+      setShowCalendar(false);
+    }
   };
+
+  const handleClickOutside = (event) => {
+    if (
+      calendarRef.current &&
+      !calendarRef.current.contains(event.target) &&
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target)
+    ) {
+      setShowCalendar(false);
+      setShowDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const options = [
     { text: "Dental Crown", icon: <LiaToothSolid />, fee: "200 rs." },
     { text: "Dental Braces", icon: <LiaToothSolid />, fee: "200 rs." },
@@ -57,41 +89,17 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
 
   const handleSelect = (option) => {
     console.log("Selected option:", option.text);
-    // Add your logic here
+    setService(option.text);
+    setShowDropdown(false);
   };
+
   const buttons = [
-    { name: "Clinic Visit", icon: <BiClinic />, onClick: function1 },
-    { name: "Voice call", icon: <MdOutlinePhone />, onClick: function2 },
-    { name: "Video Call", icon: <BsCameraVideo />, onClick: function3 },
-    { name: "Home Call", icon: <RiHome2Line />, onClick: function4 },
+    { name: "Clinic Visit", icon: <BiClinic />, onClick: () => console.log("Clinic Visit") },
+    { name: "Voice call", icon: <MdOutlinePhone />, onClick: () => console.log("Voice call") },
+    { name: "Video Call", icon: <BsCameraVideo />, onClick: () => console.log("Video Call") },
+    { name: "Home Call", icon: <RiHome2Line />, onClick: () => console.log("Home Call") },
   ];
 
-  const handleButtonClick = (buttonName, onClickFunction) => {
-    setActiveButton(buttonName);
-    onClickFunction();
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(JSON.stringify(inputs));
-    console.log(inputs);
-  };
-  const handleInputFocus = () => {
-    setShowCalendar(true);
-  };
-
-  const handleDateSelection = (date) => {
-    setSelectedDate(date);
-    if (selectedTime) {
-      setShowCalendar(false); // Close the calendar if both date and time are selected
-    }
-  };
-
-  const handleTimeSelection = (time) => {
-    setSelectedTime(time);
-    if (selectedDate) {
-      setShowCalendar(false); // Close the calendar if both date and time are selected
-    }
-  };
   return (
     <div className={`modal-overlay ${show ? "show" : ""}`}>
       <div className="modal-container">
@@ -134,14 +142,16 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
               className="input-val"
             />
           </div>
-          <div className="calendar-selector">
+          <div className="calendar-selector" ref={calendarRef}>
             <div className="form-input4">
               <input
                 type="datetime"
                 id="dateTimeInput"
                 placeholder="Choose Date & Time"
-                // onFocus={handleInputFocus}
-                onClick={() => setShowCalendar(true)}
+                onClick={() => {
+                  setShowCalendar(true);
+                  setShowDropdown(false);
+                }}
                 className="input-val"
               />
               <IoArrowDownOutline
@@ -152,7 +162,10 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
                   borderRadius: "100px",
                   background: "#372f62",
                 }}
-                onClick={() => setShowCalendar(true)}
+                onClick={() => {
+                  setShowCalendar(true);
+                  setShowDropdown(false);
+                }}
               />
             </div>
             {showCalendar && (
@@ -165,13 +178,8 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
               </div>
             )}
           </div>
-          <div className="">
-            {/* <Dropdown
-              options={options}
-              onSelect={handleSelect}
-              defaultText="Choose Service"
-            /> */}
-            <Dropdown
+          <div ref={dropdownRef}>
+          <Dropdown
               options={options}
               onSelect={handleSelect}
               defaultText={service ? service : "Choose Service"}
@@ -193,14 +201,14 @@ const BookAppointmentModal = ({ show, onHide, onSelect }) => {
                 color: "#372F62",
                 width: "50vw",
               }}
+              onToggle={(isOpen) => setShowDropdown(isOpen)}
             />
           </div>
-
           <div className="form-input4">
             <input
               type="text"
               name="ChooseDoctor"
-              value={inputs.testAndMedicine || ""}
+              value={inputs.ChooseDoctor || ""}
               onChange={handleChange}
               placeholder="Choose Doctor"
               className="input-val"
