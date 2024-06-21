@@ -5,7 +5,7 @@
   /* Services.css */
   .ser-main {
     /* Add CSS properties to enable horizontal scrolling */
-    overflow-x: auto;
+    /* overflow-x: auto; */
     /* white-space: nowrap; */
   }
 

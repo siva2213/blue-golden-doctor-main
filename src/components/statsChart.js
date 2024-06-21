@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import {
   BarChart,
-  XAxis,
-  YAxis,
-  CartesianGrid,
   Tooltip,
   ResponsiveContainer,
   Bar,
@@ -16,29 +13,30 @@ const data = [
   { name: "C", value: 10, color: "#E957C9" },
 ];
 
-const CustomTooltip = () => {
-  return (
-    <div className="tooltip-main">
-      {/* <div className=" drop-shadow-lg custom-tooltip rounded-lg   bg-[transparent]  w-[118px] h-[58px] backdrop-blur-2xl flex justify-start items-center"> */}
-      <div className="tt-months-cnt">
-        <p className="tt-months">this Month</p>
-        <p style={{ borderTop: "1px dashed #fff",margin:"0" }} />
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="tooltip-main">
+        <div className="tt-months-cnt">
+          <p className="tt-months">this Month</p>
+          <p style={{ borderTop: "1px dashed #fff", margin: "0" }} />
+        </div>
+        <div className="tooltip-count">
+          <h3 className="tt-num">{`${payload[0].value}K+`}</h3>
+          <p className="tt-pat">patients</p>
+        </div>
       </div>
-
-      <div className=" tooltip-count">
-        <h3 className="tt-num">5K+</h3>
-        <p className="tt-pat">patients</p>
-      </div>
-    </div>
-  );
+    );
+  }
+  return null;
 };
 
 const Statchart = () => {
   const [activeBar, setActiveBar] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
-  const handleBarClick = (entry, event, index) => {
-    setActiveBar(index);
+  const handleBarClick = (entry, index, event) => {
+    setActiveBar(activeBar === index ? null : index);
     const { clientX, clientY } = event;
     setTooltipPosition({ x: clientX, y: clientY });
   };
@@ -65,14 +63,18 @@ const Statchart = () => {
                   <stop offset="95%" stopColor={entry.color} stopOpacity={0} />
                 </linearGradient>
               </defs>
-              {/* <Tooltip content={<CustomTooltip />} /> */}
-              <Tooltip content={<CustomTooltip />} cursor={false} />
+              <Tooltip 
+                content={<CustomTooltip />} 
+                cursor={false}
+                position={tooltipPosition}
+                active={activeBar === index}
+              />
               <Bar
                 dataKey="value"
                 fill={`url(#colorGradient-${index})`}
                 radius={[30, 30, 0, 0]}
                 barSize={57}
-                onClick={(event) => handleBarClick(entry, event, index)}
+                onClick={(event) => handleBarClick(entry, index, event)}
               />
             </BarChart>
           </ResponsiveContainer>
