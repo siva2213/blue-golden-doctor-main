@@ -1,11 +1,11 @@
 {
-  "homepage": "https://developers1418.github.io/blue-golden-doctor-main",
+  "homepage": "https://siva2213.github.io/blue-golden-doctor-main",
   "name": "blue-golden-doctor-main",
   "version": "0.1.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Developers1418/blue-golden-doctor-main.git"
+    "url": "https://github.com/siva2213/blue-golden-doctor-main.git"
 
   },
   "dependencies": {
