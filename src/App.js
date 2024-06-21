@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import Header from "./views/header/Header";
@@ -6,13 +6,30 @@ import Footer from "./views/footer/Footer";
 import TopAdvertisement from "./components/TopAdvertisement";
 import Services from "./views/services/Services";
 import Invoice from "./views/invoice/Invoice";
-import PaymentScreen from './views/paymentscreen/PaymentScreen';
+import PaymentScreen from "./views/paymentscreen/PaymentScreen";
 import ViewModals from "./views/ViewModals";
+import WelcomeModal from "./components/WelcomeModal";
 // import NotFound from './views/NotFound.js'
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  useEffect(() => {
+    const isFirstVisit = localStorage.getItem("isFirstVisit");
+
+    if (!isFirstVisit) {
+      localStorage.setItem("isFirstVisit", "true");
+      setTimeout(() => {
+        setIsModalOpen(true);
+      }, 2000);
+    }
+  }, []);
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <BrowserRouter>
       <div className="App">
+        <WelcomeModal isOpen={isModalOpen} onClose={handleCloseModal} />
         <TopAdvertisement />
         <Header />
         <Routes>
