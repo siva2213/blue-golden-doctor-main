@@ -47,7 +47,7 @@
 /* media query */
 @media only screen and (max-width: 767px) {
   .hd-main {
-    padding: 20px 10px;
+    padding: 0px 10px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -55,19 +55,26 @@
   }
   .hd-citymain {
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-x: auto;  /*Enable horizontal scrolling */
     /* Add any other necessary styles */
   }
 
   .citylist {
     display: flex;
+    overflow-x: auto;
     /* Add any other necessary styles */
   }
 
   /* Adjust the width of city items as needed */
   .cityitem {
-    margin-right: 20px; /* Add some spacing between city items */
+    margin-right: 20px;
+    position: relative; /* Add some spacing between city items */
   }
+  .city-img-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
   .hd-logo {
     height: 36px;
   }
@@ -122,6 +129,22 @@
     color: transparent;
     white-space: nowrap;
     margin: 0;
+    transform: translateX(-50%);
+    animation: moveUp 2s infinite;
+    overflow-y: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    text-align: center;
+    
+  }
+  @keyframes moveUp {
+    0%, 50% {
+      transform: translateY(0%);
+    }
+    50%, 100% {
+      transform: translateY(-100%); /* Move text upwards */
+    }
+    
   }
   .citypagenum {
     font-size: 10px;

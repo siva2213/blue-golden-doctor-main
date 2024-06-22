@@ -8,6 +8,7 @@ import Services from "./views/services/Services";
 import Invoice from "./views/invoice/Invoice";
 import PaymentScreen from "./views/paymentscreen/PaymentScreen";
 import ViewModals from "./views/ViewModals";
+import ServiceDetail from './views/services/ServiceDetail';
 import WelcomeModal from "./components/WelcomeModal";
 // import NotFound from './views/NotFound.js'
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/blue-golden-doctor-main" element={<Services />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceId" element={<ServiceDetail />} />
           <Route path="/invoice" element={<Invoice />} />
           <Route path="/PaymentScreen" element={<PaymentScreen />} />
           <Route path="/ViewModals" element={<ViewModals />} />

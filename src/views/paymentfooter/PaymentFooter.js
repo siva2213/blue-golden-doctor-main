@@ -71,7 +71,7 @@ const PaymentFooter = () => {
           PROFILE
         </span>
       </div>
-      <button className="pay-proceed">PROCEED</button>
+      <button className="pay-proceed">Pay Cash</button>
     </div>
   );
 };

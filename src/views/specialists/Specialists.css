@@ -51,7 +51,9 @@
     max-height: 300px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    margin-left: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+   
   }
   .spec-doclist::-webkit-scrollbar {
     display: none; /* Hide scrollbar for Chrome/Safari */

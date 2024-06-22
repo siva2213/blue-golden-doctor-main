@@ -16,7 +16,7 @@ const Content = () => {
     <>
       <div className="cnt-main">
         <div className="cnt-left">
-          <div className="search-container">
+           <div className="search-container">
             <input
               type="text"
               placeholder="Search doctor"
@@ -24,8 +24,8 @@ const Content = () => {
               className="src-input"
             />
             <IoSearch className="src-icon" />
-          </div>
-
+          </div> 
+  
           <div className="text-paragraph">
             <div className="src-paragraph">
               <p className="src-text1">
@@ -83,7 +83,7 @@ const Content = () => {
               <h4 style={{ color: "#ffff", margin: "0px" }}>Delhi</h4>
               <i className="arrow down"></i>
             </div>
-            <div className="search-container-res">
+          {/*  <div className="search-container-res">
               <input
                 type="text"
                 placeholder="Search doctor"
@@ -91,7 +91,7 @@ const Content = () => {
                 className="src-input"
               />
               <IoSearch className="src-icon-res" />
-            </div>
+            </div> */}
           </div>
           <div className="graphs-data-res">
             <div className="cnt-display-res">

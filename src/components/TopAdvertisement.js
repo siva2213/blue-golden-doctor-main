@@ -7,6 +7,7 @@ export default function TopAdvertisement() {
   
   return (
     <div className="advertisement-container">
+      <marquee>
       <div className="advertisement-content">
         <LazyLoadImage
           src={pinkStar}
@@ -19,6 +20,7 @@ export default function TopAdvertisement() {
           your first treatment and take control of your health today
         </p>
       </div>
+      </marquee>
     </div>
   );
 }

@@ -45,7 +45,7 @@ const BookAppointmentModal = ({ show, onHide }) => {
     alert(JSON.stringify(inputs));
     console.log(inputs);
   };
-
+  
   const handleDateSelection = (date) => {
     setSelectedDate(date);
     if (selectedTime) {
@@ -179,13 +179,14 @@ const BookAppointmentModal = ({ show, onHide }) => {
             )}
           </div>
           <div ref={dropdownRef}>
-          <Dropdown
+            <Dropdown
               options={options}
               onSelect={handleSelect}
               defaultText={service ? service : "Choose Service"}
               dropdownBackground="#2E2756"
               optionDividerColor="#000000"
               showArrow={true}
+              arrowColor="#ffffff"
               selectFontSize="14px"
               selectPadding="10px 10px"
               selectborderRadius="40px"
