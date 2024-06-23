@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blue-golden-doctor-main/static/css/main.d29ce251.css",
-    "main.js": "/blue-golden-doctor-main/static/js/main.3df132a9.js",
+    "main.css": "/blue-golden-doctor-main/static/css/main.45709797.css",
+    "main.js": "/blue-golden-doctor-main/static/js/main.a337f16d.js",
     "static/js/592.eee76cb3.chunk.js": "/blue-golden-doctor-main/static/js/592.eee76cb3.chunk.js",
     "static/media/upi.svg": "/blue-golden-doctor-main/static/media/upi.1dacfcc82fe2f970696a238b87c96688.svg",
     "static/media/cards.svg": "/blue-golden-doctor-main/static/media/cards.aa58e3e1b32c318cbfe9956ed7e9af50.svg",
@@ -50,7 +50,11 @@
     "static/media/ftr_logo.svg": "/blue-golden-doctor-main/static/media/ftr_logo.b05f90ce76e117630565f2f47575b378.svg",
     "static/media/Applelogo.svg": "/blue-golden-doctor-main/static/media/Applelogo.df9ba8bd62a33e8940a58e6a10d5e90b.svg",
     "static/media/qrcode.svg": "/blue-golden-doctor-main/static/media/qrcode.5c84bc1f0437c169b8e92a86ff9410c0.svg",
+    "static/media/slick.svg": "/blue-golden-doctor-main/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/blue-golden-doctor-main/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/blue-golden-doctor-main/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/cardname.svg": "/blue-golden-doctor-main/static/media/cardname.faa777af10cdbb6ab5b1a9c0c6c9eabf.svg",
+    "static/media/slick.woff": "/blue-golden-doctor-main/static/media/slick.295183786cd8a1389865.woff",
     "static/media/background.svg": "/blue-golden-doctor-main/static/media/background.d10200f9c68053751b5fe125b66962a0.svg",
     "index.html": "/blue-golden-doctor-main/index.html",
     "static/media/cardlogo.svg": "/blue-golden-doctor-main/static/media/cardlogo.5c7651617a1cbbdd79ed07212fde096a.svg",
@@ -60,12 +64,12 @@
     "static/media/layer.svg": "/blue-golden-doctor-main/static/media/layer.48e07cdc290d5d5dcc7d.svg",
     "static/media/pinkstar.svg": "/blue-golden-doctor-main/static/media/pinkstar.47ad30f7a413336dc5895514a9f80273.svg",
     "static/media/res_curves.svg": "/blue-golden-doctor-main/static/media/res_curves.a2c71b13830bd3057f7e75b17e05e603.svg",
-    "main.d29ce251.css.map": "/blue-golden-doctor-main/static/css/main.d29ce251.css.map",
-    "main.3df132a9.js.map": "/blue-golden-doctor-main/static/js/main.3df132a9.js.map",
+    "main.45709797.css.map": "/blue-golden-doctor-main/static/css/main.45709797.css.map",
+    "main.a337f16d.js.map": "/blue-golden-doctor-main/static/js/main.a337f16d.js.map",
     "592.eee76cb3.chunk.js.map": "/blue-golden-doctor-main/static/js/592.eee76cb3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d29ce251.css",
-    "static/js/main.3df132a9.js"
+    "static/css/main.45709797.css",
+    "static/js/main.a337f16d.js"
   ]
 }
