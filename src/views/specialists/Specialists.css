@@ -180,13 +180,13 @@
     padding: 0 10px 30px 10px;
   }
   .reviews-list {
-    display: flex;
+    /* display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none;
-    -ms-overflow-style: none;
+    -ms-overflow-style: none; */
   }
-  .reviews-list::-webkit-scrollbar {
+  /* .reviews-list::-webkit-scrollbar {
     display: none;
   }
 
@@ -196,7 +196,7 @@
 
   .reviews-list::-webkit-scrollbar-track {
     display: none;
-  }
+  } */
   .reviews {
     /* background: #f3f1fd; */
     background: #ffcff5;
@@ -210,7 +210,7 @@
   .reviews-cust-one,
   .reviews-cust-two,
   .reviews-cust-three {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     gap: 20px;
   }

@@ -21,32 +21,33 @@
   }
   /* Hide the default scrollbar */
   .about-list::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
   }
 
   /* Optional: Style the scroll thumb */
   .about-list::-webkit-scrollbar-thumb {
-    display: none;
+    /* display: none; */
   }
 
   /* Optional: Style the track */
   .about-list::-webkit-scrollbar-track {
-    display: none;
+    /* display: none; */
   }
   .about-list {
-    display: flex;
+    padding: 0 20px 20px 20px;
+    /* display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    /* white-space: nowrap; */
+    white-space: nowrap;
     scrollbar-width: none;
-    -ms-overflow-style: none;
+    -ms-overflow-style: none; */
   }
 
-  .about-paragraphsone,
+  /* .about-paragraphsone,
   .about-paragraphstwo,
   .about-paragraphsthree {
-    padding: 0 20px 20px 20px;
-  }
+    
+  } */
   .aboutcontainer {
     display: flex;
     align-items: center;
