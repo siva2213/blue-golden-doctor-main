@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blue-golden-doctor-main/static/css/main.4433efd2.css",
-    "main.js": "/blue-golden-doctor-main/static/js/main.cc7dba10.js",
+    "main.css": "/blue-golden-doctor-main/static/css/main.2309df5b.css",
+    "main.js": "/blue-golden-doctor-main/static/js/main.01ecd493.js",
     "static/js/592.eee76cb3.chunk.js": "/blue-golden-doctor-main/static/js/592.eee76cb3.chunk.js",
     "static/media/upi.svg": "/blue-golden-doctor-main/static/media/upi.1dacfcc82fe2f970696a238b87c96688.svg",
     "static/media/cards.svg": "/blue-golden-doctor-main/static/media/cards.aa58e3e1b32c318cbfe9956ed7e9af50.svg",
@@ -32,6 +32,7 @@
     "static/media/offers.png": "/blue-golden-doctor-main/static/media/offers.a6a46760086578cc8e39.png",
     "static/media/abouttwo.svg": "/blue-golden-doctor-main/static/media/abouttwo.4dbc024491dc6743d74afd38f4556e99.svg",
     "static/media/dentisttwo.svg": "/blue-golden-doctor-main/static/media/dentisttwo.99b93811a2704fff16e7298be4c07b38.svg",
+    "static/media/dentalimage.jpg": "/blue-golden-doctor-main/static/media/dentalimage.1bf24192021488a92c17.jpg",
     "static/media/aboutone.svg": "/blue-golden-doctor-main/static/media/aboutone.63e811259b6a2425cd542d4196fba193.svg",
     "static/media/availlogo.png": "/blue-golden-doctor-main/static/media/availlogo.f76ad16fa0a9d0ff3c68.png",
     "static/media/aboutfour.svg": "/blue-golden-doctor-main/static/media/aboutfour.42846716d6e116183b2860c00bde0772.svg",
@@ -39,15 +40,22 @@
     "static/media/otherpayment.png": "/blue-golden-doctor-main/static/media/otherpayment.db3ec5cbe73e2f6699dc.png",
     "static/media/aboutthree.svg": "/blue-golden-doctor-main/static/media/aboutthree.6e9ef97194d9a048f45fcd9afda28cc9.svg",
     "static/media/otpimage.png": "/blue-golden-doctor-main/static/media/otpimage.4aaddb88b03b68291d4f.png",
+    "static/media/league-spartan-latin-wght-normal.woff2": "/blue-golden-doctor-main/static/media/league-spartan-latin-wght-normal.5f73f40c980ca4aebac7.woff2",
     "static/media/hexagon.png": "/blue-golden-doctor-main/static/media/hexagon.eb58a587e914c0ffb751.png",
     "static/media/applestore.png": "/blue-golden-doctor-main/static/media/applestore.431d7bf33e491623ce9b.png",
     "static/media/emailverify.svg": "/blue-golden-doctor-main/static/media/emailverify.10c64e49b4805a3f0cc282807f006ac7.svg",
+    "static/media/league-spartan-latin-ext-wght-normal.woff2": "/blue-golden-doctor-main/static/media/league-spartan-latin-ext-wght-normal.66613af99d255e5d5ca9.woff2",
     "static/media/playstore.png": "/blue-golden-doctor-main/static/media/playstore.8178a52c14b73a3ff664.png",
+    "static/media/rootcanal.jpg": "/blue-golden-doctor-main/static/media/rootcanal.40e9a4d8685ac75605b2.jpg",
+    "static/media/decay.jpg": "/blue-golden-doctor-main/static/media/decay.1a29a956e0c18aa8f9d1.jpg",
+    "static/media/whitening.jpg": "/blue-golden-doctor-main/static/media/whitening.45aa1529e0f32ad6ab55.jpg",
     "static/media/graphs.svg": "/blue-golden-doctor-main/static/media/graphs.30a09f8a77ff4420e7d329b180bebbdc.svg",
+    "static/media/braces.jpg": "/blue-golden-doctor-main/static/media/braces.2ec355ef242fdb772cfa.jpg",
     "static/media/submitemail.png": "/blue-golden-doctor-main/static/media/submitemail.50aefb43239239caaf4b.png",
     "static/media/reslogo.svg": "/blue-golden-doctor-main/static/media/reslogo.c2ade83a8a6b50731a25fdb8acc30446.svg",
     "static/media/logo.svg": "/blue-golden-doctor-main/static/media/logo.5daba07f2aa3f872b282d927dfefdcfc.svg",
     "static/media/ftr_logo.svg": "/blue-golden-doctor-main/static/media/ftr_logo.b05f90ce76e117630565f2f47575b378.svg",
+    "static/media/league-spartan-vietnamese-wght-normal.woff2": "/blue-golden-doctor-main/static/media/league-spartan-vietnamese-wght-normal.8388c84f4159bf65cf7d.woff2",
     "static/media/Applelogo.svg": "/blue-golden-doctor-main/static/media/Applelogo.df9ba8bd62a33e8940a58e6a10d5e90b.svg",
     "static/media/qrcode.svg": "/blue-golden-doctor-main/static/media/qrcode.5c84bc1f0437c169b8e92a86ff9410c0.svg",
     "static/media/slick.svg": "/blue-golden-doctor-main/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -63,13 +71,16 @@
     "static/media/rescurve2.svg": "/blue-golden-doctor-main/static/media/rescurve2.6c8fe20589bc673c980e030722915a1a.svg",
     "static/media/layer.svg": "/blue-golden-doctor-main/static/media/layer.48e07cdc290d5d5dcc7d.svg",
     "static/media/pinkstar.svg": "/blue-golden-doctor-main/static/media/pinkstar.47ad30f7a413336dc5895514a9f80273.svg",
+    "static/media/lastellipsedental.svg": "/blue-golden-doctor-main/static/media/lastellipsedental.2d932341b86d70210ee462b766d576ad.svg",
     "static/media/res_curves.svg": "/blue-golden-doctor-main/static/media/res_curves.a2c71b13830bd3057f7e75b17e05e603.svg",
-    "main.4433efd2.css.map": "/blue-golden-doctor-main/static/css/main.4433efd2.css.map",
-    "main.cc7dba10.js.map": "/blue-golden-doctor-main/static/js/main.cc7dba10.js.map",
+    "static/media/DentalCrownEllipse.svg": "/blue-golden-doctor-main/static/media/DentalCrownEllipse.45b4d1e522925d1da388214a80b08591.svg",
+    "static/media/endrectangle.svg": "/blue-golden-doctor-main/static/media/endrectangle.a1bc7a74e30b73dfe1e63acc137365a9.svg",
+    "main.2309df5b.css.map": "/blue-golden-doctor-main/static/css/main.2309df5b.css.map",
+    "main.01ecd493.js.map": "/blue-golden-doctor-main/static/js/main.01ecd493.js.map",
     "592.eee76cb3.chunk.js.map": "/blue-golden-doctor-main/static/js/592.eee76cb3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4433efd2.css",
-    "static/js/main.cc7dba10.js"
+    "static/css/main.2309df5b.css",
+    "static/js/main.01ecd493.js"
   ]
 }
