@@ -25,7 +25,6 @@ const WelcomeModal = ({ isOpen, onClose }) => {
           <video
             style={{borderRadius: '40px'}}
             width="340px"
-            height="650px"
             autoPlay
             muted
             playsInline
