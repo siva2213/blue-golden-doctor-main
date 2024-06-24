@@ -24,7 +24,8 @@ const WelcomeModal = ({ isOpen, onClose }) => {
         <Box sx={{mt: 4}}>
           <video
             style={{borderRadius: '40px'}}
-            width="100%"
+            width="340px"
+            height="650px"
             autoPlay
             muted
             playsInline
@@ -47,12 +48,13 @@ const modalStyle = (isMobile, isTablet) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: isMobile ? "55%" : isTablet ? "70%" : "400px",
+  width: isMobile ? "88%" : isTablet ? "70%" : "400px",
   bgcolor: "background.paper",
   boxShadow: 24,
   p: isMobile ? 2 : 4,
   borderRadius: '50px',
   textAlign: "center",
+  outline: 'none'
 });
 
 const buttonStyle = {
