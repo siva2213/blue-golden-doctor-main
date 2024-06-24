@@ -1,0 +1,186 @@
+@media only screen and (max-width: 768px) {
+
+.main-background {
+    background: #372f62;
+}
+
+.tooth-image {
+    border-radius: 90px;
+    width: 95%;
+    background-color: #372f62;
+}
+
+.scroll-icon {
+    position: relative;
+    top: -20px;
+    width: 33px;
+    height: 13px;
+}
+
+.dental-crown {
+    font-family: 'League Spartan', sans-serif; /* Use appropriate font */
+    font-size: 24px;
+    font-weight: 800;
+    width: 146px; /* Width of the SVG */
+    height: 22px;
+    background: linear-gradient(90deg, #E48E51, #E8D48F); /* Use linear gradient */
+    background-color: #1E1E1E; /* Background color */
+     /* Adjust padding as needed */
+    display: inline-block; /* Ensures the background fits around the text */
+    background-clip: text; /* Clip the gradient to the text */
+    -webkit-background-clip: text; /* For compatibility with older WebKit browsers */
+    color: transparent; /* Hide the text to show the gradient */
+    margin: 0; /* Remove any default margin */
+    line-height: 1; /* Ensure text is vertically centered */
+    letter-spacing: 0em; /* Adjust letter spacing if necessary */
+}
+
+
+.image-container {
+    padding-top: 10px;
+}
+.dental-crown-detail{
+    font-family: 'League Spartan', sans-serif; /* Use appropriate font */
+    font-size: 13px;
+    font-weight: lighter;
+    width: 100%;
+    max-width: 368px; /* Width of the SVG */
+    height: auto; /* Height of the SVG */
+    position: relative;
+    justify-content: center;
+    overflow: hidden; /* Hide any overflow */ 
+    color: white;
+    display: flex;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.dental-text {
+    width: 144px;
+    height: 18px;
+    fill: "none";
+    
+}
+.detail-text{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.ellipse-container{
+    position: relative;
+    background-color: #372f62;
+}
+.h1-detail{
+    margin-top: -22vh;
+    color: #E957C9;
+    width: 80vw;
+   height: 44px;
+   margin-left: 50px;
+   font-size: 24px;
+   box-sizing: border-box;
+   text-align: center;
+}
+
+.h2-detail{
+    max-width: 400px;
+    width: 90%;
+    height: auto;
+    color: #372F62;
+    font-size: 3vw;
+    font-family: 'League Spartan', sans-serif;
+    opacity: 60%;
+    margin: 0 auto;
+    margin-left: 7%;
+    margin-right: 5%;
+    font-weight: normal;
+    margin-top: -2vh;
+    text-align: center;
+    justify-content: center; 
+    display: flex;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.ul-dental{
+    width: 100%; /* Full width of the viewport */
+    max-width: 300px;
+    color: #372F62;
+    background-color: white;
+    font-size: 13px;
+    text-align: start;
+    line-height: 120%;
+    display: inline-block;
+    padding-left: 0px;
+}
+.end-ellipse{
+    position: relative;
+    background-color: white;
+    
+}
+.endEllipseLast{
+    margin-top:5px;
+    
+}
+.other-services{
+    margin-top: -200px;
+    color: #372F62;
+    font-size: 20px;
+    font-weight: bold;
+    width:100%;
+    height: 15px;
+    
+}
+.services-background{
+    background-color: #E7C985;
+}
+.end-rect {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    max-height: 186px; /* Maximum height */
+    display: block; /* Ensures it's a block element to handle margins correctly */
+    margin: 0 auto; /* Center horizontally */
+    position: relative; /* Positioning if needed for absolute positioning children */
+}
+
+
+}
+.services-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 368px; /* Adjust based on your design */
+    margin: 0 auto;
+  }
+.services-container {
+    display: flex;
+    margin-top: -150px;
+    position: relative;
+    justify-content: space-between; /* Space between each item */
+    align-items: center; /* Align items vertically in the center */
+    flex-wrap: wrap; /* Wrap items to the next line if necessary */
+    gap: 5pxpx; /* Adjust the space between items */
+  }
+  .service-item {
+    text-align: center; /* Center text and image */
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 50px; /* Set a minimum width for items */
+  }
+  .service-item img {
+    width: 100%;
+    height: auto;
+    max-width: 69px;
+    height: 100px;
+  }
+  .service-item p{
+    font-size: 12px;
+    color: #372F62;
+    font-weight: bold;
+  }
+.ul-dental-container{
+    width: 100%;
+    max-width: 675px;
+    padding-bottom: 9px;
+    background-color: white;
+    border-bottom: 3px solid white;
+}
+  

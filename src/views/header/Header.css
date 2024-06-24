@@ -52,6 +52,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 2px solid #372f62;
   }
   .hd-citymain {
     display: flex;
