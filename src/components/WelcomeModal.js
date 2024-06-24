@@ -23,7 +23,7 @@ const WelcomeModal = ({ isOpen, onClose }) => {
         </Box>
         <Box sx={{mt: 4}}>
           <video
-            style={{borderRadius: '50px', maxHeight: 'calc(100vh - 160px)'}}
+            style={{borderRadius: '50px', height: 'calc(100vh - 353px)'}}
             width="330px"
             autoPlay
             muted
