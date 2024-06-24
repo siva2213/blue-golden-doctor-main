@@ -20,7 +20,7 @@
   }
 
   .advertisement-text {
-    font-size: 14px;
+    font-size: 14px !important;
     color: #e8d48f;
     font-weight: bold;
     margin-left: 2px;
