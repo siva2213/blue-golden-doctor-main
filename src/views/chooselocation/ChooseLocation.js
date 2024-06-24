@@ -20,15 +20,15 @@ const ChooseLocation = () => {
 
   const handleOptionClick = (option) => {
     setSelectedCity(option.text);
-    setIsOpen(false);
+    // setIsOpen(false);
   };
 
   const options = [
     { text: "Bangalore" },
     { text: "Delhi" },
     { text: "Trichi" },
-    { text: "Delhi" },
-    { text: "Delhi" },
+    { text: "Hyderabad" },
+    { text: "Bangalore" },
     { text: "Mumbai" },
   ];
 
@@ -83,6 +83,7 @@ const ChooseLocation = () => {
                 <Dropdown
                   options={options}
                   onSelect={handleOptionClick}
+                  selectedCity={selectedCity}
                   defaultText={selectedCity ? selectedCity : "Select City"}
                   dropdownBackground="#2E2756"
                   optionDividerColor="#000000"
@@ -102,7 +103,8 @@ const ChooseLocation = () => {
                     fontSize: "14px",
                     fontWeight: "bold",
                     color: "white",
-                    width: "50vw",
+                    width: "100vw",
+                    marginRight: "15px"
                   }}
                 />
                 <div>

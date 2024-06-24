@@ -4,6 +4,7 @@ import submitemail from "../../assets/submitemail.png";
 import playstore from "../../assets/Playstorelogo.svg";
 import apple from "../../assets/Applelogo.svg";
 import email from "../../assets/emailverify.svg";
+import { PiWarningCircleBold } from "react-icons/pi";
 const SubmitEmail = () => {
   const [open, setOpen] = useState(false);
   const [emailInput, setEmailInput] = useState("");
@@ -83,14 +84,25 @@ const SubmitEmail = () => {
                     onChange={handleEmailChange}
                   />
                   {emailError && (
-                    <div className="email-error">{emailError}</div>
+                    <div className="email-error">
+                      <PiWarningCircleBold className="otp-error-icon" />
+                      {emailError}
+                    </div>
                   )}
                 </div>
                 <div className="email-btns">
-                  <button className="email-skip" onClick={handleClose}>
+                  <button
+                    className="email-skip"
+                    onClick={handleClose}
+                    style={{ width: "33%" }}
+                  >
                     SKIP
                   </button>
-                  <button className="email-done" onClick={handleSubmit}>
+                  <button
+                    className="email-done"
+                    onClick={handleSubmit}
+                    style={{ width: "67%" }}
+                  >
                     SUBMIT
                   </button>
                 </div>

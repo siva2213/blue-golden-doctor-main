@@ -22,6 +22,7 @@ const Dropdown = ({
   scrollWidth,
   optionTextStyle,
   onToggle,
+  selectedCity
 }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +73,7 @@ const Dropdown = ({
           boxShadow: selectboxShadow,
         }}
       >
-        <div>{selectedOption ? selectedOption.text : defaultText}</div>
+        <div>{selectedOption ? <span style={{color: '#fff',fontSize: '14px', fontWeight: 'bold'}}>{selectedOption.text}</span> : defaultText}</div>
         {showArrow && (
           <IoArrowDownOutline
             style={{
@@ -102,15 +103,17 @@ const Dropdown = ({
                 color: optionDividerColor,
               }}
             >
-              {options.map((option, index) => (
+              {options.map((option, index) => {
+                debugger
+                return (
                 <li key={index} onClick={() => handleOptionClick(option)}>
                   {option.icon && <span className="option-icon">{option.icon}</span>}
                   <span className="option-text" style={optionTextStyle}>
-                    {option.text}
+                    {(selectedOption && selectedOption.text === option.text) ? <span style={{color:"#E7BE7C"}}>{option.text}</span> : option.text}
                   </span>
                   {option.fee && <span className="option-fee">{option.fee}</span>}
                 </li>
-              ))}
+              )})}
             </ul>
           </Scrollbar>
         </div>

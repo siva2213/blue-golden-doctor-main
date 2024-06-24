@@ -180,7 +180,7 @@ const Scrollbar = ({
       >
         {children}
       </div>
-      <div className="custom-scrollbars__scrollbar">
+      {/* <div className="custom-scrollbars__scrollbar">
         <button
           className="custom-scrollbars__button"
           onClick={() => handleScrollButton("up")}
@@ -210,7 +210,7 @@ const Scrollbar = ({
         >
           ⇓
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

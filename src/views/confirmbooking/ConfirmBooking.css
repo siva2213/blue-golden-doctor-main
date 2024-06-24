@@ -36,7 +36,7 @@
 }
 .confirm-top-ttl {
   color: #372f62;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 .confirm-para-main {
@@ -45,8 +45,8 @@
   margin: 0;
 }
 .app-logos {
-  width: 10%;
-  padding: 10px;
+  width: 7%;
+  padding: 7px;
   background: #372f62;
   border-radius: 100px;
 }
@@ -56,8 +56,12 @@
   margin-bottom: 10px;
 }
 .confirm-city-img {
-  width: 52%;
-  margin-right: 28px;
+  position: absolute;
+  right: 6px;
+  top: 26px;
+  z-index: 1;
+  width: 40%;
+  margin-right: 4px;
 }
 .confirm-sub-page {
   background: #372f62;
@@ -65,10 +69,12 @@
   flex-direction: column;
   padding: 30px 20px 10px 20px;
   border-radius: 40px 40px;
+  z-index: 1;
   gap: 30px;
 }
 .confirm-cnt-img {
   display: flex;
+  width: 62%;
 }
 .confirm-title {
   color: white;
@@ -87,7 +93,7 @@
 .confirm-error {
   color: white;
   background: #9a1832;
-  padding: 10px;
+  padding: 5px;
   border-radius: 50px 0 50px 50px;
   width: fit-content;
   font-size: 12px;
@@ -106,6 +112,10 @@
   box-shadow: inset -3px -3px 6px 0px #403672, inset 3px 3px 6px 3px #2d2653;
   border: none;
 }
+.confirm-phone-email::placeholder {
+  color: #ffffff80;
+  font-size: 14px;
+}
 .confirm-phone-email:focus-visible {
   outline: none;
 }
@@ -115,13 +125,14 @@
 }
 
 .confirm-done {
-  background-image: linear-gradient(to right, #e49457, #e7c985);
+  background-image: linear-gradient(to right, #e48e51, #e7c985);
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   border: none;
   border-radius: 50px;
-  padding: 10px 40px;
+  padding: 15px 40px;
+  margin-bottom: 10px;
   width: -webkit-fill-available;
 }
 .confirm-doc-time {

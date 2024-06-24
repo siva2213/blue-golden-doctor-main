@@ -108,10 +108,7 @@ const ConfirmBooking = () => {
                 <div className="confirm-top-div">
                   <div className="confirm-top-title">
                     <span className="confirm-top-ttl">
-                      We are at 50 cities{" "}
-                    </span>
-                    <span className="confirm-top-ttl">
-                      with over 60 clinics.{" "}
+                      For better experience download app now!
                     </span>
                   </div>
                   <p className="confirm-para-main">
