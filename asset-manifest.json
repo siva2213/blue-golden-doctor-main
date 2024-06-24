@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blue-golden-doctor-main/static/css/main.1a1f0a4e.css",
-    "main.js": "/blue-golden-doctor-main/static/js/main.e4c33f40.js",
+    "main.css": "/blue-golden-doctor-main/static/css/main.4433efd2.css",
+    "main.js": "/blue-golden-doctor-main/static/js/main.cc7dba10.js",
     "static/js/592.eee76cb3.chunk.js": "/blue-golden-doctor-main/static/js/592.eee76cb3.chunk.js",
     "static/media/upi.svg": "/blue-golden-doctor-main/static/media/upi.1dacfcc82fe2f970696a238b87c96688.svg",
     "static/media/cards.svg": "/blue-golden-doctor-main/static/media/cards.aa58e3e1b32c318cbfe9956ed7e9af50.svg",
@@ -64,12 +64,12 @@
     "static/media/layer.svg": "/blue-golden-doctor-main/static/media/layer.48e07cdc290d5d5dcc7d.svg",
     "static/media/pinkstar.svg": "/blue-golden-doctor-main/static/media/pinkstar.47ad30f7a413336dc5895514a9f80273.svg",
     "static/media/res_curves.svg": "/blue-golden-doctor-main/static/media/res_curves.a2c71b13830bd3057f7e75b17e05e603.svg",
-    "main.1a1f0a4e.css.map": "/blue-golden-doctor-main/static/css/main.1a1f0a4e.css.map",
-    "main.e4c33f40.js.map": "/blue-golden-doctor-main/static/js/main.e4c33f40.js.map",
+    "main.4433efd2.css.map": "/blue-golden-doctor-main/static/css/main.4433efd2.css.map",
+    "main.cc7dba10.js.map": "/blue-golden-doctor-main/static/js/main.cc7dba10.js.map",
     "592.eee76cb3.chunk.js.map": "/blue-golden-doctor-main/static/js/592.eee76cb3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a1f0a4e.css",
-    "static/js/main.e4c33f40.js"
+    "static/css/main.4433efd2.css",
+    "static/js/main.cc7dba10.js"
   ]
 }
