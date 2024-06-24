@@ -153,7 +153,6 @@
     background-size: 200% auto;
     color: #fff;
     background-clip: text;
-    text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
@@ -170,7 +169,10 @@
   .bk-btn {
     background: #372f62;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 32px;
+    background: #372F62;
+    font-weight: bold;
+    text-transform: uppercase;
     border: none;
     font-size: 16px;
     font-weight: 600;
