@@ -27,7 +27,6 @@ const WelcomeModal = ({ isOpen, onClose }) => {
             width="100%"
             autoPlay
             muted
-            muted
             playsInline
             onError={(e) => console.error("Error playing video:", e)}
           >
